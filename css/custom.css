@@ -4,13 +4,13 @@
 
 .promo-banner {
     width: 100%;
-    background: #ffe066;
+    background: rgba(210, 167, 112, 0.15);
     color: #222;
     text-align: center;
     font-weight: 600;
     font-size: 1.1rem;
     padding: 0.5rem 0;
-    border-bottom: 1px solid #e0c200;
+    border-bottom: 1px solid rgba(224, 194, 0, 0.3);
     box-shadow: 0 2px 6px rgba(0,0,0,0.04);
     position: relative;
     z-index: 1000;
@@ -20,11 +20,16 @@
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .promo-banner span {
     display: inline-block;
     white-space: nowrap;
     animation: promo-slide 12s linear infinite;
+    position: relative;
+    z-index: 1;
 }
 @keyframes promo-slide {
     0% { transform: translateX(100%); }
@@ -57,12 +62,15 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   color: #222;
   font-size: 1.5rem;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  transition: all 0.3s ease;
   text-decoration: none;
 }
 .floating-social-icons .social-icon.google-review { color: #4285F4; }
@@ -70,8 +78,11 @@ h1, h2, h3, h4, h5, h6 {
 .floating-social-icons .social-icon.makemytrip { color: #FF6B35; }
 .floating-social-icons .social-icon.whatsapp { color: #25D366; }
 .floating-social-icons .social-icon:hover {
-  background: #f0f0f0;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  transform: translateY(-2px);
 }
 @media (max-width: 600px) {
   .floating-social-icons {
@@ -93,6 +104,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9rem;
   white-space: nowrap;
   margin: 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   .promo-banner {
@@ -103,5 +121,120 @@ h1, h2, h3, h4, h5, h6 {
   .promo-banner .btn_1 {
     padding: 8px 20px;
     font-size: 0.85rem;
+  }
+}
+
+.promo-banner .btn_1:hover {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Liquid Glass Effect */
+@supports (backdrop-filter: blur(10px)) {
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .liquid-glass-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .liquid-glass-dark {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+}
+
+/* Additional Liquid Glass Enhancements */
+.promo-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.floating-social-icons .social-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.floating-social-icons .social-icon:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced color transitions for social icons */
+.floating-social-icons .social-icon.google-review:hover { 
+  color: #4285F4; 
+  text-shadow: 0 0 10px rgba(66, 133, 244, 0.5);
+}
+.floating-social-icons .social-icon.tripadvisor:hover { 
+  color: #00AA6C; 
+  text-shadow: 0 0 10px rgba(0, 170, 108, 0.5);
+}
+.floating-social-icons .social-icon.makemytrip:hover { 
+  color: #FF6B35; 
+  text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+.floating-social-icons .social-icon.whatsapp:hover { 
+  color: #25D366; 
+  text-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+}
+
+/* Smooth animation for promo banner text */
+.promo-banner span {
+  display: inline-block;
+  white-space: nowrap;
+  animation: promo-slide 12s linear infinite;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(10px)) {
+  .promo-banner {
+    background: rgba(210, 167, 112, 0.9);
+  }
+  
+  .floating-social-icons .social-icon {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .floating-social-icons .social-icon:hover {
+    background: rgba(255, 255, 255, 1);
   }
 }

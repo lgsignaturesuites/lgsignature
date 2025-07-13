@@ -307,3 +307,10 @@ header.fixed_header.sticky {
     background: rgba(255,255,255,0.92) !important;
   }
 }
+
+@media (max-width: 600px) {
+  header.reveal_header.headroom--not-top,
+  header.fixed_header.sticky {
+    padding: 8px 0 !important;
+  }
+}

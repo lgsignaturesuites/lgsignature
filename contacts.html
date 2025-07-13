@@ -128,7 +128,7 @@
                 <div class="col-xl-7 col-lg-7 order-lg-1">
                     <h3 class="mb-3">Get in Touch</h3>
                     <div id="message-contact"></div>
-                    <form method="post" action="phpmailer/contact_template_email.php" id="contactform" autocomplete="off">
+                    <form id="contactform" onsubmit="return redirectToEmail();">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-floating mb-4">
@@ -317,6 +317,26 @@
 <script src="js/common_functions.js"></script>
 <script src="js/datepicker_inline.js"></script>
 <script src="phpmailer/validate.js"></script>
+
+<script>
+    function redirectToEmail() {
+        const name = document.getElementById('name_contact').value;
+        const lastName = document.getElementById('lastname_contact').value;
+        const email = document.getElementById('email_contact').value;
+        const phone = document.getElementById('phone_contact').value;
+        const message = document.getElementById('message_contact').value;
+
+        const subject = encodeURIComponent("Booking Enquiry - LG Signature Suites");
+        const body = encodeURIComponent(
+            `Name: ${name} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
+        );
+
+        window.location.href = `mailto:lgsignaturesuites@gmail.com?subject=${subject}&body=${body}`;
+
+        return false; // Prevent actual form submission
+    }
+</script>
+
 
 </body>
 </html>

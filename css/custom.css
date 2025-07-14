@@ -299,6 +299,7 @@ header.fixed_header.sticky {
   border-bottom: 1px solid rgba(224, 194, 0, 0.15);
   box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.07);
   transition: background 0.3s, box-shadow 0.3s;
+  margin-top: 48px; /* Height of promo-banner */
 }
 
 @supports not (backdrop-filter: blur(10px)) {
@@ -312,5 +313,11 @@ header.fixed_header.sticky {
   header.reveal_header.headroom--not-top,
   header.fixed_header.sticky {
     padding: 8px 0 !important;
+    margin-top: 38px; /* Height of promo-banner on mobile */
   }
+}
+
+body:not(:has(.promo-banner)) header.reveal_header.headroom--not-top,
+body:not(:has(.promo-banner)) header.fixed_header.sticky {
+  margin-top: 0 !important;
 }

@@ -1,154 +1,17 @@
-﻿/*============================================================================================*/
-/* DARK THEME - LG Signature Suites */
+/*============================================================================================*/
+/* Your custom styles below */
 /*============================================================================================*/
 
-/* Dark Theme Color Variables */
-:root {
-    --primary-dark: #1a1a1a;
-    --secondary-dark: #2d2d2d;
-    --accent-gold: #d4af37;
-    --accent-gold-light: #f4d03f;
-    --accent-gold-dark: #b8941f;
-    --text-white: #ffffff;
-    --text-light: #e0e0e0;
-    --text-muted: #b0b0b0;
-    --border-gold: rgba(212, 175, 55, 0.3);
-    --shadow-dark: rgba(0, 0, 0, 0.5);
-}
-
-/* Global Dark Theme Overrides */
-* {
-    box-sizing: border-box;
-}
-
-body, html {
-    background-color: var(--primary-dark) !important;
-    color: var(--text-white) !important;
-    font-family: 'Inter', system-ui, Arial, sans-serif;
-}
-
-/* Headers and Typography */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--text-white) !important;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-}
-
-p, span, div, a, li, td, th {
-    color: var(--text-light) !important;
-}
-
-/* Links */
-a {
-    color: var(--accent-gold) !important;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--accent-gold-light) !important;
-}
-
-/* Background Overrides */
-.bg-white, .white_bg, .bg_white, .light_bg, .bg_light, .bg-light {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-}
-
-/* Cards and Containers */
-.card, .box_cat, .box_feat, .box_1, .box_2, .box_3, .box_4, .box_5, .box_6 {
-    background-color: var(--secondary-dark) !important;
-    border: 1px solid var(--border-gold) !important;
-    color: var(--text-white) !important;
-    box-shadow: 0 4px 20px var(--shadow-dark) !important;
-}
-
-/* Navigation */
-header, nav, .main_menu {
-    background-color: var(--primary-dark) !important;
-    border-bottom: 1px solid var(--border-gold) !important;
-}
-
-.main_menu ul li a {
-    color: var(--text-white) !important;
-}
-
-.main_menu ul li a:hover {
-    color: var(--accent-gold) !important;
-}
-
-/* Buttons */
-.btn_1, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6, button, input[type="submit"] {
-    background-color: var(--accent-gold) !important;
-    color: var(--primary-dark) !important;
-    border: 1px solid var(--accent-gold) !important;
-    transition: all 0.3s ease;
-}
-
-.btn_1:hover, .btn_2:hover, .btn_3:hover, .btn_4:hover, .btn_5:hover, .btn_6:hover, button:hover, input[type="submit"]:hover {
-    background-color: var(--accent-gold-light) !important;
-    color: var(--primary-dark) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-}
-
-/* Forms */
-input, textarea, select {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-    border: 1px solid var(--border-gold) !important;
-}
-
-input:focus, textarea:focus, select:focus {
-    border-color: var(--accent-gold) !important;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3) !important;
-}
-
-input::placeholder, textarea::placeholder {
-    color: var(--text-muted) !important;
-}
-
-/* Tables */
-table, th, td {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-    border: 1px solid var(--border-gold) !important;
-}
-
-th {
-    background-color: var(--primary-dark) !important;
-    color: var(--accent-gold) !important;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-dark) !important;
-    color: var(--text-white) !important;
-    border-top: 1px solid var(--border-gold) !important;
-}
-
-footer h5, footer h6 {
-    color: var(--accent-gold) !important;
-}
-
-footer a {
-    color: var(--text-light) !important;
-}
-
-footer a:hover {
-    color: var(--accent-gold) !important;
-}
-
-/* Promo Banner - Dark Theme */
 .promo-banner {
     width: 100%;
-    background: rgba(212, 175, 55, 0.15);
-    color: var(--text-white);
+    background: rgba(210, 167, 112, 0.15);
+    color: #222;
     text-align: center;
     font-weight: 600;
     font-size: 1.1rem;
     padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-gold);
-    box-shadow: 0 2px 6px var(--shadow-dark);
+    border-bottom: 1px solid rgba(224, 194, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
     position: relative;
     z-index: 1000;
     overflow: hidden;
@@ -159,9 +22,8 @@ footer a:hover {
     flex-wrap: wrap;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid var(--border-gold);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 .promo-banner span {
     display: inline-block;
     white-space: nowrap;
@@ -169,7 +31,6 @@ footer a:hover {
     position: relative;
     z-index: 1;
 }
-
 @keyframes promo-slide {
     0% { transform: translateX(100%); }
     10% { transform: translateX(0); }
@@ -177,308 +38,279 @@ footer a:hover {
     100% { transform: translateX(-100%); }
 }
 
-/* Header Sticky - Dark Theme */
-header.reveal_header.headroom--not-top,
-header.fixed_header.sticky {
-    background: rgba(26, 26, 26, 0.9) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-gold);
-    box-shadow: 0 4px 24px 0 var(--shadow-dark);
-    transition: background 0.3s, box-shadow 0.3s;
+body, html {
+    font-family: 'Inter', system-ui, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
-/* Force dark theme on all elements */
-* {
-    color: inherit;
-}
-
-/* Bootstrap overrides for dark theme */
-.btn {
-    background-color: var(--accent-gold) !important;
-    color: var(--primary-dark) !important;
-    border-color: var(--accent-gold) !important;
-}
-
-.btn:hover {
-    background-color: var(--accent-gold-light) !important;
-    color: var(--primary-dark) !important;
-    border-color: var(--accent-gold-light) !important;
-}
-
-.form-control {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-    border-color: var(--border-gold) !important;
-}
-
-.form-control:focus {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-    border-color: var(--accent-gold) !important;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3) !important;
-}
-
-/* Additional comprehensive dark theme overrides */
-
-/* Section and layout overrides */
-.hero_section, .hero_in, .hero_2, .hero_3, .hero_4, .hero_5, .hero_6,
-.hero_home, .hero_in.breadcrumb_wrapper, .hero_wrapper {
-    background-color: var(--primary-dark) !important;
-    color: var(--text-white) !important;
-}
-
-/* All sections */
-section, .section, .main_wrapper, .wrapper {
-    background-color: var(--primary-dark) !important;
-    color: var(--text-white) !important;
-}
-
-/* Container and grid overrides */
-.container, .container-fluid, .row, .col {
-    background-color: transparent !important;
-}
-
-/* Modal and popup overrides */
-.modal, .modal-content, .modal-header, .modal-body, .modal-footer {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-    border-color: var(--border-gold) !important;
-}
-
-/* Card overrides */
-.card-header, .card-body, .card-footer {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-    border-color: var(--border-gold) !important;
-}
-
-/* List and menu overrides */
-.list-group-item, .dropdown-menu, .dropdown-item {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-    border-color: var(--border-gold) !important;
-}
-
-.dropdown-item:hover {
-    background-color: rgba(212, 175, 55, 0.1) !important;
-    color: var(--accent-gold) !important;
-}
-
-/* Navigation menu specific overrides */
-.main_menu, .navbar, .navbar-nav, .nav-link {
-    background-color: var(--primary-dark) !important;
-    color: var(--text-white) !important;
-}
-
-.nav-link:hover {
-    color: var(--accent-gold) !important;
-}
-
-/* Additional text overrides */
-.text-center, .text-left, .text-right, .text-justify {
-    color: inherit !important;
-}
-
-/* Breadcrumb overrides */
-.breadcrumb {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-}
-
-.breadcrumb-item a {
-    color: var(--accent-gold) !important;
-}
-
-/* Alert overrides */
-.alert {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-    border-color: var(--border-gold) !important;
-}
-
-/* Badge overrides */
-.badge {
-    background-color: var(--accent-gold) !important;
-    color: var(--primary-dark) !important;
-}
-
-/* Pagination overrides */
-.pagination .page-link {
-    background-color: var(--secondary-dark) !important;
-    color: var(--accent-gold) !important;
-    border-color: var(--border-gold) !important;
-}
-
-.pagination .page-link:hover {
-    background-color: var(--accent-gold) !important;
-    color: var(--primary-dark) !important;
-}
-
-/* Force override any remaining light backgrounds */
-.bg_white, .white_bg, .light_bg, .bg_light,
-.bg-white, .bg-light, .bg-secondary {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-}
-
-/* Override any text that might be dark */
-.text-dark, .text-secondary, .text-muted {
-    color: var(--text-light) !important;
-}
-
-/* Ensure all borders are golden */
-.border, .border-top, .border-bottom, .border-left, .border-right {
-    border-color: var(--border-gold) !important;
-}
-
-/* Override any remaining elements that might have white backgrounds */
-div[style*="background: white"],
-div[style*="background-color: white"],
-div[style*="background: #fff"],
-div[style*="background-color: #fff"],
-div[style*="background: #ffffff"],
-div[style*="background-color: #ffffff"] {
-    background-color: var(--secondary-dark) !important;
-}
-
-/* Override any remaining elements that might have dark text */
-span[style*="color: #000"],
-span[style*="color: black"],
-span[style*="color: #333"],
-p[style*="color: #000"],
-p[style*="color: black"],
-p[style*="color: #333"] {
-    color: var(--text-white) !important;
-}
-
-/* Ensure all images have proper dark theme integration */
-img {
-    filter: brightness(0.95) contrast(1.05);
-}
-
-/* Floating social icons - dark theme specific */
+/* Floating Social Icons */
 .floating-social-icons {
-    position: fixed;
-    top: 30%;
-    right: 20px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  position: fixed;
+  top: 30%;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.floating-social-icons .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  color: #222;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.floating-social-icons .social-icon.google-review { color: #4285F4; }
+.floating-social-icons .social-icon.tripadvisor { color: #00AA6C; }
+.floating-social-icons .social-icon.makemytrip { color: #FF6B35; }
+.floating-social-icons .social-icon.whatsapp { color: #25D366; }
+.floating-social-icons .social-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+  .floating-social-icons {
+    top: unset;
+    bottom: 80px;
+    right: 10px;
+    gap: 10px;
+  }
+  .floating-social-icons .social-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
 }
 
-.floating-social-icons .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    background: rgba(212, 175, 55, 0.1);
+/* Promo Banner Button */
+.promo-banner .btn_1 {
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .promo-banner {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 15px;
+  }
+  .promo-banner .btn_1 {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+.promo-banner .btn_1:hover {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Liquid Glass Effect */
+@supports (backdrop-filter: blur(10px)) {
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 50%;
-    border: 1px solid var(--border-gold);
-    box-shadow: 0 8px 32px 0 var(--shadow-dark);
-    color: var(--accent-gold);
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .liquid-glass-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
 }
 
-.floating-social-icons .social-icon:hover {
-    background: rgba(212, 175, 55, 0.2);
-    transform: translateY(-2px);
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .liquid-glass-dark {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
 }
 
-/* Footer social icons - dark theme specific */
+/* Additional Liquid Glass Enhancements */
+.promo-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.floating-social-icons .social-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.floating-social-icons .social-icon:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced color transitions for social icons */
+.floating-social-icons .social-icon.google-review:hover { 
+  color: #4285F4; 
+  text-shadow: 0 0 10px rgba(66, 133, 244, 0.5);
+}
+.floating-social-icons .social-icon.tripadvisor:hover { 
+  color: #00AA6C; 
+  text-shadow: 0 0 10px rgba(0, 170, 108, 0.5);
+}
+.floating-social-icons .social-icon.makemytrip:hover { 
+  color: #FF6B35; 
+  text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+.floating-social-icons .social-icon.whatsapp:hover { 
+  color: #25D366; 
+  text-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+}
+
+/* Smooth animation for promo banner text */
+.promo-banner span {
+  display: inline-block;
+  white-space: nowrap;
+  animation: promo-slide 12s linear infinite;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(10px)) {
+  .promo-banner {
+    background: rgba(210, 167, 112, 0.9);
+  }
+  
+  .floating-social-icons .social-icon {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .floating-social-icons .social-icon:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+}
+
+/* Footer Social Icons Styling */
 footer .social ul li a {
-    background: rgba(212, 175, 55, 0.1) !important;
-    color: var(--accent-gold) !important;
-    border: 1px solid var(--border-gold) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  color: #fff;
 }
 
 footer .social ul li a:hover {
-    background: var(--accent-gold) !important;
-    color: var(--primary-dark) !important;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
-/* Ensure consistent dark theme across all possible elements */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, nav, section, summary {
-    background-color: var(--primary-dark) !important;
-    color: var(--text-white) !important;
+footer .social ul li a svg {
+  width: 16px;
+  height: 16px;
 }
 
-/* Responsive design for dark theme */
-@media (max-width: 768px) {
-    .floating-social-icons {
-        top: unset;
-        bottom: 80px;
-        right: 10px;
-        gap: 10px;
-    }
-    
-    .floating-social-icons .social-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 1.1rem;
-    }
+footer .social ul li a img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
 }
 
-/* Ensure dark theme persists on all states */
-*:focus, *:hover, *:active {
-    color: inherit;
+footer .social ul li a i {
+  font-size: 16px;
 }
 
-/* Final override to ensure everything is dark */
-body * {
-    background-color: inherit;
-    color: inherit;
+/* Specific colors for footer social icons */
+footer .social ul li:nth-child(1) a:hover { background: rgba(66, 133, 244, 0.3); } /* Google */
+footer .social ul li:nth-child(2) a:hover { background: rgba(0, 170, 108, 0.3); } /* TripAdvisor */
+footer .social ul li:nth-child(3) a:hover { background: rgba(255, 107, 53, 0.3); } /* MakeMyTrip */
+footer .social ul li:nth-child(4) a:hover { background: rgba(37, 211, 102, 0.3); } /* WhatsApp */
+
+@media (max-width: 600px) {
+  .promo-banner {
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px 8px;
+    font-size: 0.95rem;
+  }
+  .promo-banner .btn_1 {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
 }
 
-/* Override Bootstrap and any framework defaults */
-.container-fluid, .row, .col, .col-12, .col-lg-12, .col-md-12, .col-sm-12 {
-    background-color: transparent !important;
+header.reveal_header.headroom--not-top,
+header.fixed_header.sticky {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(224, 194, 0, 0.15);
+  box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.07);
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
-/* Ensure all text inputs and form elements are dark */
-.form-group, .form-control, .form-select, .form-check, .form-switch {
-    background-color: var(--secondary-dark) !important;
-    color: var(--text-white) !important;
-    border-color: var(--border-gold) !important;
+@supports not (backdrop-filter: blur(10px)) {
+  header.reveal_header.headroom--not-top,
+  header.fixed_header.sticky {
+    background: rgba(255,255,255,0.92) !important;
+  }
 }
 
-/* Ensure all labels are visible */
-label, .form-label {
-    color: var(--text-light) !important;
-}
-
-/* Media queries to ensure dark theme on all devices */
-@media (max-width: 1200px) {
-    body, html {
-        background-color: var(--primary-dark) !important;
-        color: var(--text-white) !important;
-    }
-}
-
-@media (max-width: 992px) {
-    body, html {
-        background-color: var(--primary-dark) !important;
-        color: var(--text-white) !important;
-    }
-}
-
-@media (max-width: 768px) {
-    body, html {
-        background-color: var(--primary-dark) !important;
-        color: var(--text-white) !important;
-    }
-}
-
-@media (max-width: 576px) {
-    body, html {
-        background-color: var(--primary-dark) !important;
-        color: var(--text-white) !important;
-    }
+@media (max-width: 600px) {
+  header.reveal_header.headroom--not-top,
+  header.fixed_header.sticky {
+    padding: 8px 0 !important;
+  }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+	<url>
+		<loc>https://lgsignaturesuites.com/index.html</loc>
+		<video:video>
+			<video:thumbnail_loc>https://lgsignaturesuites.com/img/lg-signature-suites-banner.jpg</video:thumbnail_loc>
+			<video:title>LG Signature Suites Collage</video:title>
+			<video:description>Highlights of LG Signature Suites amenities and features in Bangalore.</video:description>
+			<video:content_loc>https://lgsignaturesuites.com/video/lg_signature_suites_collage.mp4</video:content_loc>
+			<video:publication_date>2024-01-01T00:00:00+00:00</video:publication_date>
+		</video:video>
+	</url>
+	<url>
+		<loc>https://lgsignaturesuites.com/index.html</loc>
+		<video:video>
+			<video:thumbnail_loc>https://lgsignaturesuites.com/img/hero_home_1.jpg</video:thumbnail_loc>
+			<video:title>Swimming Pool</video:title>
+			<video:description>Relax by the swimming pool at LG Signature Suites.</video:description>
+			<video:content_loc>https://lgsignaturesuites.com/video/swimming_pool_3.mp4</video:content_loc>
+			<video:publication_date>2024-01-01T00:00:00+00:00</video:publication_date>
+		</video:video>
+	</url>
+</urlset> 

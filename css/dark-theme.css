@@ -1,0 +1,873 @@
+/*============================================================================================*/
+/* DARK THEME - LG Signature Suites */
+/* Premium Dark Theme Implementation */
+/*============================================================================================*/
+
+/* CSS Custom Properties for Dark Theme */
+:root {
+  /* Dark Base Colors */
+  --bg-0: #070809;           /* Page background */
+  --bg-1: #0F1418;           /* Content section background */
+  --surface: #121620;        /* Cards, nav bar */
+  
+  /* Text Colors */
+  --text-primary: #F5F7FA;   /* Primary text */
+  --text-secondary: #B9C0C7; /* Secondary text */
+  --text-muted: #879099;    /* Muted text */
+  
+  /* Accent Colors */
+  --accent: #D4AF37;         /* Gold, luxury */
+  --accent-700: #B88F2A;     /* Gold hover state */
+  --accent-2: #2EC4B6;       /* Teal secondary CTA */
+  --accent-2-700: #24A89A;   /* Teal hover state */
+  
+  /* Header Colors (Dark Navy-Gray) */
+  --header-bg: #121620;      /* Dark navy-gray header */
+  --header-text: #F5F7FA;    /* Light text on header */
+  --header-border: #1E2429;  /* Dark border */
+  
+  /* Focus and Accessibility */
+  --focus-outline: rgba(212, 175, 55, 0.22);
+  --focus-width: 3px;
+}
+
+/*============================================================================================*/
+/* BASE STYLES OVERRIDE */
+/*============================================================================================*/
+
+/* Body and Main Background */
+body {
+  background: var(--bg-0) !important;
+  color: var(--text-primary) !important;
+}
+
+main {
+  background-color: var(--bg-0) !important;
+}
+
+/* Typography Override */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary) !important;
+}
+
+p {
+  color: var(--text-primary);
+}
+
+/* Links */
+a {
+  color: var(--accent) !important;
+}
+
+a:hover, a:focus {
+  color: var(--accent-700) !important;
+}
+
+/*============================================================================================*/
+/* HEADER STYLES - DARK NAVY-GRAY HEADER */
+/*============================================================================================*/
+
+header {
+  background-color: #121620 !important;
+  border-bottom: 1px solid #1E2429 !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999 !important;
+}
+
+/* Header text and navigation */
+header nav ul li a {
+  color: #F5F7FA !important;
+}
+
+header nav ul li a:hover {
+  color: #D4AF37 !important;
+}
+
+/* Sticky header states */
+header.reveal_header.headroom--not-top,
+header.fixed_header.sticky {
+  background-color: #121620 !important;
+  border-bottom: 1px solid #1E2429 !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important;
+  position: sticky !important;
+  top: 0 !important;
+}
+
+/* Hamburger menu */
+.hamburger_2 .hamburger__inner,
+.hamburger_2 .hamburger__inner::before,
+.hamburger_2 .hamburger__inner::after {
+  background-color: #F5F7FA !important;
+}
+
+/* Hamburger menu hover state */
+.hamburger_2:hover .hamburger__inner,
+.hamburger_2:hover .hamburger__inner::before,
+.hamburger_2:hover .hamburger__inner::after {
+  background-color: #D4AF37 !important;
+}
+
+/*============================================================================================*/
+/* BUTTON STYLES */
+/*============================================================================================*/
+
+/* Primary CTA - Gold */
+.btn_1 {
+  background: var(--accent) !important;
+  color: #070809 !important;
+  border: none !important;
+}
+
+.btn_1:hover {
+  background: var(--accent-700) !important;
+  color: #070809 !important;
+}
+
+/* Secondary CTA - Teal */
+.btn_1.outline {
+  background: transparent !important;
+  border: 2px solid var(--accent-2) !important;
+  color: var(--accent-2) !important;
+}
+
+.btn_1.outline:hover {
+  background: var(--accent-2) !important;
+  color: var(--bg-0) !important;
+  border-color: var(--accent-2) !important;
+}
+
+/* Ghost Button */
+.btn_1.outline.white {
+  border: 1px solid #1E2429 !important;
+  color: var(--text-primary) !important;
+  background: transparent !important;
+}
+
+.btn_1.outline.white:hover {
+  background: var(--accent) !important;
+  color: var(--bg-0) !important;
+  border-color: var(--accent) !important;
+}
+
+/* Special Button 4 (Learn More) */
+.btn_4.learn-more .circle {
+  background: var(--accent) !important;
+}
+
+.btn_4.learn-more .button-text {
+  color: var(--text-primary) !important;
+}
+
+.btn_4:hover .button-text {
+  color: #070809 !important;
+}
+
+/*============================================================================================*/
+/* TYPOGRAPHY HIERARCHY */
+/*============================================================================================*/
+
+/* H1 - 40-48px, bold, primary text */
+h1 {
+  font-size: 44px !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  line-height: 1.2 !important;
+}
+
+/* H2 - 28-32px, bold, primary text */
+h2 {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+  line-height: 1.3 !important;
+}
+
+/* Body text - 16px, line-height 1.6, primary text */
+body, p {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Secondary/meta text */
+small, .text-muted {
+  color: var(--text-secondary) !important;
+}
+
+/* Title small elements */
+.title small {
+  color: var(--accent) !important;
+}
+
+.title h2, .title h3 {
+  color: var(--text-primary) !important;
+}
+
+/* White title variants */
+.title.white small {
+  color: var(--text-secondary) !important;
+  opacity: 0.8;
+}
+
+.title.white h2, .title.white h3 {
+  color: var(--text-primary) !important;
+}
+
+/*============================================================================================*/
+/* CONTENT SECTIONS */
+/*============================================================================================*/
+
+/* Pattern sections with dark backgrounds */
+.pattern_2 {
+  background: var(--bg-1) !important;
+}
+
+.bg_white {
+  background-color: var(--bg-1) !important;
+}
+
+/* Content cards and boxes */
+.box_item_info {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+}
+
+.box_facilities {
+  color: var(--text-primary) !important;
+}
+
+.box_facilities h3 {
+  color: var(--text-primary) !important;
+}
+
+.box_facilities.white {
+  color: var(--text-primary) !important;
+}
+
+.box_facilities.white h3 {
+  color: var(--text-primary) !important;
+}
+
+/* Facilities icons */
+.box_facilities i {
+  color: var(--accent) !important;
+}
+
+.box_facilities.white i {
+  color: var(--accent) !important;
+}
+
+/*============================================================================================*/
+/* HERO SECTIONS */
+/*============================================================================================*/
+
+/* Hero text */
+.hero .wrapper small {
+  color: var(--text-secondary) !important;
+}
+
+.hero .wrapper h1, .hero .wrapper h3 {
+  color: var(--text-primary) !important;
+}
+
+.hero .wrapper p {
+  color: var(--text-primary) !important;
+}
+
+/* Hero image overlays - Dark gradient */
+.hero .opacity-mask {
+  background: linear-gradient(180deg, rgba(7,8,9,0.55), rgba(7,8,9,0.8)) !important;
+}
+
+.parallax_section_1 .opacity-mask {
+  background: linear-gradient(180deg, rgba(7,8,9,0.55), rgba(7,8,9,0.8)) !important;
+}
+
+/*============================================================================================*/
+/* BOOKING FORMS */
+/*============================================================================================*/
+
+.booking_form {
+  background-color: var(--surface) !important;
+  border: 1px solid #1E2429 !important;
+}
+
+.booking_form input {
+  background-color: var(--bg-1) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid #1E2429 !important;
+}
+
+.booking_form input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--focus-outline) !important;
+}
+
+.booking_form input[type='submit'] {
+  background-color: var(--accent) !important;
+  color: var(--bg-0) !important;
+}
+
+.booking_form input[type='submit']:hover {
+  background-color: var(--accent-700) !important;
+}
+
+/* Quantity buttons */
+.qty-buttons label {
+  color: var(--text-secondary) !important;
+}
+
+.qty-buttons input.qty {
+  background-color: var(--bg-1) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid #1E2429 !important;
+}
+
+/*============================================================================================*/
+/* FOOTER */
+/*============================================================================================*/
+
+footer {
+  background-color: var(--bg-0) !important;
+  color: var(--text-primary) !important;
+}
+
+footer h5 {
+  color: var(--text-primary) !important;
+}
+
+footer a {
+  color: var(--text-secondary) !important;
+}
+
+footer a:hover {
+  color: var(--accent) !important;
+}
+
+footer .copy {
+  background-color: var(--bg-1) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Footer social icons */
+footer .social ul li a {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-primary) !important;
+}
+
+footer .social ul li a:hover {
+  background: var(--accent) !important;
+  color: var(--bg-0) !important;
+}
+
+/*============================================================================================*/
+/* TESTIMONIALS */
+/*============================================================================================*/
+
+.box_overlay {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+}
+
+.comment {
+  color: var(--text-primary) !important;
+  border-left-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/*============================================================================================*/
+/* NEWS/BLOG CARDS */
+/*============================================================================================*/
+
+.box_contents {
+  background-color: var(--surface) !important;
+  border: 1px solid #1E2429 !important;
+}
+
+.box_contents .wrapper {
+  color: var(--text-primary) !important;
+}
+
+.box_contents h3 {
+  color: var(--text-primary) !important;
+}
+
+.box_contents small {
+  color: var(--text-secondary) !important;
+}
+
+.box_contents em {
+  color: var(--accent) !important;
+}
+
+.box_contents em:before {
+  background-color: var(--accent) !important;
+}
+
+/*============================================================================================*/
+/* NAVIGATION PANEL */
+/*============================================================================================*/
+
+.nav_panel {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+  z-index: 10000 !important;
+}
+
+.logo_panel {
+  background-color: var(--bg-1) !important;
+}
+
+.sidebar-navigation nav a {
+  color: var(--text-primary) !important;
+  opacity: 0.95 !important;
+}
+
+.sidebar-navigation nav a:hover {
+  color: var(--accent) !important;
+}
+
+.sidebar-navigation nav a.active {
+  color: var(--accent) !important;
+}
+
+/* Ensure links inside list are visible */
+.sidebar-navigation nav ul li a {
+  color: var(--text-primary) !important;
+}
+
+.sidebar-navigation nav ul li a:hover {
+  color: var(--accent) !important;
+}
+
+.phone_element {
+  border-top-color: #1E2429 !important;
+}
+
+.phone_element a span {
+  color: var(--accent) !important;
+}
+
+.phone_element a span em {
+  color: var(--text-primary) !important;
+}
+
+.phone_element a i {
+  color: var(--accent) !important;
+}
+
+/*============================================================================================*/
+/* FORM ELEMENTS */
+/*============================================================================================*/
+
+.form-control {
+  background-color: var(--bg-1) !important;
+  color: var(--text-primary) !important;
+  border-color: #1E2429 !important;
+}
+
+.form-control:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--focus-outline) !important;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Custom select */
+.custom_select select {
+  background-color: var(--bg-1) !important;
+  color: var(--text-primary) !important;
+  border-color: #1E2429 !important;
+}
+
+/*============================================================================================*/
+/* ACCESSIBILITY - FOCUS OUTLINES */
+/*============================================================================================*/
+
+/* Focus outlines for all interactive elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: var(--focus-width) solid var(--focus-outline) !important;
+  outline-offset: 2px !important;
+}
+
+/* Remove default focus and add custom */
+.btn_1:focus {
+  outline: var(--focus-width) solid var(--focus-outline) !important;
+  outline-offset: 2px !important;
+}
+
+/*============================================================================================*/
+/* RESPONSIVE ADJUSTMENTS */
+/*============================================================================================*/
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 36px !important;
+  }
+  
+  h2 {
+    font-size: 28px !important;
+  }
+  
+  .hero .wrapper h1, .hero .wrapper h3 {
+    font-size: 32px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 32px !important;
+  }
+  
+  .hero .wrapper h1, .hero .wrapper h3 {
+    font-size: 28px !important;
+  }
+}
+
+/*============================================================================================*/
+/* SPECIAL OVERRIDES FOR DARK THEME */
+/*============================================================================================*/
+
+/* Ensure all text is visible on dark backgrounds */
+* {
+  color: inherit;
+}
+
+/* Override any remaining light theme colors */
+.bg_gray {
+  background-color: var(--bg-1) !important;
+}
+
+.bg_color_1 {
+  background-color: var(--surface) !important;
+}
+
+/* Pattern backgrounds */
+.pattern {
+  background: var(--bg-1) url(../img/pattern.png) top left no-repeat !important;
+}
+
+.pattern_2 {
+  background: var(--bg-1) url(../img/pattern_2.png) top right no-repeat !important;
+}
+
+/* Marquee text */
+.marquee .content {
+  color: var(--text-muted) !important;
+  opacity: 0.1 !important;
+}
+
+/* Progress bar */
+.progress-bar {
+  background-color: var(--accent) !important;
+}
+
+/* Review cards */
+.review_card {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+}
+
+.review_card .rating {
+  color: var(--accent) !important;
+}
+
+/* Contact info */
+.contact_info {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+}
+
+.contact_info h4 {
+  color: var(--text-primary) !important;
+}
+
+.contact_info i {
+  color: var(--accent) !important;
+}
+
+/* Map styling */
+.map_contact iframe {
+  filter: grayscale(85%) brightness(0.8) !important;
+}
+
+/*============================================================================================*/
+/* ANIMATIONS AND TRANSITIONS */
+/*============================================================================================*/
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Ensure smooth hover effects */
+.btn_1, .btn_1.outline, a {
+  transition: all 0.3s ease !important;
+}
+
+/*============================================================================================*/
+/* DATE RANGE PICKER STYLING */
+/*============================================================================================*/
+
+/* Date Range Picker Container */
+.daterangepicker {
+  background-color: var(--surface) !important;
+  border: 1px solid #1E2429 !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Date Range Picker Header */
+.daterangepicker .ranges {
+  background-color: var(--bg-1) !important;
+  border-bottom: 1px solid #1E2429 !important;
+}
+
+.daterangepicker .ranges ul {
+  background-color: var(--bg-1) !important;
+}
+
+.daterangepicker .ranges li {
+  color: var(--text-primary) !important;
+  background-color: transparent !important;
+}
+
+.daterangepicker .ranges li:hover {
+  background-color: var(--accent) !important;
+  color: var(--bg-0) !important;
+}
+
+.daterangepicker .ranges li.active {
+  background-color: var(--accent) !important;
+  color: var(--bg-0) !important;
+}
+
+/* Calendar Headers */
+.daterangepicker .calendar-table {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+}
+
+.daterangepicker .calendar-table th {
+  background-color: var(--bg-1) !important;
+  color: var(--text-primary) !important;
+  border-color: #1E2429 !important;
+}
+
+.daterangepicker .calendar-table td {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+  border-color: #1E2429 !important;
+}
+
+/* Calendar Days */
+.daterangepicker .calendar-table td.available {
+  color: var(--text-primary) !important;
+}
+
+.daterangepicker .calendar-table td.available:hover {
+  background-color: var(--accent) !important;
+  color: var(--bg-0) !important;
+}
+
+.daterangepicker .calendar-table td.in-range {
+  background-color: rgba(212, 175, 55, 0.2) !important;
+  color: var(--text-primary) !important;
+}
+
+.daterangepicker .calendar-table td.start-date,
+.daterangepicker .calendar-table td.end-date {
+  background-color: var(--accent) !important;
+  color: var(--bg-0) !important;
+}
+
+.daterangepicker .calendar-table td.off {
+  color: var(--text-muted) !important;
+}
+
+.daterangepicker .calendar-table td.disabled {
+  color: var(--text-muted) !important;
+  opacity: 0.5 !important;
+}
+
+/* Month/Year Selectors */
+.daterangepicker .calendar-table .month {
+  color: var(--text-primary) !important;
+}
+
+.daterangepicker .calendar-table .year {
+  color: var(--text-primary) !important;
+}
+
+/* Buttons */
+.daterangepicker .drp-buttons {
+  background-color: var(--bg-1) !important;
+  border-top: 1px solid #1E2429 !important;
+}
+
+.daterangepicker .drp-buttons .btn {
+  background-color: var(--accent) !important;
+  color: var(--bg-0) !important;
+  border: 1px solid var(--accent) !important;
+}
+
+.daterangepicker .drp-buttons .btn:hover {
+  background-color: var(--accent-700) !important;
+  color: var(--bg-0) !important;
+}
+
+.daterangepicker .drp-buttons .btn.btn-sm {
+  background-color: transparent !important;
+  color: var(--text-primary) !important;
+  border: 1px solid #1E2429 !important;
+}
+
+.daterangepicker .drp-buttons .btn.btn-sm:hover {
+  background-color: var(--accent) !important;
+  color: var(--bg-0) !important;
+  border-color: var(--accent) !important;
+}
+
+/* Input Fields */
+.daterangepicker .drp-selected {
+  color: var(--text-primary) !important;
+}
+
+.daterangepicker .drp-selected input {
+  background-color: var(--bg-1) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid #1E2429 !important;
+}
+
+.daterangepicker .drp-selected input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--focus-outline) !important;
+}
+
+/* Arrow Indicators */
+.daterangepicker .drp-selected .drp-selected-left,
+.daterangepicker .drp-selected .drp-selected-right {
+  color: var(--text-primary) !important;
+}
+
+/* Show/Hide Calendar Buttons */
+.daterangepicker .drp-selected .drp-selected-left .drp-selected-left,
+.daterangepicker .drp-selected .drp-selected-right .drp-selected-right {
+  color: var(--text-primary) !important;
+}
+
+/* Embedded Date Range Picker */
+.embedded-daterangepicker {
+  background-color: var(--surface) !important;
+  border: 1px solid #1E2429 !important;
+  color: var(--text-primary) !important;
+}
+
+.embedded-daterangepicker .daterangepicker {
+  background-color: var(--surface) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Date Range Picker Input Fields */
+#daterangepicker-embedded-container input {
+  background-color: var(--bg-1) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid #1E2429 !important;
+}
+
+#daterangepicker-embedded-container input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--focus-outline) !important;
+}
+
+/* Date Range Picker Icons */
+.daterangepicker .fa,
+.daterangepicker .fas,
+.daterangepicker .far,
+.daterangepicker .fab {
+  color: var(--text-primary) !important;
+}
+
+/* Prev/Next Month Buttons */
+.daterangepicker .prev,
+.daterangepicker .next {
+  color: var(--text-primary) !important;
+}
+
+.daterangepicker .prev:hover,
+.daterangepicker .next:hover {
+  background-color: var(--accent) !important;
+  color: var(--bg-0) !important;
+}
+
+/* Month/Year Dropdown */
+.daterangepicker .monthselect,
+.daterangepicker .yearselect {
+  background-color: var(--bg-1) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid #1E2429 !important;
+}
+
+.daterangepicker .monthselect:focus,
+.daterangepicker .yearselect:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--focus-outline) !important;
+}
+
+/* Time Picker */
+.daterangepicker .time-picker {
+  background-color: var(--bg-1) !important;
+  color: var(--text-primary) !important;
+  border-top: 1px solid #1E2429 !important;
+}
+
+.daterangepicker .time-picker input {
+  background-color: var(--bg-1) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid #1E2429 !important;
+}
+
+.daterangepicker .time-picker input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--focus-outline) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .daterangepicker {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .daterangepicker .ranges {
+    width: 100% !important;
+  }
+  
+  .daterangepicker .calendar-table {
+    width: 100% !important;
+  }
+}
+
+/*============================================================================================*/
+/* PRINT STYLES */
+/*============================================================================================*/
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  header {
+    background: white !important;
+    color: black !important;
+  }
+}

@@ -95,6 +95,28 @@ header.fixed_header.sticky {
   top: 0 !important;
 }
 
+/* Ensure correct logo visibility on dark sticky header */
+header.reveal_header.headroom--not-top .logo_normal {
+  display: block !important;
+}
+header.reveal_header.headroom--not-top .logo_sticky {
+  display: none !important;
+}
+header.fixed_header.sticky .logo_normal {
+  display: inline-block !important;
+}
+header.fixed_header.sticky .logo_sticky {
+  display: none !important;
+}
+
+/* Prevent logo clipping and ensure visibility */
+header .logo_normal img,
+header .logo_sticky img {
+  max-height: 65px !important;
+  height: auto !important;
+  width: auto !important;
+}
+
 /* Hamburger menu */
 .hamburger_2 .hamburger__inner,
 .hamburger_2 .hamburger__inner::before,
@@ -415,8 +437,41 @@ footer .social ul li a:hover {
   z-index: 10000 !important;
 }
 
-.logo_panel {
-  background-color: var(--bg-1) !important;
+  .logo_panel {
+    background-color: var(--bg-1) !important;
+  }
+  
+  /* Make logo visible inside the dark nav panel */
+  .nav_panel .logo_panel {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 15px !important;
+  }
+  
+  .nav_panel .logo_panel img {
+    max-height: 65px !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
+    background: #FFFFFF !important; /* Strong white background */
+    border: 2px solid #D4AF37 !important; /* Gold border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important; /* Strong shadow */
+    opacity: 1 !important;
+    filter: none !important;
+  }
+  
+  /* Ensure logo is always visible */
+  .nav_panel .logo_panel {
+    background: linear-gradient(135deg, #1E2429 0%, #2A3441 100%) !important;
+    border: 1px solid #D4AF37 !important;
+    border-radius: 12px !important;
+    margin: 10px !important;
+  }
+  
+  .sidebar-navigation {
+  border-top: 1px solid #1E2429 !important;
 }
 
 .sidebar-navigation nav a {
@@ -433,12 +488,34 @@ footer .social ul li a:hover {
 }
 
 /* Ensure links inside list are visible */
+.sidebar-navigation nav ul {
+  background: var(--surface) !important;
+}
+
 .sidebar-navigation nav ul li a {
   color: var(--text-primary) !important;
 }
 
 .sidebar-navigation nav ul li a:hover {
   color: var(--accent) !important;
+}
+
+/* Mobile slide-in menu (main-menu) background */
+@media only screen and (max-width: 991px) {
+  .main-menu {
+    background-color: var(--surface) !important;
+  }
+  .main-menu #mainNav,
+  .main-menu #mainNav ul {
+    background-color: var(--surface) !important;
+  }
+  .main-menu #mainNav ul li a {
+    color: var(--text-primary) !important;
+  }
+  .main-menu #mainNav ul li a:hover,
+  .main-menu #mainNav ul li a.active {
+    color: var(--accent) !important;
+  }
 }
 
 .phone_element {

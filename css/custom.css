@@ -259,6 +259,8 @@ h1, h2, h3, h4, h5, h6 {
     top: unset;
     bottom: 35px;
     right: 10px;
+    left: auto;
+    transform: none;
   }
   
   .social-toggle-btn {
@@ -269,6 +271,16 @@ h1, h2, h3, h4, h5, h6 {
   
   .social-menu {
     gap: 10px;
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+    flex-direction: column-reverse;
+    bottom: 0;
+    top: auto;
+  }
+  
+  .social-menu.active {
+    transform: translateX(0);
   }
   
   .social-menu a {

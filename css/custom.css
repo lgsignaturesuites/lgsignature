@@ -96,19 +96,19 @@ h1, h2, h3, h4, h5, h6 {
         right: 1rem !important;
     }
     
-    /* Mobile Overlay Image - Double Size, Show Right Half */
-    .parallax-section div[style*="width: 90%"] {
+    /* Mobile Overlay Image - DISABLED */
+    /* .parallax-section div[style*="width: 90%"] {
         width: 150% !important;
         height: 90% !important;
         max-width: 180% !important;
         transform: scale(1.2) !important;
         transform-origin: right center !important;
         margin-left: -50% !important;
-    }
+    } */
 }
 
-/* Additional mobile breakpoint for smaller screens */
-@media (max-width: 480px) {
+/* Additional mobile breakpoint for smaller screens - DISABLED */
+/* @media (max-width: 480px) {
     .parallax-section div[style*="width: 90%"] {
         width: 140% !important;
         height: 80% !important;
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
         transform-origin: right center !important;
         margin-left: -30% !important;
     }
-}
+} */
 
 /* Mobile Booking Form Positioning - Move up below overlay image */
 @media (max-width: 768px) {

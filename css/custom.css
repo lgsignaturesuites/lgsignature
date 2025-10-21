@@ -119,6 +119,21 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Mobile Booking Form Positioning - Move up below overlay image */
+@media (max-width: 768px) {
+    .booking-form-container {
+        margin-top: -2rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-form-container {
+        margin-top: -6rem !important;
+        margin-bottom: 8rem !important;
+    }
+}
+
 /* Parallax Section Titles - Larger H2 Sizes */
 .parallax-section h2,
 .parallax-title {
@@ -200,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 600px) {
   .floating-social {
     top: unset;
-    bottom: 80px;
+    bottom: 35px;
     right: 10px;
     gap: 10px;
   }

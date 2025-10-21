@@ -281,10 +281,11 @@ a:hover, a:focus {
 }
 .title h2,
 .title h3 {
-  font-weight: 700;
-  font-size: 38px;
-  font-size: 2.375rem;
+  font-weight: 900;
+  font-size: 42px;
+  font-size: 2.625rem;
   margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
 }
 .title h3 {
   font-size: 31px;
@@ -2614,16 +2615,19 @@ footer .copy {
 
 .slide-text h2,
 .slide-text h3 {
-  font-size: 51px;
-  font-size: 3.1875rem;
+  font-size: 56px;
+  font-size: 3.5rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
 }
 @media (max-width: 767px) {
   .slide-text h2,
   .slide-text h3 {
     font-size: 42px;
     font-size: 2.625rem;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 .slide-text small {

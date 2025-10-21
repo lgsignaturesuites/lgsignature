@@ -46,6 +46,83 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+/* Header Logo Styling */
+.logo-text {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    -webkit-text-stroke: 0px rgba(0,0,0,0) !important;
+    text-stroke: 0.5px rgba(0,0,0,0.1) !important;
+    font-stretch: condensed !important;
+}
+
+/* Mobile Header Logo Styling */
+@media (max-width: 768px) {
+    .logo-text {
+        display: none !important;
+    }
+    
+    .logo-section {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .logo-section img {
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+        object-fit: contain !important;
+    }
+    
+    .header-inner {
+        justify-content: center !important;
+    }
+    
+    .mobile-menu-btn {
+        position: absolute !important;
+        right: 1rem !important;
+    }
+}
+
+/* Parallax Section Titles - Larger H2 Sizes */
+.parallax-section h2,
+.parallax-title {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 4.2rem !important;
+    letter-spacing: 0.1em !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Responsive Parallax Title Sizes */
+@media (min-width: 768px) {
+    .parallax-section h2,
+    .parallax-title {
+        font-size: 5.6rem !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .parallax-section h2,
+    .parallax-title {
+        font-size: 7rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax-section h2,
+    .parallax-title {
+        font-size: 2.8rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax-section h2,
+    .parallax-title {
+        font-size: 2.45rem !important;
+    }
+}
+
 /* Floating Social Icons */
 .floating-social-icons {
   position: fixed;

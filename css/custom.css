@@ -57,6 +57,19 @@ h1, h2, h3, h4, h5, h6 {
     font-stretch: condensed !important;
 }
 
+/* Header Navigation Styling */
+.desktop-nav a {
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+}
+
+.mobile-menu a {
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+}
+
 /* Mobile Header Logo Styling */
 @media (max-width: 768px) {
     .logo-text {
@@ -81,6 +94,28 @@ h1, h2, h3, h4, h5, h6 {
     .mobile-menu-btn {
         position: absolute !important;
         right: 1rem !important;
+    }
+    
+    /* Mobile Overlay Image - Double Size, Show Right Half */
+    .parallax-section div[style*="width: 90%"] {
+        width: 150% !important;
+        height: 90% !important;
+        max-width: 180% !important;
+        transform: scale(1.2) !important;
+        transform-origin: right center !important;
+        margin-left: -50% !important;
+    }
+}
+
+/* Additional mobile breakpoint for smaller screens */
+@media (max-width: 480px) {
+    .parallax-section div[style*="width: 90%"] {
+        width: 140% !important;
+        height: 80% !important;
+        max-width: 200% !important;
+        transform: scale(1.4) !important;
+        transform-origin: right center !important;
+        margin-left: -30% !important;
     }
 }
 

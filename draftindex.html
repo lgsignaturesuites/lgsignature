@@ -216,9 +216,108 @@
             color: #ccc;
         }
         
+        /* Info Bar Styles */
+        .info-bar {
+            background: rgba(118, 178, 196, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: white;
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 60;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .info-bar-left {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .info-item i {
+            font-size: 0.9rem;
+        }
+        
+        .info-item a {
+            color: white !important;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .info-item a:hover {
+            color: #e0f7ff !important;
+            text-decoration: none;
+        }
+        
+        .info-item {
+            color: white !important;
+        }
+        
+        .info-item i {
+            color: white !important;
+        }
+        
+        @media (max-width: 768px) {
+            .info-bar {
+                padding: 0.375rem 0;
+                font-size: 0.8rem;
+            }
+            
+            .info-bar-left {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .info-item {
+                gap: 0.375rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .info-bar {
+                padding: 0.125rem 0;
+                font-size: 0.7rem;
+                height: 1.5rem;
+                line-height: 1.5rem;
+            }
+            
+            .info-bar-content {
+                height: 1.5rem;
+                align-items: center;
+            }
+            
+            .info-bar-left {
+                gap: 0;
+                flex-direction: row;
+                justify-content: center;
+                height: 1.5rem;
+            }
+            
+        }
+
         .sticky-header {
             position: fixed !important;
-            top: 0 !important;
+            top: 1.5rem !important;
             left: 0 !important;
             right: 0 !important;
             z-index: 50 !important;
@@ -283,7 +382,7 @@
         }
         
         .btn-book-now-desktop {
-            background: #20B2AA !important;
+            background: #76b2c4 !important;
             color: white !important;
             padding: 0.5rem 1.25rem !important;
             border-radius: 6px !important;
@@ -297,7 +396,7 @@
         }
         
         .btn-book-now-desktop:hover {
-            background: #1a9b94 !important;
+            background: #5696aa !important;
             color: white !important;
             transform: translateY(-1px) !important;
             box-shadow: 0 4px 12px rgba(32, 178, 170, 0.4) !important;
@@ -332,6 +431,7 @@
             border: 1px solid rgba(255, 255, 255, 0.2) !important;
             border-radius: 8px !important;
             z-index: 50 !important;
+            margin-top: 0.5rem !important;
         }
         
         .mobile-menu a {
@@ -487,7 +587,7 @@
         }
         
         .booking-button {
-            background: #20B2AA;
+            background: #76b2c4;
             color: white;
             padding: 12px 30px;
             border: none;
@@ -503,9 +603,9 @@
         }
         
         .booking-button:hover {
-            background: #1a9b94;
+            background: #5696aa;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(32, 178, 170, 0.4);
+            box-shadow: 0 4px 12px rgba(118, 178, 196, 0.4);
         }
         
         /* Quantity Buttons */
@@ -721,6 +821,10 @@
         }
         
         @media (max-width: 768px) {
+            .sticky-header {
+                top: 1.5rem !important;
+            }
+            
             .logo-text {
                 font-size: 1.3rem !important;
             }
@@ -1048,6 +1152,22 @@
     </div><!-- /Page Preload -->
 
     <div class="layer"></div><!-- Opacity Mask -->
+
+    <!-- Info Bar -->
+    <div class="info-bar">
+        <div class="info-bar-content">
+            <div class="info-bar-left">
+                <span class="info-item">
+                    <i class="bi bi-envelope"></i>
+                    <a href="mailto:lgsignaturesuite@gmail.com">lgsignaturesuite@gmail.com</a>
+                </span>
+                <span class="info-item">
+                    <i class="bi bi-telephone"></i>
+                    <a href="tel:+919113929433">+91 9113929433</a>
+                </span>
+            </div>
+        </div>
+    </div>
 
     <!-- Sticky Header -->
     <header class="sticky-header">

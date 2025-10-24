@@ -139,6 +139,56 @@
             overflow: hidden;
         }
         
+        /* Mobile section height optimization */
+        @media (max-width: 768px) {
+            .parallax-section:not(:first-child) {
+                height: 50vh !important;
+                min-height: 50vh !important;
+            }
+            
+            /* Keep hero section at full height */
+            .parallax-section:first-child {
+                height: 100vh !important;
+                min-height: 100vh !important;
+            }
+            
+            /* Make sections wider for better image visibility */
+            .parallax-section {
+                width: 100vw !important;
+                margin-left: calc(-50vw + 50%) !important;
+                margin-right: calc(-50vw + 50%) !important;
+                left: 0 !important;
+                right: 0 !important;
+            }
+            
+            /* Optimize background images for mobile */
+            .parallax-bg {
+                background-size: cover !important;
+                background-position: center center !important;
+                background-attachment: scroll !important;
+                width: 100% !important;
+                height: 100% !important;
+            }
+            
+            /* Reduce padding for better content fit */
+            .parallax-content {
+                padding: 0 0.5rem !important;
+            }
+            
+            /* Optimize title size for mobile */
+            .parallax-title {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            /* Optimize button size for mobile */
+            .parallax-button {
+                padding: 0.75rem 1.25rem !important;
+                font-size: 0.9rem !important;
+            }
+        }
+        
         .parallax-bg {
             position: absolute;
             top: 0;
@@ -1111,58 +1161,6 @@
             }
         }
         
-        /* Mobile Pan Effect for Parallax Images */
-        @media (max-width: 768px) {
-            .parallax-bg {
-                transition: transform 0.1s ease-out;
-                cursor: grab;
-                touch-action: pan-y;
-                user-select: none;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-            }
-            
-            .parallax-bg:active {
-                cursor: grabbing;
-            }
-            
-            .parallax-bg.panning {
-                transition: none;
-                cursor: grabbing;
-            }
-            
-            /* Enhanced pan effect for mobile */
-            .parallax-bg.mobile-pan {
-                transform-origin: center center;
-                will-change: transform;
-                background-size: 110% auto; /* Slightly larger to allow panning */
-                background-position: center center;
-            }
-            
-            /* Improve touch responsiveness */
-            .parallax-section {
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
-            
-            /* Visual feedback for panning */
-            .parallax-bg.mobile-pan:active {
-                filter: brightness(1.05);
-            }
-        }
-        
-        /* Additional mobile optimizations */
-        @media (max-width: 480px) {
-            .parallax-bg.mobile-pan {
-                background-size: 120% auto; /* Even larger for smaller screens */
-            }
-        }
-        
         /* Hero section responsive adjustments */
         @media (max-width: 768px) {
             .parallax-section {
@@ -1528,219 +1526,10 @@ $(document).ready(function() {
             const elementOffset = scrolled - sectionOffset;
             
             if (elementOffset > -window.innerHeight && elementOffset < window.innerHeight) {
-                // Check if element has mobile pan transform
-                const mobilePanTransform = element.dataset.mobilePanTransform || '';
-                element.style.transform = `translateY(${elementOffset * 0.5}px) ${mobilePanTransform}`;
+                element.style.transform = `translateY(${elementOffset * 0.5}px)`;
             }
         });
     }
-    
-    // Mobile Pan Effect for Parallax Images
-    function initMobilePanEffect() {
-        const isMobile = window.innerWidth <= 768;
-        if (!isMobile) return;
-        
-        parallaxElements.forEach(element => {
-            let isPanning = false;
-            let startX = 0;
-            let startY = 0;
-            let currentX = 0;
-            let currentY = 0;
-            let panX = 0;
-            let panY = 0;
-            let isDragging = false;
-            
-            // Add mobile pan class
-            element.classList.add('mobile-pan');
-            
-            // Touch events
-            element.addEventListener('touchstart', function(e) {
-                if (e.touches.length === 1) {
-                    isPanning = true;
-                    isDragging = true;
-                    element.classList.add('panning');
-                    
-                    const touch = e.touches[0];
-                    startX = touch.clientX;
-                    startY = touch.clientY;
-                    
-                    // Prevent default to avoid scrolling
-                    e.preventDefault();
-                }
-            }, { passive: false });
-            
-            element.addEventListener('touchmove', function(e) {
-                if (isPanning && e.touches.length === 1) {
-                    const touch = e.touches[0];
-                    currentX = touch.clientX;
-                    currentY = touch.clientY;
-                    
-                    // Calculate pan distance
-                    const deltaX = (currentX - startX) * 0.3; // Reduce sensitivity
-                    const deltaY = (currentY - startY) * 0.3;
-                    
-                    // Apply pan transform
-                    panX = Math.max(-50, Math.min(50, deltaX));
-                    panY = Math.max(-50, Math.min(50, deltaY));
-                    
-                    const panTransform = `translate(${panX}px, ${panY}px)`;
-                    element.dataset.mobilePanTransform = panTransform;
-                    
-                    // Update transform with parallax
-                    const scrolled = window.pageYOffset;
-                    const sectionIndex = Array.from(parallaxElements).indexOf(element);
-                    const sectionOffset = window.innerHeight * sectionIndex;
-                    const elementOffset = scrolled - sectionOffset;
-                    
-                    if (elementOffset > -window.innerHeight && elementOffset < window.innerHeight) {
-                        element.style.transform = `translateY(${elementOffset * 0.5}px) ${panTransform}`;
-                    }
-                    
-                    e.preventDefault();
-                }
-            }, { passive: false });
-            
-            element.addEventListener('touchend', function(e) {
-                if (isPanning) {
-                    isPanning = false;
-                    isDragging = false;
-                    element.classList.remove('panning');
-                    
-                    // Gradually return to center
-                    const returnToCenter = () => {
-                        panX *= 0.9;
-                        panY *= 0.9;
-                        
-                        const panTransform = `translate(${panX}px, ${panY}px)`;
-                        element.dataset.mobilePanTransform = panTransform;
-                        
-                        // Update transform with parallax
-                        const scrolled = window.pageYOffset;
-                        const sectionIndex = Array.from(parallaxElements).indexOf(element);
-                        const sectionOffset = window.innerHeight * sectionIndex;
-                        const elementOffset = scrolled - sectionOffset;
-                        
-                        if (elementOffset > -window.innerHeight && elementOffset < window.innerHeight) {
-                            element.style.transform = `translateY(${elementOffset * 0.5}px) ${panTransform}`;
-                        }
-                        
-                        if (Math.abs(panX) > 0.1 || Math.abs(panY) > 0.1) {
-                            requestAnimationFrame(returnToCenter);
-                        } else {
-                            // Reset to center
-                            panX = 0;
-                            panY = 0;
-                            element.dataset.mobilePanTransform = '';
-                            element.style.transform = `translateY(${elementOffset * 0.5}px)`;
-                        }
-                    };
-                    
-                    requestAnimationFrame(returnToCenter);
-                }
-            });
-            
-            // Mouse events for desktop testing
-            element.addEventListener('mousedown', function(e) {
-                if (isMobile) return;
-                isPanning = true;
-                isDragging = true;
-                element.classList.add('panning');
-                
-                startX = e.clientX;
-                startY = e.clientY;
-                
-                e.preventDefault();
-            });
-            
-            element.addEventListener('mousemove', function(e) {
-                if (isPanning && isDragging) {
-                    currentX = e.clientX;
-                    currentY = e.clientY;
-                    
-                    const deltaX = (currentX - startX) * 0.3;
-                    const deltaY = (currentY - startY) * 0.3;
-                    
-                    panX = Math.max(-50, Math.min(50, deltaX));
-                    panY = Math.max(-50, Math.min(50, deltaY));
-                    
-                    const panTransform = `translate(${panX}px, ${panY}px)`;
-                    element.dataset.mobilePanTransform = panTransform;
-                    
-                    const scrolled = window.pageYOffset;
-                    const sectionIndex = Array.from(parallaxElements).indexOf(element);
-                    const sectionOffset = window.innerHeight * sectionIndex;
-                    const elementOffset = scrolled - sectionOffset;
-                    
-                    if (elementOffset > -window.innerHeight && elementOffset < window.innerHeight) {
-                        element.style.transform = `translateY(${elementOffset * 0.5}px) ${panTransform}`;
-                    }
-                }
-            });
-            
-            element.addEventListener('mouseup', function(e) {
-                if (isPanning) {
-                    isPanning = false;
-                    isDragging = false;
-                    element.classList.remove('panning');
-                    
-                    const returnToCenter = () => {
-                        panX *= 0.9;
-                        panY *= 0.9;
-                        
-                        const panTransform = `translate(${panX}px, ${panY}px)`;
-                        element.dataset.mobilePanTransform = panTransform;
-                        
-                        const scrolled = window.pageYOffset;
-                        const sectionIndex = Array.from(parallaxElements).indexOf(element);
-                        const sectionOffset = window.innerHeight * sectionIndex;
-                        const elementOffset = scrolled - sectionOffset;
-                        
-                        if (elementOffset > -window.innerHeight && elementOffset < window.innerHeight) {
-                            element.style.transform = `translateY(${elementOffset * 0.5}px) ${panTransform}`;
-                        }
-                        
-                        if (Math.abs(panX) > 0.1 || Math.abs(panY) > 0.1) {
-                            requestAnimationFrame(returnToCenter);
-                        } else {
-                            panX = 0;
-                            panY = 0;
-                            element.dataset.mobilePanTransform = '';
-                            element.style.transform = `translateY(${elementOffset * 0.5}px)`;
-                        }
-                    };
-                    
-                    requestAnimationFrame(returnToCenter);
-                }
-            });
-            
-            // Prevent context menu on long press
-            element.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-            });
-        });
-    }
-    
-    // Initialize mobile pan effect
-    initMobilePanEffect();
-    
-    // Reinitialize on window resize
-    let resizeTimeout;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function() {
-            // Remove existing pan effects
-            parallaxElements.forEach(element => {
-                element.classList.remove('mobile-pan', 'panning');
-                element.dataset.mobilePanTransform = '';
-                // Remove all event listeners by cloning the element
-                const newElement = element.cloneNode(true);
-                element.parentNode.replaceChild(newElement, element);
-            });
-            
-            // Reinitialize
-            initMobilePanEffect();
-        }, 250);
-    });
     
     // Throttle scroll events for better performance
     let ticking = false;

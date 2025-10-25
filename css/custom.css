@@ -77,8 +77,10 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .logo-section {
-        justify-content: center !important;
-        width: 100% !important;
+        justify-content: flex-start !important;
+        width: auto !important;
+        margin-right: auto !important;
+        flex: 1 !important;
     }
     
     .logo-section img {
@@ -88,12 +90,14 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .header-inner {
-        justify-content: center !important;
+        justify-content: flex-start !important;
     }
     
     .mobile-menu-btn {
-        position: absolute !important;
-        right: 1rem !important;
+        position: static !important;
+        right: auto !important;
+        margin-left: auto !important;
+        flex-shrink: 0 !important;
     }
     
     /* Mobile Overlay Image - DISABLED */

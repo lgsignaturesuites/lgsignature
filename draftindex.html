@@ -146,10 +146,10 @@
                 min-height: 50vh !important;
             }
             
-            /* Reduce hero section height for mobile */
+            /* Hero section height for mobile - reduced to show full video width */
             .parallax-section:first-child {
-                height: 60vh !important;
-                min-height: 60vh !important;
+                height: 45vh !important;
+                min-height: 45vh !important;
             }
             
             /* Make sections wider for better image visibility */
@@ -198,20 +198,41 @@
                 right: 0 !important;
             }
             
-            /* Video container optimization */
+            /* Video container optimization - fit full width without cropping */
             .parallax-section:first-child video {
                 width: 100% !important;
                 height: 100% !important;
                 object-fit: cover !important;
-                transform: scale(1.1) !important;
+                object-position: center center !important;
+                transform: scale(1) !important;
                 transform-origin: center center !important;
             }
             
-            /* Overlay image optimization for mobile */
+            /* Video wrapper to ensure proper sizing */
+            .parallax-section:first-child .parallax-bg {
+                overflow: hidden !important;
+            }
+            
+            /* Overlay image optimization for mobile - centered with proper spacing */
+            .parallax-section:first-child > div[style*="display: flex"] {
+                padding-top: 8.5rem !important;
+                padding-bottom: 1.5rem !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+            
             .parallax-section:first-child div[style*="width: 90%"] {
+                width: 95% !important;
+                height: auto !important;
+                margin: 0 !important;
+                flex-shrink: 0 !important;
+            }
+            
+            .parallax-section:first-child div[style*="width: 90%"] img {
                 width: 100% !important;
-                height: 50% !important;
-                margin-bottom: 1rem !important;
+                height: auto !important;
+                max-height: 35vh !important;
+                object-fit: contain !important;
             }
         }
         
@@ -234,95 +255,7 @@
             }
         }
         
-        /* Mobile booking button with glow animation */
-        @media (max-width: 768px) {
-            .mobile-booking-button-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 1rem;
-                position: relative;
-                z-index: 10;
-            }
-            
-            .mobile-booking-button {
-                background: linear-gradient(135deg, #76b2c4, #5696aa);
-                color: white;
-                border: none;
-                border-radius: 50px;
-                padding: 1rem 2.5rem;
-                font-size: 1.1rem;
-                font-weight: 600;
-                letter-spacing: 0.5px;
-                text-transform: uppercase;
-                cursor: pointer;
-                position: relative;
-                overflow: hidden;
-                transition: all 0.3s ease;
-                box-shadow: 0 8px 25px rgba(118, 178, 196, 0.3);
-                display: flex;
-                align-items: center;
-                gap: 0.75rem;
-                min-width: 200px;
-                justify-content: center;
-            }
-            
-            .mobile-booking-button::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                border-radius: 50px;
-                padding: 2px;
-                background: linear-gradient(45deg, #76b2c4, #5696aa, #76b2c4, #4a7a8a);
-                background-size: 300% 300%;
-                animation: borderGlow 3s ease-in-out infinite;
-                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-                mask-composite: exclude;
-                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-                -webkit-mask-composite: xor;
-            }
-            
-            .mobile-booking-button:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 12px 35px rgba(118, 178, 196, 0.4);
-            }
-            
-            .mobile-booking-button:active {
-                transform: translateY(0);
-            }
-            
-            .button-text {
-                position: relative;
-                z-index: 2;
-            }
-            
-            .button-icon {
-                position: relative;
-                z-index: 2;
-                font-size: 1.2rem;
-                transition: transform 0.3s ease;
-            }
-            
-            .mobile-booking-button:hover .button-icon {
-                transform: translateX(3px);
-            }
-            
-            @keyframes borderGlow {
-                0% {
-                    background-position: 0% 50%;
-                }
-                50% {
-                    background-position: 100% 50%;
-                }
-                100% {
-                    background-position: 0% 50%;
-                }
-            }
-        }
-        
+
         .parallax-bg {
             position: absolute;
             top: 0;
@@ -1457,23 +1390,12 @@
             
             <!-- Overlay Image -->
             <div style="position: relative; z-index: 20; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 1rem;">
-                <div style="width: 90%; height: 60%; position: relative; margin-bottom: 2rem;">
+                <div style="width: 90%; height: 60%; position: relative;">
                     <img
                         src="img/overlaylgsignature.avif"
                         alt="LG Signature Suites Overlay"
                         style="width: 100%; height: 100%; object-fit: contain;"
                     />
-                </div>
-                
-                <!-- Mobile Booking Button -->
-                <div class="mobile-booking-button-container mobile-only">
-                    <button 
-                        class="mobile-booking-button" 
-                        onclick="window.location.href='https://live.ipms247.com/booking/book-rooms-Lgsignature'"
-                    >
-                        <span class="button-text">Book Now</span>
-                        <span class="button-icon">→</span>
-                    </button>
                 </div>
                 
                 <!-- Booking Form - Desktop Only -->
@@ -1694,7 +1616,7 @@ $(document).ready(function() {
             // Only start parallax after 20% of section is scrolled
             if (elementOffset > delayThreshold && elementOffset < sectionHeight) {
                 const adjustedOffset = elementOffset - delayThreshold;
-                const parallaxRate = 0.5;
+                const parallaxRate = 0.8;
                 element.style.transform = `translateY(${adjustedOffset * parallaxRate}px)`;
             } else if (elementOffset <= delayThreshold) {
                 // Reset position when not yet at 20% threshold

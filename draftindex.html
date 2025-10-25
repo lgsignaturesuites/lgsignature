@@ -234,70 +234,92 @@
             }
         }
         
-        /* Separate booking form container for mobile */
+        /* Mobile booking button with glow animation */
         @media (max-width: 768px) {
-            .mobile-booking-container {
-                background: linear-gradient(135deg, 
-                    rgba(255, 255, 255, 0.95) 0%, 
-                    rgba(255, 255, 255, 0.85) 50%, 
-                    rgba(255, 255, 255, 0.9) 100%);
-                backdrop-filter: blur(25px);
-                -webkit-backdrop-filter: blur(25px);
-                border-radius: 0;
-                padding: 3rem 2rem;
-                margin: 0;
-                width: 100vw;
-                margin-left: calc(-50vw + 50%);
-                margin-right: calc(-50vw + 50%);
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-                border: none;
+            .mobile-booking-button-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1rem;
                 position: relative;
                 z-index: 10;
-                min-height: 40vh;
+            }
+            
+            .mobile-booking-button {
+                background: linear-gradient(135deg, #76b2c4, #5696aa);
+                color: white;
+                border: none;
+                border-radius: 50px;
+                padding: 1rem 2.5rem;
+                font-size: 1.1rem;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                box-shadow: 0 8px 25px rgba(118, 178, 196, 0.3);
                 display: flex;
                 align-items: center;
+                gap: 0.75rem;
+                min-width: 200px;
                 justify-content: center;
             }
             
-            .mobile-booking-container .booking-form-grid {
-                flex-direction: column;
-                gap: 1.5rem;
-                max-width: 500px;
-                width: 100%;
+            .mobile-booking-button::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 50px;
+                padding: 2px;
+                background: linear-gradient(45deg, #76b2c4, #5696aa, #76b2c4, #4a7a8a);
+                background-size: 300% 300%;
+                animation: borderGlow 3s ease-in-out infinite;
+                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask-composite: exclude;
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
             }
             
-            .mobile-booking-container .booking-field {
-                width: 100%;
+            .mobile-booking-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 12px 35px rgba(118, 178, 196, 0.4);
             }
             
-            .mobile-booking-container .booking-button {
-                width: 100%;
-                padding: 15px 25px;
-                font-size: 16px;
-                height: 50px;
-                font-weight: 600;
-                border-radius: 8px;
+            .mobile-booking-button:active {
+                transform: translateY(0);
             }
             
-            .mobile-booking-container .booking-label {
-                font-size: 1rem;
-                font-weight: 600;
-                color: #333;
-                margin-bottom: 0.75rem;
+            .button-text {
+                position: relative;
+                z-index: 2;
             }
             
-            .mobile-booking-container .booking-input {
-                padding: 15px 18px;
-                font-size: 16px;
-                border-radius: 8px;
-                border: 2px solid rgba(118, 178, 196, 0.2);
-                background: rgba(255, 255, 255, 0.9);
+            .button-icon {
+                position: relative;
+                z-index: 2;
+                font-size: 1.2rem;
+                transition: transform 0.3s ease;
             }
             
-            .mobile-booking-container .qty-buttons-wrapper {
-                border-radius: 8px;
-                border: 2px solid rgba(118, 178, 196, 0.2);
-                background: rgba(255, 255, 255, 0.9);
+            .mobile-booking-button:hover .button-icon {
+                transform: translateX(3px);
+            }
+            
+            @keyframes borderGlow {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
             }
         }
         
@@ -1443,6 +1465,17 @@
                     />
                 </div>
                 
+                <!-- Mobile Booking Button -->
+                <div class="mobile-booking-button-container mobile-only">
+                    <button 
+                        class="mobile-booking-button" 
+                        onclick="window.location.href='https://live.ipms247.com/booking/book-rooms-Lgsignature'"
+                    >
+                        <span class="button-text">Book Now</span>
+                        <span class="button-icon">→</span>
+                    </button>
+                </div>
+                
                 <!-- Booking Form - Desktop Only -->
                 <div class="booking-form-container desktop-only">
                     <div class="booking-form-grid">
@@ -1494,54 +1527,6 @@
             </div>
         </section>
 
-        <!-- Mobile Booking Form Container -->
-        <div class="mobile-booking-container mobile-only">
-            <div class="booking-form-grid">
-                <!-- Date Range Picker -->
-                <div class="booking-field">
-                    <div class="input-wrapper">
-                        <input 
-                            class="booking-input" 
-                            type="text" 
-                            name="dates_mobile" 
-                            placeholder="Check in / Check out" 
-                            readonly="readonly"
-                        />
-                        <i class="bi bi-calendar2 input-icon-single"></i>
-                    </div>
-                </div>
-                
-                <!-- Adults -->
-                <div class="booking-field">
-                    <label class="booking-label">Adults</label>
-                    <div class="qty-buttons-wrapper">
-                        <button type="button" class="qtyminus" name="adults_mobile">-</button>
-                        <input type="text" name="adults_mobile" id="adults_mobile" value="2" class="qty" readonly>
-                        <button type="button" class="qtyplus" name="adults_mobile">+</button>
-                    </div>
-                </div>
-                
-                <!-- Children -->
-                <div class="booking-field">
-                    <label class="booking-label">Children</label>
-                    <div class="qty-buttons-wrapper">
-                        <button type="button" class="qtyminus" name="childs_mobile">-</button>
-                        <input type="text" name="childs_mobile" id="childs_mobile" value="0" class="qty" readonly>
-                        <button type="button" class="qtyplus" name="childs_mobile">+</button>
-                    </div>
-                </div>
-                
-                <!-- Search Button -->
-                <div class="booking-button-container">
-                    <input 
-                        type="submit" 
-                        class="booking-button" 
-                        value="Search" 
-                        onclick="window.location.href='https://live.ipms247.com/booking/book-rooms-Lgsignature'"
-                    />
-                </div>
-            </div>
-        </div>
 
         <!-- Rooms Section -->
         <section class="parallax-section" id="rooms">
@@ -1771,11 +1756,9 @@ $(document).ready(function() {
         }
     });
     
-    // Initialize quantity inputs with proper values for both desktop and mobile
+    // Initialize quantity inputs with proper values
     $("input[name='adults']").val(2);
     $("input[name='childs']").val(0);
-    $("input[name='adults_mobile']").val(2);
-    $("input[name='childs_mobile']").val(0);
     
     // Override date range picker to prevent conflicts for desktop
     $('input[name="dates"]').off().daterangepicker({
@@ -1798,26 +1781,6 @@ $(document).ready(function() {
         $(this).val('');
     });
     
-    // Mobile date range picker
-    $('input[name="dates_mobile"]').off().daterangepicker({
-        autoUpdateInput: false,
-        autoApply: true,
-        alwaysShowCalendars: true,
-        opens: 'center',
-        minDate: new Date(),
-        locale: {
-            format: 'MM-DD-YYYY',
-            cancelLabel: 'Clear'
-        }
-    });
-    
-    $('input[name="dates_mobile"]').on('apply.daterangepicker', function(ev, picker) {
-        $(this).val(picker.startDate.format('MM-DD-YYYY') + ' to ' + picker.endDate.format('MM-DD-YYYY'));
-    });
-    
-    $('input[name="dates_mobile"]').on('cancel.daterangepicker', function(ev, picker) {
-        $(this).val('');
-    });
     
     }, 100); // End of setTimeout
     

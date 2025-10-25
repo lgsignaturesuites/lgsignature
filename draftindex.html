@@ -1514,19 +1514,28 @@ $(document).ready(function() {
         });
     }
     
-    // Parallax scrolling effect
+    // Parallax scrolling effect with 20% delay
     const parallaxElements = document.querySelectorAll('.parallax-bg');
     
     function updateParallax() {
         const scrolled = window.pageYOffset;
         
         parallaxElements.forEach((element, index) => {
-            const rate = scrolled * -0.5;
             const sectionOffset = window.innerHeight * index;
             const elementOffset = scrolled - sectionOffset;
+            const sectionHeight = window.innerHeight;
             
-            if (elementOffset > -window.innerHeight && elementOffset < window.innerHeight) {
-                element.style.transform = `translateY(${elementOffset * 0.5}px)`;
+            // Calculate 20% of section height
+            const delayThreshold = sectionHeight * 0.2;
+            
+            // Only start parallax after 20% of section is scrolled
+            if (elementOffset > delayThreshold && elementOffset < sectionHeight) {
+                const adjustedOffset = elementOffset - delayThreshold;
+                const parallaxRate = 0.5;
+                element.style.transform = `translateY(${adjustedOffset * parallaxRate}px)`;
+            } else if (elementOffset <= delayThreshold) {
+                // Reset position when not yet at 20% threshold
+                element.style.transform = 'translateY(0px)';
             }
         });
     }

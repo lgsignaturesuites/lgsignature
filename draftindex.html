@@ -1275,6 +1275,75 @@
                 font-size: 0.9rem;
             }
         }
+        
+        /* Floating Book Now Button */
+        .floating-book-now {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+        }
+        
+        .book-now-btn {
+            background: rgba(118, 178, 196, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .book-now-btn:hover {
+            background: rgba(118, 178, 196, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+            text-decoration: none;
+            color: white;
+        }
+        
+        .book-now-btn i {
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-book-now {
+                bottom: 1.5rem;
+            }
+            
+            .book-now-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.875rem;
+            }
+        }
+        
+        @media (max-width: 280px) {
+            .floating-book-now {
+                bottom: 1rem;
+                left: 1rem;
+                right: 1rem;
+                transform: none;
+            }
+            
+            .book-now-btn {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -1369,6 +1438,14 @@
                 </svg>
             </a>
         </div>
+    </div>
+
+    <!-- Floating Book Now Button -->
+    <div class="floating-book-now">
+        <a href="https://live.ipms247.com/booking/book-rooms-Lgsignature" class="book-now-btn">
+            <i class="bi bi-calendar-check"></i>
+            <span>Book Now</span>
+        </a>
     </div>
 
     <main>
@@ -1602,6 +1679,9 @@ $(document).ready(function() {
     // Parallax scrolling effect with 20% delay
     const parallaxElements = document.querySelectorAll('.parallax-bg');
     
+    // Detect if mobile device
+    const isMobile = window.innerWidth <= 768;
+    
     function updateParallax() {
         const scrolled = window.pageYOffset;
         
@@ -1616,7 +1696,8 @@ $(document).ready(function() {
             // Only start parallax after 20% of section is scrolled
             if (elementOffset > delayThreshold && elementOffset < sectionHeight) {
                 const adjustedOffset = elementOffset - delayThreshold;
-                const parallaxRate = 0.8;
+                // Increase parallax rate for mobile for stronger effect
+                const parallaxRate = isMobile ? 1.2 : 0.5;
                 element.style.transform = `translateY(${adjustedOffset * parallaxRate}px)`;
             } else if (elementOffset <= delayThreshold) {
                 // Reset position when not yet at 20% threshold

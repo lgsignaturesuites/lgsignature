@@ -1350,6 +1350,12 @@
             display: none !important;
         }
         
+        .floating-social-collapsible {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
         .social-menu {
             display: flex !important;
             flex-direction: column !important;
@@ -1360,11 +1366,277 @@
             position: relative !important;
             right: auto !important;
             bottom: auto !important;
+            pointer-events: all !important;
         }
         
         @media (max-width: 600px) {
             .social-menu {
                 gap: 10px !important;
+            }
+        }
+        
+        /* Chatbot Floating Button and Window */
+        .chatbot-container {
+            position: relative;
+            z-index: 1000;
+            margin-bottom: 15px;
+        }
+        
+        .chatbot-toggle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            outline: none;
+            margin-bottom: 15px;
+        }
+        
+        .chatbot-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+        }
+        
+        .chatbot-toggle i {
+            transition: transform 0.3s ease;
+        }
+        
+        .chatbot-toggle.active i {
+            transform: rotate(180deg);
+        }
+        
+        .chatbot-window {
+            position: fixed;
+            bottom: 2rem;
+            right: 5rem;
+            width: 350px;
+            max-height: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 16px;
+            box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .chatbot-window.active {
+            display: flex;
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .chatbot-header {
+            background: linear-gradient(135deg, rgba(118, 178, 196, 0.9), rgba(118, 178, 196, 0.7));
+            padding: 1rem 1.25rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+        
+        .chatbot-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .chatbot-messages {
+            flex: 1;
+            padding: 1.25rem;
+            overflow-y: auto;
+            max-height: 320px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        .chatbot-message {
+            margin-bottom: 1rem;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .bot-message {
+            background: white;
+            padding: 0.75rem 1rem;
+            border-radius: 12px 12px 12px 4px;
+            color: #333;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 85%;
+        }
+        
+        .user-message {
+            background: linear-gradient(135deg, rgba(118, 178, 196, 0.9), rgba(118, 178, 196, 0.7));
+            padding: 0.75rem 1rem;
+            border-radius: 12px 12px 4px 12px;
+            color: white;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-left: auto;
+            max-width: 85%;
+        }
+        
+        .chatbot-options {
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .chatbot-option-btn {
+            background: rgba(118, 178, 196, 0.1);
+            border: 1px solid rgba(118, 178, 196, 0.3);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            color: #333;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-weight: 500;
+        }
+        
+        .chatbot-option-btn:hover {
+            background: rgba(118, 178, 196, 0.2);
+            border-color: rgba(118, 178, 196, 0.5);
+            transform: translateX(4px);
+        }
+        
+        .chatbot-input-area {
+            padding: 1rem 1.25rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .chatbot-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid rgba(118, 178, 196, 0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .chatbot-input:focus {
+            border-color: rgba(118, 178, 196, 0.6);
+            box-shadow: 0 0 0 3px rgba(118, 178, 196, 0.1);
+        }
+        
+        .chatbot-send {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(118, 178, 196, 0.9), rgba(118, 178, 196, 0.7));
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .chatbot-send:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(118, 178, 196, 0.4);
+        }
+        
+        .chatbot-send:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        @media (max-width: 768px) {
+            .chatbot-container {
+                top: unset;
+                bottom: 35px;
+                right: 10px;
+                transform: none;
+            }
+            
+            .chatbot-window {
+                width: 320px;
+                max-height: 450px;
+                bottom: 50px;
+                right: 10px;
+            }
+            
+            .chatbot-toggle {
+                width: 38px;
+                height: 38px;
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .chatbot-container {
+                bottom: 35px;
+                right: 10px;
+            }
+            
+            .chatbot-window {
+                width: calc(100vw - 1.5rem);
+                max-height: 400px;
+                right: 0.75rem;
+                bottom: 50px;
+            }
+            
+            .chatbot-toggle {
+                width: 38px;
+                height: 38px;
             }
         }
     </style>
@@ -1431,8 +1703,63 @@
         </div>
     </header>
 
-    <!-- Floating Social Media Icons - Always Visible -->
+    <!-- Floating Social Media Icons with Chatbot - Always Visible -->
     <div class="floating-social-collapsible">
+        <!-- Chatbot Widget -->
+        <div class="chatbot-container">
+            <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open chat">
+                <i class="bi bi-chat-dots-fill"></i>
+            </button>
+            
+            <div class="chatbot-window" id="chatbot-window">
+                <div class="chatbot-header">
+                    <h3>LG Signature Concierge</h3>
+                    <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                
+                <div class="chatbot-messages" id="chatbot-messages">
+                    <div class="chatbot-message">
+                        <div class="bot-message">
+                            Hello! 👋 Welcome to LG Signature Suites. How can I assist you today?
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chatbot-options" id="chatbot-options">
+                    <button class="chatbot-option-btn" data-question="room-availability">
+                        🛏️ Check Room Availability
+                    </button>
+                    <button class="chatbot-option-btn" data-question="amenities">
+                        ✨ What amenities do you offer?
+                    </button>
+                    <button class="chatbot-option-btn" data-question="location">
+                        📍 Location & Directions
+                    </button>
+                    <button class="chatbot-option-btn" data-question="pricing">
+                        💰 Room Rates & Packages
+                    </button>
+                    <button class="chatbot-option-btn" data-question="contact">
+                        📞 Contact Information
+                    </button>
+                </div>
+                
+                <div class="chatbot-input-area">
+                    <input 
+                        type="text" 
+                        class="chatbot-input" 
+                        id="chatbot-input" 
+                        placeholder="Type your message..."
+                        aria-label="Chat input"
+                    >
+                    <button class="chatbot-send" id="chatbot-send" aria-label="Send message">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
         <div class="social-menu" id="social-menu">
             <a href="https://g.page/r/CYLwnGL5wWz8EBM/review" target="_blank" title="Google Review">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -1461,6 +1788,61 @@
             <i class="bi bi-calendar-check"></i>
             <span>Book Now</span>
         </a>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open chat">
+            <i class="bi bi-chat-dots-fill"></i>
+        </button>
+        
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h3>LG Signature Concierge</h3>
+                <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="chatbot-message">
+                    <div class="bot-message">
+                        Hello! 👋 Welcome to LG Signature Suites. How can I assist you today?
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-options" id="chatbot-options">
+                <button class="chatbot-option-btn" data-question="room-availability">
+                    🛏️ Check Room Availability
+                </button>
+                <button class="chatbot-option-btn" data-question="amenities">
+                    ✨ What amenities do you offer?
+                </button>
+                <button class="chatbot-option-btn" data-question="location">
+                    📍 Location & Directions
+                </button>
+                <button class="chatbot-option-btn" data-question="pricing">
+                    💰 Room Rates & Packages
+                </button>
+                <button class="chatbot-option-btn" data-question="contact">
+                    📞 Contact Information
+                </button>
+            </div>
+            
+            <div class="chatbot-input-area">
+                <input 
+                    type="text" 
+                    class="chatbot-input" 
+                    id="chatbot-input" 
+                    placeholder="Type your message..."
+                    aria-label="Chat input"
+                >
+                <button class="chatbot-send" id="chatbot-send" aria-label="Send message">
+                    <i class="bi bi-send-fill"></i>
+                </button>
+            </div>
+        </div>
     </div>
 
     <main>
@@ -1801,6 +2183,189 @@ $(document).ready(function() {
     
     
     }, 100); // End of setTimeout
+    
+    // Chatbot functionality
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotWindow = document.getElementById('chatbot-window');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+    const chatbotOptions = document.getElementById('chatbot-options');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+    
+    const whatsappNumber = '919113929433'; // WhatsApp number for redirection
+    
+    // Conversation responses
+    const responses = {
+        'room-availability': {
+            message: 'I can help you check room availability! Would you like to:',
+            options: [
+                { text: '📅 Book a room now', action: 'book' },
+                { text: '💬 Chat with us on WhatsApp', action: 'whatsapp' }
+            ]
+        },
+        'amenities': {
+            message: 'We offer premium amenities including free WiFi, air conditioning, flat-screen TVs, room service, and more! Would you like to:',
+            options: [
+                { text: '📋 See full amenities list', action: 'whatsapp' },
+                { text: '🏨 Book a room', action: 'book' }
+            ]
+        },
+        'location': {
+            message: 'We are located in Bengaluru, Karnataka. Would you like:',
+            options: [
+                { text: '🗺️ Get directions on WhatsApp', action: 'whatsapp' },
+                { text: '📞 Call for assistance', action: 'whatsapp' }
+            ]
+        },
+        'pricing': {
+            message: 'Our room rates vary by season and availability. For current pricing:',
+            options: [
+                { text: '💰 Get pricing details on WhatsApp', action: 'whatsapp' },
+                { text: '🛏️ Check availability & book', action: 'book' }
+            ]
+        },
+        'contact': {
+            message: 'You can reach us via:',
+            options: [
+                { text: '💬 WhatsApp: +91 91139 29433', action: 'whatsapp' },
+                { text: '📧 Email us', action: 'whatsapp' }
+            ]
+        }
+    };
+    
+    // Toggle chatbot window
+    function toggleChatbot() {
+        chatbotWindow.classList.toggle('active');
+        chatbotToggle.classList.toggle('active');
+        if (chatbotWindow.classList.contains('active')) {
+            chatbotInput.focus();
+        }
+    }
+    
+    chatbotToggle.addEventListener('click', toggleChatbot);
+    chatbotClose.addEventListener('click', toggleChatbot);
+    
+    // Add message to chat
+    function addMessage(text, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'chatbot-message';
+        messageDiv.innerHTML = `
+            <div class="${isUser ? 'user-message' : 'bot-message'}">
+                ${text}
+            </div>
+        `;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+    
+    // Show response options
+    function showOptions(options) {
+        chatbotOptions.innerHTML = '';
+        options.forEach(option => {
+            const btn = document.createElement('button');
+            btn.className = 'chatbot-option-btn';
+            btn.textContent = option.text;
+            btn.addEventListener('click', () => {
+                if (option.action === 'whatsapp') {
+                    redirectToWhatsApp(option.text);
+                } else if (option.action === 'book') {
+                    window.open('https://live.ipms247.com/booking/book-rooms-Lgsignature', '_blank');
+                    addMessage('Great! Opening our booking page for you...', false);
+                    setTimeout(() => {
+                        showInitialOptions();
+                    }, 1500);
+                }
+            });
+            chatbotOptions.appendChild(btn);
+        });
+    }
+    
+    // Show initial question options
+    function showInitialOptions() {
+        chatbotOptions.innerHTML = `
+            <button class="chatbot-option-btn" data-question="room-availability">
+                🛏️ Check Room Availability
+            </button>
+            <button class="chatbot-option-btn" data-question="amenities">
+                ✨ What amenities do you offer?
+            </button>
+            <button class="chatbot-option-btn" data-question="location">
+                📍 Location & Directions
+            </button>
+            <button class="chatbot-option-btn" data-question="pricing">
+                💰 Room Rates & Packages
+            </button>
+            <button class="chatbot-option-btn" data-question="contact">
+                📞 Contact Information
+            </button>
+        `;
+        
+        // Re-attach event listeners
+        document.querySelectorAll('.chatbot-option-btn').forEach(btn => {
+            btn.addEventListener('click', handleQuestionClick);
+        });
+    }
+    
+    // Handle question button clicks
+    function handleQuestionClick(e) {
+        const question = e.currentTarget.dataset.question;
+        const questionText = e.currentTarget.textContent.trim();
+        
+        // Add user's question to chat
+        addMessage(questionText, true);
+        
+        // Get and display bot response
+        const response = responses[question];
+        if (response) {
+            setTimeout(() => {
+                addMessage(response.message, false);
+                showOptions(response.options);
+            }, 500);
+        }
+    }
+    
+    // Redirect to WhatsApp
+    function redirectToWhatsApp(context = '') {
+        const message = context ? `Hi, I'm interested in: ${context}` : 'Hi, I have a question about LG Signature Suites';
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+        
+        addMessage('Redirecting you to WhatsApp...', false);
+        setTimeout(() => {
+            showInitialOptions();
+        }, 1500);
+    }
+    
+    // Handle custom user input
+    function handleUserMessage() {
+        const message = chatbotInput.value.trim();
+        if (!message) return;
+        
+        addMessage(message, true);
+        chatbotInput.value = '';
+        
+        // Bot response for custom messages
+        setTimeout(() => {
+            addMessage('Thank you for your message! Let me connect you with our team on WhatsApp for personalized assistance.', false);
+            setTimeout(() => {
+                redirectToWhatsApp(message);
+            }, 1000);
+        }, 500);
+    }
+    
+    // Event listeners for input
+    chatbotSend.addEventListener('click', handleUserMessage);
+    chatbotInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            handleUserMessage();
+        }
+    });
+    
+    // Initial question button listeners
+    document.querySelectorAll('.chatbot-option-btn').forEach(btn => {
+        btn.addEventListener('click', handleQuestionClick);
+    });
     
 }); // End of document ready
 </script>

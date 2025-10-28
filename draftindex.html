@@ -1350,12 +1350,6 @@
             display: none !important;
         }
         
-        .floating-social-collapsible {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
         .social-menu {
             display: flex !important;
             flex-direction: column !important;
@@ -1377,20 +1371,22 @@
         
         /* Chatbot Floating Button and Window */
         .chatbot-container {
-            position: relative;
+            position: fixed;
+            bottom: 5.5rem;
+            left: 2rem;
             z-index: 1000;
-            margin-bottom: 15px;
         }
         
         .chatbot-toggle {
-            width: 48px;
-            height: 48px;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(118, 178, 196, 0.15);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.18);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 
+                        0 0 20px rgba(118, 178, 196, 0.4);
             color: white;
             cursor: pointer;
             display: flex;
@@ -1398,14 +1394,28 @@
             justify-content: center;
             font-size: 1.5rem;
             transition: all 0.3s ease;
+            border: none;
             outline: none;
-            margin-bottom: 15px;
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 
+                            0 0 20px rgba(118, 178, 196, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 
+                            0 0 30px rgba(118, 178, 196, 0.6);
+            }
         }
         
         .chatbot-toggle:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(118, 178, 196, 0.25);
             transform: translateY(-2px);
-            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5),
+                        0 0 35px rgba(118, 178, 196, 0.7);
+            animation: none;
         }
         
         .chatbot-toggle i {
@@ -1417,9 +1427,9 @@
         }
         
         .chatbot-window {
-            position: fixed;
-            bottom: 2rem;
-            right: 5rem;
+            position: absolute;
+            bottom: 70px;
+            left: 0;
             width: 350px;
             max-height: 500px;
             background: rgba(255, 255, 255, 0.95);
@@ -1432,14 +1442,14 @@
             flex-direction: column;
             overflow: hidden;
             opacity: 0;
-            transform: translateX(20px);
+            transform: translateY(20px);
             transition: all 0.3s ease;
         }
         
         .chatbot-window.active {
             display: flex;
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
         }
         
         .chatbot-header {
@@ -1600,43 +1610,37 @@
         
         @media (max-width: 768px) {
             .chatbot-container {
-                top: unset;
-                bottom: 35px;
-                right: 10px;
-                transform: none;
+                bottom: 4.5rem;
+                left: 1rem;
             }
             
             .chatbot-window {
                 width: 320px;
                 max-height: 450px;
-                bottom: 50px;
-                right: 10px;
             }
             
             .chatbot-toggle {
-                width: 38px;
-                height: 38px;
-                font-size: 1.1rem;
-                margin-bottom: 10px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
             }
         }
         
         @media (max-width: 480px) {
             .chatbot-container {
-                bottom: 35px;
-                right: 10px;
+                bottom: 4rem;
+                left: 0.75rem;
+                right: 0.75rem;
             }
             
             .chatbot-window {
                 width: calc(100vw - 1.5rem);
                 max-height: 400px;
-                right: 0.75rem;
-                bottom: 50px;
             }
             
             .chatbot-toggle {
-                width: 38px;
-                height: 38px;
+                width: 48px;
+                height: 48px;
             }
         }
     </style>
@@ -1703,63 +1707,8 @@
         </div>
     </header>
 
-    <!-- Floating Social Media Icons with Chatbot - Always Visible -->
+    <!-- Floating Social Media Icons - Always Visible -->
     <div class="floating-social-collapsible">
-        <!-- Chatbot Widget -->
-        <div class="chatbot-container">
-            <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open chat">
-                <i class="bi bi-chat-dots-fill"></i>
-            </button>
-            
-            <div class="chatbot-window" id="chatbot-window">
-                <div class="chatbot-header">
-                    <h3>LG Signature Concierge</h3>
-                    <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">
-                        <i class="bi bi-x"></i>
-                    </button>
-                </div>
-                
-                <div class="chatbot-messages" id="chatbot-messages">
-                    <div class="chatbot-message">
-                        <div class="bot-message">
-                            Hello! 👋 Welcome to LG Signature Suites. How can I assist you today?
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="chatbot-options" id="chatbot-options">
-                    <button class="chatbot-option-btn" data-question="room-availability">
-                        🛏️ Check Room Availability
-                    </button>
-                    <button class="chatbot-option-btn" data-question="amenities">
-                        ✨ What amenities do you offer?
-                    </button>
-                    <button class="chatbot-option-btn" data-question="location">
-                        📍 Location & Directions
-                    </button>
-                    <button class="chatbot-option-btn" data-question="pricing">
-                        💰 Room Rates & Packages
-                    </button>
-                    <button class="chatbot-option-btn" data-question="contact">
-                        📞 Contact Information
-                    </button>
-                </div>
-                
-                <div class="chatbot-input-area">
-                    <input 
-                        type="text" 
-                        class="chatbot-input" 
-                        id="chatbot-input" 
-                        placeholder="Type your message..."
-                        aria-label="Chat input"
-                    >
-                    <button class="chatbot-send" id="chatbot-send" aria-label="Send message">
-                        <i class="bi bi-send-fill"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
         <div class="social-menu" id="social-menu">
             <a href="https://g.page/r/CYLwnGL5wWz8EBM/review" target="_blank" title="Google Review">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">

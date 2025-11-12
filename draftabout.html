@@ -1218,6 +1218,215 @@
                 font-size: 0.9rem;
             }
         }
+        
+        /* Attractions Section Styles */
+        .attractions-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+        }
+        
+        .attractions-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .attractions-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #000 !important;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .attractions-subtitle {
+            color: #76b2c4 !important;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        }
+        
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .attractions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .attractions-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .attraction-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .attraction-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        .attraction-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .attraction-card:hover .attraction-image {
+            transform: scale(1.05);
+        }
+        
+        .attraction-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .attraction-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #000 !important;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .attraction-content p {
+            color: #333 !important;
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .attraction-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666 !important;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+        
+        .attraction-meta i {
+            color: #76b2c4 !important;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .attractions-section {
+                padding: 3rem 0;
+            }
+            
+            .attractions-title {
+                font-size: 2rem;
+            }
+            
+            .attractions-subtitle {
+                font-size: 1rem;
+            }
+            
+            .attractions-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .attraction-image {
+                height: 200px;
+            }
+            
+            .attraction-content {
+                padding: 1.5rem;
+            }
+            
+            .attraction-content h3 {
+                font-size: 1.25rem;
+            }
+            
+            .attraction-content p {
+                font-size: 0.95rem;
+            }
+        }
+        
+        /* Nearby Amenities Notice */
+        .nearby-amenities {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .nearby-amenities-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .nearby-amenities-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #333 !important;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        .nearby-amenities-item i {
+            color: #76b2c4 !important;
+            font-size: 1.25rem;
+        }
+        
+        .nearby-amenities-text {
+            color: #666 !important;
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .nearby-amenities {
+                padding: 1.5rem;
+                margin-top: 2rem;
+            }
+            
+            .nearby-amenities-content {
+                gap: 1rem;
+                flex-direction: column;
+            }
+            
+            .nearby-amenities-item {
+                font-size: 0.9rem;
+            }
+            
+            .nearby-amenities-text {
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 
@@ -1459,6 +1668,152 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attractions Section -->
+        <section class="attractions-section">
+            <div class="container">
+                <h2 class="attractions-title">Nearby Attractions</h2>
+                <p class="attractions-subtitle">Explore Bangalore's Best</p>
+                
+                <div class="attractions-grid">
+                    <!-- Attraction 1: Cubbon Park -->
+                    <div class="attraction-card">
+                        <img src="https://www.postoast.com/wp-content/uploads/2021/09/Cubbon-Park-Aerial-view.jpg" alt="Cubbon Park" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3>Cubbon Park</h3>
+                            <p>One of Bangalore's most iconic landmarks, Cubbon Park is a 300-acre green lung in the heart of the city. Perfect for morning walks, jogging, and picnics amidst lush greenery and historic monuments.</p>
+                            <div class="attraction-meta">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>~8 km from Kalyan Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 2: Bangalore Palace -->
+                    <div class="attraction-card">
+                        <img src="https://bangaloretourism.in/images/v2/headers/bangalore-palace-timings-entry-fee-bangalore-tourism-header-cr-amit-rawat.jpg" alt="Bangalore Palace" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3>Bangalore Palace</h3>
+                            <p>A magnificent palace built in Tudor-style architecture, Bangalore Palace is a must-visit for history enthusiasts. Explore the royal heritage and beautiful gardens surrounding this architectural marvel.</p>
+                            <div class="attraction-meta">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>~10 km from Kalyan Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 3: Lalbagh Botanical Garden -->
+                    <div class="attraction-card">
+                        <img src="https://remotetraveler.com/wp-content/uploads/2014/10/Lal-Bagh-Botanical-Garden.jpg" alt="Lalbagh Botanical Garden" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3>Lalbagh Botanical Garden</h3>
+                            <p>Home to rare species of flora and the famous glass house, Lalbagh is a paradise for nature lovers. Enjoy the serene environment, flower shows, and beautiful walking trails.</p>
+                            <div class="attraction-meta">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>~12 km from Kalyan Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 4: ISKCON Temple -->
+                    <div class="attraction-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjaoSotCkgIzrNmbleCk6GP-FQmYHE_8QFrw&s" alt="ISKCON Temple" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3>ISKCON Temple</h3>
+                            <p>One of the largest ISKCON temples in the world, this spiritual destination offers a serene atmosphere for meditation and worship. The beautiful architecture and peaceful ambiance make it a popular attraction.</p>
+                            <div class="attraction-meta">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>~6 km from Kalyan Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 5: UB City -->
+                    <div class="attraction-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/UB_City_at_night_.jpg/1200px-UB_City_at_night_.jpg" alt="UB City" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3>UB City</h3>
+                            <p>Bangalore's premier luxury shopping destination, UB City offers high-end brands, fine dining restaurants, and entertainment options. A perfect place for shopping and dining experiences.</p>
+                            <div class="attraction-meta">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>~9 km from Kalyan Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 6: Bannerghatta National Park -->
+                    <div class="attraction-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR78QDRYySfWngBFj59GKtvxYRqmQvfi0An-A&s" alt="Bannerghatta National Park" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3>Bannerghatta National Park</h3>
+                            <p>Experience wildlife up close at this national park featuring a zoo, safari, butterfly park, and rescue center. Perfect for families and wildlife enthusiasts looking for an adventurous day out.</p>
+                            <div class="attraction-meta">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>~25 km from Kalyan Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 7: Tipu Sultan's Summer Palace -->
+                    <div class="attraction-card">
+                        <img src="https://pohcdn.com/sites/default/files/styles/paragraph__hero_banner__hb_image__1880bp/public/hero_banner/Sultan_Tipu_Palace.jpg  " alt="Tipu Sultan's Summer Palace" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3>Tipu Sultan's Summer Palace</h3>
+                            <p>A historical monument showcasing Indo-Islamic architecture, this palace was the summer residence of Tipu Sultan. Explore the rich history and beautiful teakwood architecture.</p>
+                            <div class="attraction-meta">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>~15 km from Kalyan Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 8: Commercial Street -->
+                    <div class="attraction-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmOaiI819XDVokw6WoJ5wmBtWaAftJ4l-3BQ&s" alt="Commercial Street" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3>Commercial Street</h3>
+                            <p>One of Bangalore's most popular shopping destinations, Commercial Street offers everything from traditional Indian wear to modern fashion, accessories, and street food. A shopper's paradise.</p>
+                            <div class="attraction-meta">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>~10 km from Kalyan Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Attraction 9: Nandi Hills -->
+                    <div class="attraction-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTAKBbtZyw1bgRF5_bFghhY4XOfrt69J7fu6su6-QPRd_ofeGhKDXN0prcd06JoNb4yRBEdcoOMz4oLvxyf78Sd8SP3&s=19" alt="Nandi Hills" class="attraction-image">
+                        <div class="attraction-content">
+                            <h3>Nandi Hills</h3>
+                            <p>A popular weekend getaway, Nandi Hills offers breathtaking sunrise views, trekking trails, and a peaceful retreat from the city. Perfect for nature lovers and adventure seekers.</p>
+                            <div class="attraction-meta">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>~60 km from Kalyan Nagar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Nearby Amenities Notice -->
+                <div class="nearby-amenities">
+                    <div class="nearby-amenities-content">
+                        <div class="nearby-amenities-item">
+                            <i class="bi bi-cup-hot-fill"></i>
+                            <span>Cafes</span>
+                        </div>
+                        <div class="nearby-amenities-item">
+                            <i class="bi bi-moon-stars-fill"></i>
+                            <span>Nightlife</span>
+                        </div>
+                        <div class="nearby-amenities-item">
+                            <i class="bi bi-cup-straw"></i>
+                            <span>Bars</span>
+                        </div>
+                    </div>
+                    <p class="nearby-amenities-text">All nearby for your convenience</p>
                 </div>
             </div>
         </section>

@@ -3,105 +3,125 @@
 /*============================================================================================*/
 
 .promo-banner {
-    width: 100%;
-    background: rgba(210, 167, 112, 0.15);
-    color: #222;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(224, 194, 0, 0.3);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-    position: relative;
-    z-index: 1000;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.promo-banner span {
-    display: inline-block;
-    white-space: nowrap;
-    animation: promo-slide 12s linear infinite;
-    position: relative;
-    z-index: 1;
-}
-@keyframes promo-slide {
-    0% { transform: translateX(100%); }
-    10% { transform: translateX(0); }
-    90% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+  width: 100%;
+  background: rgba(210, 167, 112, 0.15);
+  color: #222;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(224, 194, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  position: relative;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-body, html {
-    font-family: 'Inter', system-ui, Arial, sans-serif;
+.promo-banner span {
+  display: inline-block;
+  white-space: nowrap;
+  animation: promo-slide 12s linear infinite;
+  position: relative;
+  z-index: 1;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
+
+@keyframes promo-slide {
+  0% {
+    transform: translateX(100%);
+  }
+
+  10% {
+    transform: translateX(0);
+  }
+
+  90% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+body,
+html {
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
 }
 
 /* Header Logo Styling */
 .logo-text {
-    font-family: 'Montserrat', sans-serif !important;
-    font-weight: 950 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.15em !important;
-    -webkit-text-stroke: 0px rgba(0,0,0,0) !important;
-    text-stroke: 0.5px rgba(0,0,0,0.1) !important;
-    font-stretch: condensed !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 950 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  -webkit-text-stroke: 0px rgba(0, 0, 0, 0) !important;
+  text-stroke: 0.5px rgba(0, 0, 0, 0.1) !important;
+  font-stretch: condensed !important;
 }
 
 /* Header Navigation Styling */
 .desktop-nav a {
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.1em !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
 }
 
 .mobile-menu a {
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.1em !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
 }
 
 /* Mobile Header Logo Styling */
 @media (max-width: 768px) {
-    .logo-text {
-        display: none !important;
-    }
-    
-    .logo-section {
-        justify-content: flex-start !important;
-        width: auto !important;
-        margin-right: auto !important;
-        flex: 1 !important;
-    }
-    
-    .logo-section img {
-        width: 3.5rem !important;
-        height: 3.5rem !important;
-        object-fit: contain !important;
-    }
-    
-    .header-inner {
-        justify-content: flex-start !important;
-    }
-    
-    .mobile-menu-btn {
-        position: static !important;
-        right: auto !important;
-        margin-left: auto !important;
-        flex-shrink: 0 !important;
-    }
-    
-    /* Mobile Overlay Image - DISABLED */
-    /* .parallax-section div[style*="width: 90%"] {
+  .logo-text {
+    display: none !important;
+  }
+
+  .logo-section {
+    justify-content: flex-start !important;
+    width: auto !important;
+    margin-right: auto !important;
+    flex: 1 !important;
+  }
+
+  .logo-section img {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    object-fit: contain !important;
+  }
+
+  .header-inner {
+    justify-content: flex-start !important;
+  }
+
+  .mobile-menu-btn {
+    position: static !important;
+    right: auto !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Mobile Overlay Image - DISABLED */
+  /* .parallax-section div[style*="width: 90%"] {
         width: 150% !important;
         height: 90% !important;
         max-width: 180% !important;
@@ -125,56 +145,60 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile Booking Form Positioning - Move up below overlay image */
 @media (max-width: 768px) {
-    .booking-form-container {
-        margin-top: -2rem !important;
-        margin-bottom: 1rem !important;
-    }
+  .booking-form-container {
+    margin-top: -2rem !important;
+    margin-bottom: 1rem !important;
+  }
 }
 
 @media (max-width: 480px) {
-    .booking-form-container {
-        margin-top: -6rem !important;
-        margin-bottom: 8rem !important;
-    }
+  .booking-form-container {
+    margin-top: -6rem !important;
+    margin-bottom: 8rem !important;
+  }
 }
 
 /* Parallax Section Titles - Larger H2 Sizes */
 .parallax-section h2,
 .parallax-title {
-    font-family: 'Montserrat', sans-serif !important;
-    font-weight: 900 !important;
-    font-size: 3.2rem !important;
-    letter-spacing: 0.1em !important;
-    margin-bottom: 2rem !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 3.2rem !important;
+  letter-spacing: 0.1em !important;
+  margin-bottom: 2rem !important;
 }
 
 /* Responsive Parallax Title Sizes */
 @media (min-width: 768px) {
-    .parallax-section h2,
-    .parallax-title {
-        font-size: 4rem !important;
-    }
+
+  .parallax-section h2,
+  .parallax-title {
+    font-size: 4rem !important;
+  }
 }
 
 @media (min-width: 1024px) {
-    .parallax-section h2,
-    .parallax-title {
-        font-size: 4.8rem !important;
-    }
+
+  .parallax-section h2,
+  .parallax-title {
+    font-size: 4.8rem !important;
+  }
 }
 
 @media (max-width: 768px) {
-    .parallax-section h2,
-    .parallax-title {
-        font-size: 2.6rem !important;
-    }
+
+  .parallax-section h2,
+  .parallax-title {
+    font-size: 2.6rem !important;
+  }
 }
 
 @media (max-width: 480px) {
-    .parallax-section h2,
-    .parallax-title {
-        font-size: 2.2rem !important;
-    }
+
+  .parallax-section h2,
+  .parallax-title {
+    font-size: 2.2rem !important;
+  }
 }
 
 /* Collapsible Floating Social Icons */
@@ -189,13 +213,13 @@ h1, h2, h3, h4, h5, h6 {
 .social-toggle-btn {
   width: 48px;
   height: 48px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(118, 178, 196, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  color: white;
+  color: rgba(118, 178, 196, 0.9);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -205,9 +229,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  color: rgba(118, 178, 196, 1);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  box-shadow: 0 12px 40px 0 rgba(118, 178, 196, 0.4);
 }
 
 .social-menu {
@@ -232,7 +257,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-menu a {
-  color: white !important;
+  color: rgba(118, 178, 196, 0.9) !important;
   font-size: 1.5rem;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -241,20 +266,20 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-radius: 50%;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(118, 178, 196, 0.25);
 }
 
 .social-menu a:hover {
-  color: white !important;
-  background: rgba(255, 255, 255, 0.2);
+  color: rgba(118, 178, 196, 1) !important;
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  box-shadow: 0 12px 40px 0 rgba(118, 178, 196, 0.4);
   transform: translateY(-2px);
 }
 
@@ -266,13 +291,13 @@ h1, h2, h3, h4, h5, h6 {
     left: auto;
     transform: none;
   }
-  
+
   .social-toggle-btn {
     width: 38px;
     height: 38px;
     font-size: 1rem;
   }
-  
+
   .social-menu {
     gap: 10px;
     right: 0;
@@ -282,11 +307,11 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     top: auto;
   }
-  
+
   .social-menu.active {
     transform: translateX(0);
   }
-  
+
   .social-menu a {
     width: 38px;
     height: 38px;
@@ -304,6 +329,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   gap: 16px;
 }
+
 .floating-social-icons .social-icon {
   display: flex;
   align-items: center;
@@ -321,6 +347,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
   text-decoration: none;
 }
+
 /* Removed individual color overrides - using white for all */
 .floating-social-icons .social-icon:hover {
   background: rgba(255, 255, 255, 0.2);
@@ -329,6 +356,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
   transform: translateY(-2px);
 }
+
 @media (max-width: 600px) {
   .floating-social-icons {
     top: unset;
@@ -336,6 +364,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 10px;
     gap: 10px;
   }
+
   .floating-social-icons .social-icon {
     width: 38px;
     height: 38px;
@@ -357,12 +386,14 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 1;
 }
+
 @media (max-width: 768px) {
   .promo-banner {
     flex-direction: column;
     gap: 10px;
     padding: 12px 15px;
   }
+
   .promo-banner .btn_1 {
     padding: 8px 20px;
     font-size: 0.85rem;
@@ -386,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   }
-  
+
   .liquid-glass-dark {
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -403,7 +434,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   }
-  
+
   .liquid-glass-dark {
     background: rgba(0, 0, 0, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -419,7 +450,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
   pointer-events: none;
   z-index: -1;
 }
@@ -431,7 +462,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -443,8 +474,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Enhanced color transitions for social icons - using white for all */
-.floating-social a:hover { 
-  color: white !important; 
+.floating-social a:hover {
+  color: white !important;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
@@ -462,11 +493,11 @@ h1, h2, h3, h4, h5, h6 {
   .promo-banner {
     background: rgba(210, 167, 112, 0.9);
   }
-  
+
   .floating-social-icons .social-icon {
     background: rgba(255, 255, 255, 0.9);
   }
-  
+
   .floating-social-icons .social-icon:hover {
     background: rgba(255, 255, 255, 1);
   }
@@ -506,10 +537,26 @@ footer .social ul li a i {
 }
 
 /* Specific colors for footer social icons */
-footer .social ul li:nth-child(1) a:hover { background: rgba(66, 133, 244, 0.3); } /* Google */
-footer .social ul li:nth-child(2) a:hover { background: rgba(0, 170, 108, 0.3); } /* TripAdvisor */
-footer .social ul li:nth-child(3) a:hover { background: rgba(255, 107, 53, 0.3); } /* MakeMyTrip */
-footer .social ul li:nth-child(4) a:hover { background: rgba(37, 211, 102, 0.3); } /* WhatsApp */
+footer .social ul li:nth-child(1) a:hover {
+  background: rgba(66, 133, 244, 0.3);
+}
+
+/* Google */
+footer .social ul li:nth-child(2) a:hover {
+  background: rgba(0, 170, 108, 0.3);
+}
+
+/* TripAdvisor */
+footer .social ul li:nth-child(3) a:hover {
+  background: rgba(255, 107, 53, 0.3);
+}
+
+/* MakeMyTrip */
+footer .social ul li:nth-child(4) a:hover {
+  background: rgba(37, 211, 102, 0.3);
+}
+
+/* WhatsApp */
 
 @media (max-width: 600px) {
   .promo-banner {
@@ -518,6 +565,7 @@ footer .social ul li:nth-child(4) a:hover { background: rgba(37, 211, 102, 0.3);
     padding: 6px 8px;
     font-size: 0.95rem;
   }
+
   .promo-banner .btn_1 {
     padding: 6px 12px;
     font-size: 0.8rem;
@@ -535,13 +583,15 @@ header.fixed_header.sticky {
 }
 
 @supports not (backdrop-filter: blur(10px)) {
+
   header.reveal_header.headroom--not-top,
   header.fixed_header.sticky {
-    background: rgba(255,255,255,0.92) !important;
+    background: rgba(255, 255, 255, 0.92) !important;
   }
 }
 
 @media (max-width: 600px) {
+
   header.reveal_header.headroom--not-top,
   header.fixed_header.sticky {
     padding: 8px 0 !important;

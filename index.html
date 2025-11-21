@@ -4,25 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Affordable hotel in Kalyan Nagar, Bangalore. Family and couple friendly rooms with free parking, Wi‑Fi, and breakfast.">
+    <meta name="description"
+        content="Affordable hotel in Kalyan Nagar, Bangalore. Family and couple friendly rooms with free parking, Wi‑Fi, and breakfast.">
     <meta name="author" content="Nouman">
     <meta name="keywords" content="hotels in Kalyan Nagar Bengaluru, Kalyan Nagar hotel Bangalore, hotel near Kalyan Nagar Hennur Road, budget hotel Kalyan Nagar, 3 star hotel Kalyan Nagar, couple-friendly hotel Kalyan Nagar, 
     hotel with free parking Kalyan Nagar, hotel with breakfast included Bangalore, family-friendly hotel Kalyan Nagar, business hotel Kalyan Nagar Bangalore, affordable stay Bangalore, cheap hotels near me, 
     hotels near me, budget hotel Bangalore, best hotels in Bangalore for couples, hotel near Manyata Tech Park, hotel near Kammanahalli, hotel near Outer Ring Road Bangalore, short stay hotels Kalyan Nagar, 
     hotels near Bangalore East Railway Station">
 
-        <!-- Open Graph Tags -->
-        <meta property="og:title" content="LG Signature Suites | 3 Star Hotel in Kalyan Nagar, Bangalore">
-        <meta property="og:description" content="Affordable, couple-friendly, and family-friendly hotel in Kalyan Nagar, Bangalore. Near Manyata Tech Park, Hennur Road, and Outer Ring Road. Book direct for best rates.">
-        <meta property="og:image" content="https://lgsignaturesuites.com/img/lg-signature-suites-banner.jpg">
-        <meta property="og:url" content="https://lgsignaturesuites.com">
-        <meta property="og:type" content="hotel">
-        <meta property="og:locale" content="en_IN">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="LG Signature Suites | 3 Star Hotel in Kalyan Nagar, Bangalore">
-        <meta name="twitter:description" content="Book LG Signature Suites for a comfortable, affordable stay in Kalyan Nagar, Bangalore. Family, business, and couple-friendly rooms. Free parking and breakfast included.">
-        <meta name="twitter:image" content="https://lgsignaturesuites.com/img/lg-signature-suites-banner.jpg">
-        <script type="application/ld+json">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="LG Signature Suites | 3 Star Hotel in Kalyan Nagar, Bangalore">
+    <meta property="og:description"
+        content="Affordable, couple-friendly, and family-friendly hotel in Kalyan Nagar, Bangalore. Near Manyata Tech Park, Hennur Road, and Outer Ring Road. Book direct for best rates.">
+    <meta property="og:image" content="https://lgsignaturesuites.com/img/lg-signature-suites-banner.jpg">
+    <meta property="og:url" content="https://lgsignaturesuites.com">
+    <meta property="og:type" content="hotel">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LG Signature Suites | 3 Star Hotel in Kalyan Nagar, Bangalore">
+    <meta name="twitter:description"
+        content="Book LG Signature Suites for a comfortable, affordable stay in Kalyan Nagar, Bangalore. Family, business, and couple-friendly rooms. Free parking and breakfast included.">
+    <meta name="twitter:image" content="https://lgsignaturesuites.com/img/lg-signature-suites-banner.jpg">
+    <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "WebSite",
@@ -35,7 +38,7 @@
           }
         }
         </script>
-        <script type="application/ld+json">
+    <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Hotel",
@@ -87,14 +90,14 @@
           ]
         }
         </script>
-        
+
     <title>LG Signature Suites | 3-Star Hotel in Kalyan Nagar</title>
-    
+
     <link rel="canonical" href="https://lgsignaturesuites.com/">
     <link rel="alternate" hreflang="en-IN" href="https://lgsignaturesuites.com/">
     <link rel="alternate" hreflang="x-default" href="https://lgsignaturesuites.com/">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/logo.png" type="image/png">
     <link rel="icon" href="img/logo.png" type="image/png">
@@ -108,507 +111,1832 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <!-- BASE CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-	<link href="css/vendors.min.css" rel="stylesheet">
+    <link href="css/vendors.min.css" rel="stylesheet">
+    <link href="css/daterangepicker.css" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
     <link href="css/custom.css" rel="stylesheet">
-    
+
     <!-- DARK THEME CSS -->
     <link href="css/dark-theme.css" rel="stylesheet">
+
+    <!-- Custom Scroll Scape Styles -->
+    <style>
+        .scroll-scape-container {
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .parallax-section {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Mobile section height optimization */
+        @media (max-width: 768px) {
+            .parallax-section:not(:first-child) {
+                height: 50vh !important;
+                min-height: 50vh !important;
+            }
+
+            /* Hero section height for mobile - reduced to show full video width */
+            .parallax-section:first-child {
+                height: 45vh !important;
+                min-height: 45vh !important;
+            }
+
+            /* Make sections wider for better image visibility */
+            .parallax-section {
+                width: 100vw !important;
+                margin-left: calc(-50vw + 50%) !important;
+                margin-right: calc(-50vw + 50%) !important;
+                left: 0 !important;
+                right: 0 !important;
+            }
+
+            /* Optimize background images for mobile */
+            .parallax-bg {
+                background-size: cover !important;
+                background-position: center center !important;
+                background-attachment: scroll !important;
+                width: 100% !important;
+                height: 100% !important;
+            }
+
+            /* Reduce padding for better content fit */
+            .parallax-content {
+                padding: 0 0.5rem !important;
+            }
+
+            /* Optimize title size for mobile */
+            .parallax-title {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 1rem !important;
+                color: #d4a971 !important;
+            }
+
+            /* Optimize button size for mobile */
+            .parallax-button {
+                padding: 0.75rem 1.25rem !important;
+                font-size: 0.9rem !important;
+            }
+
+            /* Hero section video optimization for mobile */
+            .parallax-section:first-child {
+                width: 100vw !important;
+                margin-left: calc(-50vw + 50%) !important;
+                margin-right: calc(-50vw + 50%) !important;
+                left: 0 !important;
+                right: 0 !important;
+            }
+
+            /* Video container optimization - fit full width without cropping */
+            .parallax-section:first-child video {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center center !important;
+                transform: scale(1) !important;
+                transform-origin: center center !important;
+            }
+
+            /* Video wrapper to ensure proper sizing */
+            .parallax-section:first-child .parallax-bg {
+                overflow: hidden !important;
+            }
+
+            /* Overlay image optimization for mobile - centered with proper spacing */
+            .parallax-section:first-child>div[style*="display: flex"] {
+                padding-top: 8.5rem !important;
+                padding-bottom: 1.5rem !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            .parallax-section:first-child div[style*="width: 90%"] {
+                width: 95% !important;
+                height: auto !important;
+                margin: 0 !important;
+                flex-shrink: 0 !important;
+            }
+
+            .parallax-section:first-child div[style*="width: 90%"] img {
+                width: 100% !important;
+                height: auto !important;
+                max-height: 35vh !important;
+                object-fit: contain !important;
+            }
+        }
+
+        /* Show/hide booking forms based on screen size */
+        .desktop-only {
+            display: block;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-only {
+                display: none !important;
+            }
+
+            .mobile-only {
+                display: block !important;
+            }
+        }
+
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            will-change: transform;
+        }
+
+        .parallax-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .parallax-title {
+            font-size: 5rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+            font-family: 'Montserrat', sans-serif;
+            color: #d4a971 !important;
+        }
+
+        .parallax-button {
+            border: 2px solid white;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            letter-spacing: 0.1em;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .parallax-button:hover {
+            background: white;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .floating-social {
+            position: fixed;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 50;
+        }
+
+        .floating-social a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .floating-social a:hover {
+            color: #ccc;
+        }
+
+        .floating-social a#chat-icon-toggle.active {
+            color: #20B2AA;
+            transform: scale(1.1);
+        }
+
+        .floating-social a#chat-icon-toggle:hover {
+            color: #20B2AA;
+        }
+
+        /* Info Bar Styles */
+        .info-bar {
+            background: rgba(211, 210, 210, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #76b2c4;
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 60;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info-bar-left {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-item i {
+            font-size: 0.9rem;
+        }
+
+        .info-item a {
+            color: #333 !important;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .info-item a:hover {
+            color: #000 !important;
+            text-decoration: none;
+        }
+
+        .info-item {
+            color: #333 !important;
+        }
+
+        .info-item i {
+            color: #333 !important;
+        }
+
+        @media (max-width: 768px) {
+            .info-bar {
+                padding: 0.375rem 0;
+                font-size: 0.8rem;
+            }
+
+            .info-bar-left {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .info-item {
+                gap: 0.375rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-bar {
+                padding: 0.125rem 0;
+                font-size: 0.7rem;
+                height: 1.5rem;
+                line-height: 1.5rem;
+            }
+
+            .info-bar-content {
+                height: 1.5rem;
+                align-items: center;
+            }
+
+            .info-bar-left {
+                gap: 0;
+                flex-direction: row;
+                justify-content: center;
+                height: 1.5rem;
+            }
+
+        }
+
+        .sticky-header {
+            position: fixed !important;
+            top: 1.5rem !important;
+            left: 0 !important;
+            right: 0 !important;
+            z-index: 50 !important;
+            background: rgba(255, 255, 255, 0.15) !important;
+            backdrop-filter: blur(25px) !important;
+            -webkit-backdrop-filter: blur(15px) !important;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+            border: 1px solid rgba(255, 255, 255, 0.18) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .header-inner {
+            height: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-section img {
+            width: 2.5rem;
+            height: 2.5rem;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-family: 'Abril Fatface', serif !important;
+            font-size: 1.7rem !important;
+            font-weight: normal !important;
+            letter-spacing: 0.1em !important;
+            color: #000 !important;
+        }
+
+        .desktop-nav {
+            display: none;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .desktop-nav a {
+            color: #000 !important;
+            text-decoration: none !important;
+            font-weight: 500 !important;
+            font-size: 0.9rem !important;
+            letter-spacing: 0.05em !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .desktop-nav a:hover {
+            color: #333 !important;
+        }
+
+        .btn-book-now-desktop {
+            background: #76b2c4 !important;
+            color: white !important;
+            padding: 0.5rem 1.25rem !important;
+            border-radius: 6px !important;
+            font-weight: 600 !important;
+            font-size: 0.85rem !important;
+            letter-spacing: 0.5px !important;
+            text-transform: uppercase !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease !important;
+            margin-left: 0.5rem !important;
+        }
+
+        .btn-book-now-desktop:hover {
+            background: #5696aa !important;
+            color: white !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 12px rgba(32, 178, 170, 0.4) !important;
+        }
+
+        .mobile-menu-btn {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 0.375rem !important;
+            color: #333 !important;
+            background: none !important;
+            border: none !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .mobile-menu-btn:hover {
+            color: #000 !important;
+            background: rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .mobile-menu {
+            position: absolute !important;
+            top: 100% !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: rgba(255, 255, 255, 0.55) !important;
+            backdrop-filter: blur(15px) !important;
+            -webkit-backdrop-filter: blur(15px) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-radius: 8px !important;
+            z-index: 50 !important;
+            margin-top: 0.5rem !important;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                background: rgba(255, 255, 255, 0.95) !important;
+                backdrop-filter: blur(20px) !important;
+                -webkit-backdrop-filter: blur(20px) !important;
+            }
+        }
+
+        .mobile-menu a {
+            display: block !important;
+            padding: 1rem 1.5rem !important;
+            text-align: center !important;
+            color: #000 !important;
+            text-decoration: none !important;
+            font-weight: 500 !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .mobile-menu a:hover {
+            color: #333 !important;
+            background: rgba(0, 0, 0, 0.05) !important;
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        @media (min-width: 768px) {
+            .desktop-nav {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: none !important;
+            }
+
+            .parallax-title {
+                font-size: 7rem;
+                font-weight: 900;
+                color: #d4a971 !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .btn-book-now-desktop {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .parallax-title {
+                font-size: 9rem;
+                font-weight: 900;
+                color: #d4a971 !important;
+            }
+        }
+
+        /* Responsive Booking Form Styles */
+        .booking-form-container {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .booking-form-grid {
+            display: flex;
+            gap: 1rem;
+            align-items: end;
+            flex-wrap: nowrap;
+        }
+
+        .booking-field {
+            flex: 1;
+            position: relative;
+        }
+
+        .booking-field:first-child {
+            flex: 2;
+        }
+
+        .booking-button-container {
+            flex-shrink: 0;
+        }
+
+        .booking-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Hide label only for date field */
+        .booking-field:first-child .booking-label {
+            display: none;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .booking-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .booking-input:focus {
+            outline: none;
+            border-color: #20B2AA;
+            box-shadow: 0 0 0 2px rgba(32, 178, 170, 0.2);
+        }
+
+        .input-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .input-icon-single {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 14px;
+        }
+
+        .separator {
+            width: 1px;
+            height: 20px;
+            background: #ddd;
+        }
+
+        .input-icon i {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .booking-button-container {
+            display: flex;
+            align-items: end;
+        }
+
+        .booking-button {
+            background: #76b2c4;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 44px;
+            white-space: nowrap;
+        }
+
+        .booking-button:hover {
+            background: #5696aa;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(118, 178, 196, 0.4);
+        }
+
+        /* Quantity Buttons */
+        .qty-buttons-wrapper {
+            display: flex;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            overflow: hidden;
+            width: fit-content;
+            max-width: 200px;
+        }
+
+        .qtyplus,
+        .qtyminus {
+            background: rgba(248, 249, 250, 0.8);
+            border: none;
+            padding: 12px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            color: #666;
+            transition: all 0.3s ease;
+            min-width: 44px;
+            width: 44px;
+            flex-shrink: 0;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .qtyplus:hover,
+        .qtyminus:hover {
+            background: #e9ecef;
+            color: #333;
+        }
+
+        .qtyplus:active,
+        .qtyminus:active {
+            background: #dee2e6;
+        }
+
+        .qty {
+            border: none !important;
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            padding: 12px 8px;
+            width: 60px;
+            min-width: 60px;
+            max-width: 60px;
+            flex-shrink: 0;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .qty::placeholder {
+            color: #999;
+            font-weight: 500;
+            font-size: 12px;
+        }
+
+        .qty:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        /* Ensure proper display of quantity inputs */
+        .qty-buttons-wrapper .qty {
+            display: block !important;
+            width: 60px !important;
+            min-width: 60px !important;
+            max-width: 60px !important;
+            text-align: center !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            color: #333 !important;
+            background: white !important;
+            border: none !important;
+            padding: 12px 8px !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+            position: relative !important;
+            z-index: 1 !important;
+        }
+
+        /* Override any conflicting styles */
+        .booking-form-grid .qty {
+            width: 60px !important;
+            min-width: 60px !important;
+            max-width: 60px !important;
+            flex: none !important;
+        }
+
+        /* Force single number display - prevent duplication */
+        input.qty[name="adults"],
+        input.qty[name="childs"] {
+            width: 60px !important;
+            min-width: 60px !important;
+            max-width: 60px !important;
+            display: block !important;
+            text-align: center !important;
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            color: #333 !important;
+            background: white !important;
+            border: none !important;
+            padding: 12px 8px !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+            position: relative !important;
+            z-index: 1 !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            white-space: nowrap !important;
+            /* Prevent text duplication */
+            -webkit-appearance: none !important;
+            -moz-appearance: textfield !important;
+            appearance: none !important;
+        }
+
+        /* Remove any pseudo-elements that might cause duplication */
+        input.qty[name="adults"]::before,
+        input.qty[name="adults"]::after,
+        input.qty[name="childs"]::before,
+        input.qty[name="childs"]::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        /* Ensure no extra spaces in quantity wrappers */
+        .qty-buttons-wrapper * {
+            margin: 0;
+        }
+
+        .qty-buttons-wrapper {
+            white-space: nowrap;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .logo-text {
+                font-size: 1.4rem !important;
+            }
+
+            .booking-form-container {
+                padding: 1.5rem;
+                margin: 0 0.5rem;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.12);
+                backdrop-filter: blur(18px);
+                -webkit-backdrop-filter: blur(18px);
+            }
+
+            .booking-form-grid {
+                gap: 1rem;
+            }
+
+            .booking-button {
+                padding: 14px 28px;
+                font-size: 14px;
+                height: 48px;
+            }
+
+            .booking-label {
+                font-size: 0.9rem;
+                margin-bottom: 0.6rem;
+            }
+
+            .booking-input {
+                padding: 14px 16px;
+                font-size: 15px;
+            }
+        }
+
+        /* Tablet landscape */
+        @media (max-width: 900px) and (min-width: 769px) {
+            .booking-form-container {
+                padding: 1.25rem;
+                margin: 0 1rem;
+            }
+
+            .booking-form-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .booking-field {
+                width: 100%;
+            }
+
+            .booking-button-container {
+                width: 100%;
+            }
+
+            .booking-button {
+                width: 100%;
+                padding: 15px 24px;
+                font-size: 15px;
+                height: 50px;
+            }
+
+            .booking-label {
+                font-size: 0.9rem;
+                margin-bottom: 0.6rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sticky-header {
+                top: 1.5rem !important;
+            }
+
+            .header-inner {
+                justify-content: flex-start !important;
+            }
+
+            .logo-section {
+                margin-right: auto !important;
+                flex: 1 !important;
+            }
+
+            .mobile-menu-btn {
+                margin-left: auto !important;
+                flex-shrink: 0 !important;
+            }
+
+            .logo-text {
+                font-size: 1.3rem !important;
+            }
+
+            .booking-form-container {
+                padding: 0.875rem;
+                margin: 0 0.75rem;
+                border-radius: 8px;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+            }
+
+            .booking-form-grid {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .booking-field {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* Specific styling for quantity fields on mobile */
+            .booking-field:nth-child(2),
+            .booking-field:nth-child(3) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .booking-button-container {
+                width: 100%;
+                margin-top: 0.25rem;
+            }
+
+            .booking-button {
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 14px;
+                height: 44px;
+                border-radius: 6px;
+                font-weight: 600;
+                letter-spacing: 0.3px;
+            }
+
+            .booking-label {
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+                font-weight: 600;
+                color: #2c3e50;
+                text-align: left;
+            }
+
+            /* Remove margin for quantity field labels */
+            .booking-field:nth-child(2) .booking-label,
+            .booking-field:nth-child(3) .booking-label {
+                margin-bottom: 0;
+                margin-right: 1rem;
+                flex-shrink: 0;
+            }
+
+            .booking-input {
+                padding: 12px 14px;
+                font-size: 16px;
+                /* Prevents zoom on iOS */
+                border-radius: 6px;
+                border: 1px solid #e1e8ed;
+                transition: all 0.3s ease;
+            }
+
+            .booking-input:focus {
+                border-color: #20B2AA;
+                box-shadow: 0 0 0 3px rgba(32, 178, 170, 0.1);
+            }
+
+            /* Mobile quantity buttons */
+            .qty-buttons-wrapper {
+                width: auto;
+                max-width: 160px;
+                margin-left: auto;
+                margin-right: 0;
+                border-radius: 6px;
+                border: 1px solid #e1e8ed;
+                transition: all 0.3s ease;
+            }
+
+            .qty-buttons-wrapper:focus-within {
+                border-color: #20B2AA;
+                box-shadow: 0 0 0 2px rgba(32, 178, 170, 0.1);
+            }
+
+            .qtyplus,
+            .qtyminus {
+                padding: 12px 14px;
+                font-size: 16px;
+                min-width: 42px;
+                width: 42px;
+            }
+
+            .qty {
+                padding: 12px 8px;
+                font-size: 14px;
+                width: 60px;
+                min-width: 60px;
+                max-width: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 1.2rem !important;
+            }
+
+            .booking-form-container {
+                padding: 0.75rem;
+                margin: 0 0.5rem;
+                border-radius: 6px;
+                background: rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .booking-form-grid {
+                flex-direction: column;
+                gap: 0.625rem;
+            }
+
+            .booking-button {
+                padding: 10px 16px;
+                font-size: 13px;
+                height: 40px;
+                border-radius: 4px;
+            }
+
+            .booking-label {
+                font-size: 0.75rem;
+                margin-bottom: 0.375rem;
+                text-align: left;
+            }
+
+            /* Remove margin for quantity field labels */
+            .booking-field:nth-child(2) .booking-label,
+            .booking-field:nth-child(3) .booking-label {
+                margin-bottom: 0;
+                margin-right: 0.75rem;
+                flex-shrink: 0;
+            }
+
+            .booking-input {
+                padding: 10px 12px;
+                font-size: 16px;
+                border-radius: 4px;
+            }
+
+            /* Small mobile quantity buttons */
+            .qty-buttons-wrapper {
+                max-width: 140px;
+                border-radius: 4px;
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+            .qtyplus,
+            .qtyminus {
+                padding: 10px 12px;
+                font-size: 14px;
+                min-width: 38px;
+                width: 38px;
+            }
+
+            .qty {
+                padding: 10px 6px;
+                font-size: 13px;
+                width: 50px;
+                min-width: 50px;
+                max-width: 50px;
+            }
+        }
+
+        /* Extra small mobile devices */
+        @media (max-width: 360px) {
+            .logo-text {
+                font-size: 1.1rem !important;
+            }
+
+            .booking-form-container {
+                padding: 0.625rem;
+                margin: 0 0.375rem;
+                background: rgba(255, 255, 255, 0.06);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .booking-form-grid {
+                gap: 0.5rem;
+            }
+
+            .booking-input {
+                padding: 8px 10px;
+                font-size: 16px;
+            }
+
+            .booking-button {
+                padding: 8px 12px;
+                font-size: 12px;
+                height: 36px;
+            }
+
+            .booking-label {
+                font-size: 0.7rem;
+                margin-bottom: 0.25rem;
+                text-align: left;
+            }
+
+            /* Remove margin for quantity field labels */
+            .booking-field:nth-child(2) .booking-label,
+            .booking-field:nth-child(3) .booking-label {
+                margin-bottom: 0;
+                margin-right: 0.5rem;
+                flex-shrink: 0;
+            }
+
+            .qty-buttons-wrapper {
+                max-width: 120px;
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+            .qtyplus,
+            .qtyminus {
+                padding: 8px 10px;
+                font-size: 12px;
+                min-width: 32px;
+                width: 32px;
+            }
+
+            .qty {
+                padding: 8px 4px;
+                font-size: 12px;
+                width: 42px;
+                min-width: 42px;
+                max-width: 42px;
+            }
+        }
+
+        /* Fallback for browsers that don't support backdrop-filter */
+        @supports not (backdrop-filter: blur(10px)) {
+            .booking-form-container {
+                background: rgba(255, 255, 255, 0.9);
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .booking-input {
+                background: rgba(255, 255, 255, 0.95);
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .qty-buttons-wrapper {
+                background: rgba(255, 255, 255, 0.95);
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .qty {
+                background: rgba(255, 255, 255, 0.9);
+            }
+
+            .qtyplus,
+            .qtyminus {
+                background: rgba(248, 249, 250, 0.9);
+            }
+
+            /* Header fallbacks */
+            .sticky-header {
+                background: rgba(255, 255, 255, 0.9) !important;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+            }
+
+            .mobile-menu {
+                background: rgba(255, 255, 255, 0.9) !important;
+                border: 1px solid rgba(0, 0, 0, 0.1) !important;
+            }
+        }
+
+        /* Hero section responsive adjustments */
+        @media (max-width: 768px) {
+            .parallax-section {
+                padding: 0 0.5rem;
+            }
+
+            .parallax-title {
+                font-size: 3.5rem;
+                font-weight: 900;
+                margin-bottom: 1.5rem;
+            }
+
+            .parallax-button {
+                padding: 0.875rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .parallax-title {
+                font-size: 6rem;
+                font-weight: 900;
+                margin-bottom: 1rem;
+            }
+
+            .parallax-button {
+                padding: 0.75rem 1.25rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Floating Book Now Button */
+        .floating-book-now {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+        }
+
+        .book-now-btn {
+            background: rgba(118, 178, 196, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .book-now-btn:hover {
+            background: rgba(118, 178, 196, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+            text-decoration: none;
+            color: white;
+        }
+
+        .book-now-btn i {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .floating-book-now {
+                bottom: 1.5rem;
+            }
+
+            .book-now-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 280px) {
+            .floating-book-now {
+                bottom: 1rem;
+                left: 1rem;
+                right: 1rem;
+                transform: none;
+            }
+
+            .book-now-btn {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Always Visible Social Icons */
+        .social-toggle-btn {
+            display: none !important;
+        }
+
+        .social-menu {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 15px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateX(0) !important;
+            position: relative !important;
+            right: auto !important;
+            bottom: auto !important;
+            pointer-events: all !important;
+        }
+
+        @media (max-width: 600px) {
+            .social-menu {
+                gap: 10px !important;
+            }
+        }
+
+        /* Chatbot Floating Button and Window */
+        .chatbot-container {
+            position: fixed;
+            bottom: 5.5rem;
+            left: 2rem;
+            z-index: 1000;
+        }
+
+        .chatbot-toggle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(118, 178, 196, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+                0 0 20px rgba(118, 178, 196, 0.4);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            border: none;
+            outline: none;
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+                    0 0 20px rgba(118, 178, 196, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+                    0 0 30px rgba(118, 178, 196, 0.6);
+            }
+        }
+
+        .chatbot-toggle:hover {
+            background: rgba(118, 178, 196, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5),
+                0 0 35px rgba(118, 178, 196, 0.7);
+            animation: none;
+        }
+
+        .chatbot-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .chatbot-toggle.active i {
+            transform: rotate(180deg);
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            width: 350px;
+            max-height: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 16px;
+            box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-window.active {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, rgba(118, 178, 196, 0.9), rgba(118, 178, 196, 0.7));
+            padding: 1rem 1.25rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .chatbot-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1.25rem;
+            overflow-y: auto;
+            max-height: 320px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .chatbot-message {
+            margin-bottom: 1rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .bot-message {
+            background: white;
+            padding: 0.75rem 1rem;
+            border-radius: 12px 12px 12px 4px;
+            color: #333;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 85%;
+        }
+
+        .user-message {
+            background: linear-gradient(135deg, rgba(118, 178, 196, 0.9), rgba(118, 178, 196, 0.7));
+            padding: 0.75rem 1rem;
+            border-radius: 12px 12px 4px 12px;
+            color: white;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-left: auto;
+            max-width: 85%;
+        }
+
+        .chatbot-options {
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .chatbot-option-btn {
+            background: rgba(118, 178, 196, 0.1);
+            border: 1px solid rgba(118, 178, 196, 0.3);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            color: #333;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .chatbot-option-btn:hover {
+            background: rgba(118, 178, 196, 0.2);
+            border-color: rgba(118, 178, 196, 0.5);
+            transform: translateX(4px);
+        }
+
+        .chatbot-input-area {
+            padding: 1rem 1.25rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .chatbot-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid rgba(118, 178, 196, 0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .chatbot-input:focus {
+            border-color: rgba(118, 178, 196, 0.6);
+            box-shadow: 0 0 0 3px rgba(118, 178, 196, 0.1);
+        }
+
+        .chatbot-send {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(118, 178, 196, 0.9), rgba(118, 178, 196, 0.7));
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .chatbot-send:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(118, 178, 196, 0.4);
+        }
+
+        .chatbot-send:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .chatbot-container {
+                bottom: 4.5rem;
+                left: 1rem;
+            }
+
+            .chatbot-window {
+                width: 320px;
+                max-height: 450px;
+            }
+
+            .chatbot-toggle {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chatbot-container {
+                bottom: 4rem;
+                left: 0.75rem;
+                right: 0.75rem;
+            }
+
+            .chatbot-window {
+                width: calc(100vw - 1.5rem);
+                max-height: 400px;
+            }
+
+            .chatbot-toggle {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    </style>
 </head>
 
-<body class="datepicker_mobile_full"> 
+<body class="datepicker_mobile_full scroll-scape-container">
 
-    <div class="promo-banner">
-        <span>20% off on room bookings!</span>
-        <a href="https://live.ipms247.com/booking/book-rooms-Lgsignature" </a>
-    </div>
 
     <div id="preloader">
-        <div data-loader="cir   cle-side"></div>
+        <div data-loader="circle-side"></div>
     </div><!-- /Page Preload -->
 
     <div class="layer"></div><!-- Opacity Mask -->
 
-    <header class="reveal_header">
-        <div class="container">
-            <div class="row align-items-center">
-                 <div class="col-6">
-                        <a href="index.html" class="logo_normal"><img src="img/logo.png" width="65" height="65" alt=""></a>
-                        <a href="index.html" class="logo_sticky"><img src="img/logo_sticky.png" width="65" height="65" alt=""></a>
-                </div>
-                <div class="col-6">
-                    <nav>
-                        <ul>
-                            <li><a href="#booking_section" class="btn_1 btn_scrollto">Book Now</a></li>
-                            <li>
-                               <div class="hamburger_2 open_close_nav_panel">
-                                    <div class="hamburger__box">
-                                        <div class="hamburger__inner"></div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+    <!-- Info Bar -->
+    <div class="info-bar">
+        <div class="info-bar-content">
+            <div class="info-bar-left">
+                <span class="info-item">
+                    <i class="bi bi-envelope"></i>
+                    <a href="mailto:lgsignaturesuite@gmail.com">lgsignaturesuite@gmail.com</a>
+                </span>
+                <span class="info-item">
+                    <i class="bi bi-telephone"></i>
+                    <a href="tel:+919113929433">+91 9113929433</a>
+                </span>
             </div>
-        </div><!-- /container -->
-    </header><!-- /Header -->
+        </div>
+    </div>
 
-    <div class="nav_panel">
-        <a href="#" class="closebt open_close_nav_panel"><i class="bi bi-x"></i></a>
-        <div class="logo_panel">
-          <img src="img/logo_sticky.png" width="65" height="65" alt="">
-        </div>
-        <div class="sidebar-navigation">
-          <nav>
-            <ul class="level-1">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="room-list-2.html">Rooms & Suites</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contacts.html">Contact</a></li>
-            </ul>
-            <div class="panel_footer">
-              <div class="phone_element">
-                <a href="tel://+919113929433">
-                  <i class="bi bi-telephone"></i>
-                  <span><em>Info and bookings</em>+91 9113929433</span>
-                </a>
-              </div>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="header-inner">
+                <div class="logo-section">
+                    <img src="img/logo.png" alt="LG Signature Suites Logo">
+                    <h1 class="logo-text">LG SIGNATURE SUITES</h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <a href="room-list-2.html">Rooms</a>
+                    <a href="room-list-2.html">Suites</a>
+                    <a href="about.html">About</a>
+                    <a href="contacts.html">Contact</a>
+                    <a href="https://live.ipms247.com/booking/book-rooms-Lgsignature" class="btn-book-now-desktop">Book
+                        Now</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" style="width: 1.5rem; height: 1.5rem;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
             </div>
-          </nav>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobile-menu" style="display: none;">
+                <a href="room-list-2.html">Rooms</a>
+                <a href="room-list-2.html">Suites</a>
+                <a href="about.html">About</a>
+                <a href="contacts.html">Contact</a>
+            </div>
         </div>
-      </div>           
-    <!-- /nav_panel -->
+    </header>
+
+    <!-- Floating Social Media Icons - Always Visible -->
+    <div class="floating-social-collapsible">
+        <div class="social-menu" id="social-menu">
+            <a href="https://g.page/r/CYLwnGL5wWz8EBM/review" target="_blank" title="Google Review">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                    <path
+                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                    <path
+                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                    <path
+                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+            </a>
+            <a href="https://www.tripadvisor.in/Hotel_Review-g297628-d28108805-Reviews-LG_Signature_Suites-Bengaluru_Bangalore_District_Karnataka.html"
+                target="_blank" title="TripAdvisor">
+                <svg width="24" height="24" viewBox="0 0 50 50" fill="currentColor">
+                    <path
+                        d="M 25 11 C 19.167969 11 13.84375 12.511719 9.789063 15 L 2 15 C 2 15 3.753906 17.152344 4.578125 19.578125 C 2.96875 21.621094 2 24.195313 2 27 C 2 33.628906 7.371094 39 14 39 C 17.496094 39 20.636719 37.492188 22.828125 35.105469 L 25 38 L 27.171875 35.105469 C 29.363281 37.492188 32.503906 39 36 39 C 42.628906 39 48 33.628906 48 27 C 48 24.195313 47.03125 21.621094 45.421875 19.578125 C 46.246094 17.152344 48 15 48 15 L 40.203125 15 C 36.148438 12.511719 30.828125 11 25 11 Z M 25 13 C 28.882813 13 32.585938 13.707031 35.800781 15.011719 C 30.964844 15.089844 26.824219 18.027344 25 22.214844 C 23.171875 18.019531 19.023438 15.078125 14.171875 15.011719 L 14.242188 14.988281 C 17.453125 13.699219 21.144531 13 25 13 Z M 14 17 C 19.523438 17 24 21.476563 24 27 C 24 32.523438 19.523438 37 14 37 C 8.476563 37 4 32.523438 4 27 C 4 21.476563 8.476563 17 14 17 Z M 36 17 C 41.523438 17 46 21.476563 46 27 C 46 32.523438 41.523438 37 36 37 C 30.476563 37 26 32.523438 26 27 C 26 21.476563 30.476563 17 36 17 Z M 14 21 C 10.6875 21 8 23.6875 8 27 C 8 30.3125 10.6875 33 14 33 C 17.3125 33 20 30.3125 20 27 C 20 23.6875 17.3125 21 14 21 Z M 36 21 C 32.6875 21 30 23.6875 30 27 C 30 30.3125 32.6875 33 36 33 C 39.3125 33 42 30.3125 42 27 C 42 23.6875 39.3125 21 36 21 Z M 14 23 C 16.210938 23 18 24.789063 18 27 C 18 29.210938 16.210938 31 14 31 C 11.789063 31 10 29.210938 10 27 C 10 24.789063 11.789063 23 14 23 Z M 36 23 C 38.210938 23 40 24.789063 40 27 C 40 29.210938 38.210938 31 36 31 C 33.789063 31 32 29.210938 32 27 C 32 24.789063 33.789063 23 36 23 Z M 14 25 C 12.894531 25 12 25.894531 12 27 C 12 28.105469 12.894531 29 14 29 C 15.105469 29 16 28.105469 16 27 C 16 25.894531 15.105469 25 14 25 Z M 36 25 C 34.894531 25 34 25.894531 34 27 C 34 28.105469 34.894531 29 36 29 C 37.105469 29 38 28.105469 38 27 C 38 25.894531 37.105469 25 36 25 Z" />
+                </svg>
+            </a>
+            <a href="https://wa.me/919113929433" target="_blank" title="WhatsApp">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+                </svg>
+            </a>
+            <a href="#" id="chat-icon-toggle" title="Chat" style="cursor: pointer;">
+                <i class="bi bi-chat-dots-fill"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating Book Now Button -->
+    <div class="floating-book-now">
+        <a href="https://live.ipms247.com/booking/book-rooms-Lgsignature" class="book-now-btn">
+            <i class="bi bi-calendar-check"></i>
+            <span>Book Now</span>
+        </a>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h3>LG Signature Concierge</h3>
+                <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="chatbot-message">
+                    <div class="bot-message">
+                        Hello! 👋 Welcome to LG Signature Suites. How can I assist you today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="chatbot-options" id="chatbot-options">
+                <button class="chatbot-option-btn" data-question="room-availability">
+                    🛏️ Check Room Availability
+                </button>
+                <button class="chatbot-option-btn" data-question="amenities">
+                    ✨ What amenities do you offer?
+                </button>
+                <button class="chatbot-option-btn" data-question="location">
+                    📍 Location & Directions
+                </button>
+                <button class="chatbot-option-btn" data-question="pricing">
+                    💰 Room Rates & Packages
+                </button>
+                <button class="chatbot-option-btn" data-question="contact">
+                    📞 Contact Information
+                </button>
+            </div>
+
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Type your message..."
+                    aria-label="Chat input">
+                <button class="chatbot-send" id="chatbot-send" aria-label="Send message">
+                    <i class="bi bi-send-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <main>
-        <div class="hero full-height jarallax" data-jarallax-video="https://vimeo.com/1100992057?share=copy#t=0" data-speed="0.2">
-            <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero" data-opacity-mask="rgba(0, 0, 0, 0.5)">
-                <div class="container">
-                    <small class="slide-animated one">LG Signature Suites</small>
-                    <h1 class="slide-animated two">LG Signature Suites – 3‑Star Hotel in Kalyan Nagar</h1>
-                    <div class="row justify-content-center slide-animated three">
-                        <div class="col-xl-10">
-                            <div class="row g-0 booking_form">
-                                <div class="col-lg-4 ">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" name="dates" placeholder="Check in / Check out" readonly="readonly">
-                                        <i class="bi bi-calendar2"></i>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-sm-6 pe-lg-0 pe-sm-1">
-                                    <div class="qty-buttons">
-                                        <label>Adults</label>
-                                        <input type="button" value="+" class="qtyplus" name="adults">
-                                        <input type="text" name="adults" id="adults" value="" class="qty form-control">
-                                        <input type="button" value="-" class="qtyminus" name="adults">
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-sm-6 ps-lg-0 ps-sm-1">
-                                    <div class="qty-buttons">
-                                        <label>Childs</label>
-                                        <input type="button" value="+" class="qtyplus" name="childs">
-                                        <input type="text" name="childs" id="childs" value="" class="qty form-control">
-                                        <input type="button" value="-" class="qtyminus" name="childs">
-                                    </div>
-                                </div>
-                                <div class="col-lg-2">
-                                    <input type="submit" class="btn_search" value="Search" onclick="window.location.href='https://live.ipms247.com/booking/book-rooms-Lgsignature'">
-                                  </div>                                                                   
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mouse_wp slide-animated four">
-                    <a href="#first_section" class="btn_scrollto">
-                        <div class="mouse"></div>
-                    </a>
-                </div>
-                <!-- /mouse_wp -->
+        <!-- Hero Section with Video -->
+        <section class="parallax-section">
+            <!-- Background video -->
+            <div class="parallax-bg"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;">
+                <video
+                    src="https://video.wixstatic.com/video/11062b_0e4938c49fdf49ec80c5ce38ce70a2d0/1080p/mp4/file.mp4"
+                    style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.2); transform-origin: center center;"
+                    autoplay muted loop playsinline preload="auto"></video>
             </div>
-        </div>
-        <!-- /Background Video Parallax -->
+            <div class="parallax-overlay" style="background: rgba(0,0,0,0.3);"></div>
 
-        <div class="pattern_2">
-            <div class="container margin_120_95" id="first_section">
-                <div class="row justify-content-between flex-lg-row-reverse align-items-center">
-                    <div class="col-lg-5">
-                        <div class="parallax_wrapper">
-                            <img src="img/home_2.jpg" alt="" class="img-fluid rounded-img">
-                            <div data-cue="slideInUp" class="img_over"><span data-jarallax-element="-30"><img src="img/home_1.jpg" alt="" class="rounded-img"></span></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="intro">
-                            <div class="title">
-                                <small>About us</small>
-                                <h2>A refined space to relax, recharge, and enjoy</h2>
-                            </div>
-                            <p class="lead">LG SIGNATURE SUITES delivers an exceptional experience for both business and leisure travelers.</p>
-                            <p>With our three-star luxury accommodations, we blend comfort, style, and attentive service to create a stay that feels truly elevated. Every suite is thoughtfully designed with a focus on ambience and detail — offering a calm, polished environment that invites you to unwind and enjoy your time fully.</p>
-                            <p><em>- Team LG</em></p>
-                        </div>
-                    </div>
+            <!-- Overlay Image -->
+            <div
+                style="position: relative; z-index: 20; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 1rem;">
+                <div style="width: 90%; height: 60%; position: relative;">
+                    <img src="img/lg signature banner sharpened.png" alt="LG Signature Suites Overlay"
+                        style="width: 100%; height: 100%; object-fit: contain;" />
                 </div>
-                <!-- /Row -->
-            </div>
-            <div class="pinned-image pinned-image--medium">
-                <div class="pinned-image__container" id="section_video">
-                    <video loop="loop" muted="muted" id="video_home">
-                        <source src="video/lg signature video collage features.mp4" type="video/mp4">
-                    </video>
-                    <div class="pinned-image__container-overlay"></div>
-                </div>
-                <div class="pinned_over_content">
-                    <div class="title white">
-                        <small data-cue="slideInUp" data-delay="200">LG Signature Suites</small>
-                        <h2 data-cue="slideInUp" data-delay="300">Enjoy in a very<br> Immersive Relax</h2>
-                    </div>
-                </div>
-            </div>
-            <!-- /pinned content -->
-        </div>
-        <!-- /Pattern  -->
 
-        <div class="container margin_120_95">
-            <div class="row justify-content-between">
-                <div class="col-lg-4 fixed_title">
-                    <div class="title">
-                        <small>LG Signature Suites</small>
-                        <h2>Our Rooms</h2>
-                        <p class="lead">Escape to comfort and elegance in our thoughtfully designed rooms, where every detail caters to your peace of mind.
-                            Experience modern luxury blended with timeless charm—<strong>because you deserve nothing less.</strong></p>
-                        <p> <a href="#booking_section" class="btn_4 learn-more btn_scrollto">
-                                <span class="circle">
-                                    <span class="icon arrow"></span>
-                                </span>
-                                <span class="button-text">Book Now</span>
-                            </a></p>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row_list_version_3" data-cue="fadeIn">
-                        <div class="owl-carousel owl-theme carousel_item_1 kenburns rounded-img">
-                            <div class="item">
-                                <a data-fslightbox="gallery_1" data-type="image" href="img/rooms/1.png"><img src="img/rooms/1.png" alt=""></a>
-                            </div>
-                            <div class="item">
-                                <a data-fslightbox="gallery_1" data-type="image" href="img/rooms/opt_1.jpg"><img src="img/rooms/opt_1.jpg" alt=""></a>
-                            </div>
-                            <div class="item">
-                                <a data-fslightbox="gallery_1" data-type="image" href="img/rooms/opt_8.jpg"><img src="img/rooms/opt_8.jpg" alt=""></a>
+                <!-- Booking Form - Desktop Only -->
+                <div class="booking-form-container desktop-only">
+                    <div class="booking-form-grid">
+                        <!-- Date Range Picker -->
+                        <div class="booking-field">
+                            <div class="input-wrapper">
+                                <input class="booking-input" type="text" name="dates" placeholder="Check in / Check out"
+                                    readonly="readonly" />
+                                <i class="bi bi-calendar2 input-icon-single"></i>
                             </div>
                         </div>
-                        <!-- /carousel -->
-                        <div class="box_item_info" data-jarallax-element="-30">
-                            <small>Open for Reservation</small>
-                            <h3>Standard Room</h3>
-                            <p>Experience comfort and style in our Standard Executive Room — ideal for solo or business travelers.
-                                Enjoy a queen bed, ergonomic workspace, and modern essentials for a relaxing stay.</p>
-                            <div class="facilities clearfix">
-                                <ul>
-                                    <li>
-                                        <i class="customicon-double-bed"></i> Queen Size Bed
-                                    </li>
-                                    <li>
-                                        <i class="customicon-television"></i> 43 Inc TV
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /box_item_info -->
-                    </div>
-                    <!-- /row_list_version_3 -->
-                    <div class="row_list_version_3" data-cue="fadeIn">
-                        <div class="owl-carousel owl-theme carousel_item_1 kenburns rounded-img">
-                            <div class="item">
-                                <a data-fslightbox="gallery_3" data-type="image" href="img/rooms/3.jpg"><img src="img/rooms/3.jpg" alt=""></a>
-                            </div>
-                            <div class="item">
-                                <a data-fslightbox="gallery_3" data-type="image" href="img/rooms/opt_3.jpg"><img src="img/rooms/opt_3.jpg" alt=""></a>
-                            </div>
-                            <div class="item">
-                                <a data-fslightbox="gallery_3" data-type="image" href="img/rooms/opt_6.jpg"><img src="img/rooms/opt_6.jpg" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- /carousel -->
-                        <div class="box_item_info" data-jarallax-element="-30">
-                            <small>Open for Reservations</small>
-                            <h3>King Room with Balcony</h3>
-                            <p>Indulge in comfort with our Premium Double Deluxe Room, featuring two double beds and elegant finishes.
-                                Enjoy a private balcony, mini-fridge, and coffee maker — perfect for couples or small families.</p>
-                            <div class="facilities clearfix">
-                                <ul>
-                                    <li>
-                                        <i class="customicon-double-bed"></i> King Size Bed
-                                    </li>
-                                    <li>
-                                        <i class="customicon-television"></i> 43 Inc TV
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /box_item_info -->
-                    </div>
-                    <!-- /row_list_version_3 -->
-                    <div class="row_list_version_3" data-cue="fadeIn">
-                        <div class="owl-carousel owl-theme carousel_item_1 kenburns rounded-img">
-                            <div class="item">
-                                <a data-fslightbox="gallery_2" data-type="image" href="img/rooms/2.jpg"><img src="img/rooms/2.jpg" alt=""></a>
-                            </div>
-                            <div class="item">
-                                <a data-fslightbox="gallery_2" data-type="image" href="img/rooms/opt_2.jpg"><img src="img/rooms/opt_2.jpg" alt=""></a>
-                            </div>
-                            <div class="item">
-                                <a data-fslightbox="gallery_2" data-type="image" href="img/rooms/opt_5.jpg"><img src="img/rooms/opt_5.jpg" alt=""></a>
-                            </div>
-                        </div>
-                        <!-- /carousel -->
-                        <div class="box_item_info" data-jarallax-element="-30">
-                            <small>Open for Reservations</small>
-                            <h3>King Triple Room</h3>
-                            <p>Elevate your stay in our King's Triple Room — with a king bed, single bed, and private balcony.
-                                Perfect for families or trios, featuring a smart TV, high-speed Wi-Fi, and spa-style bathroom.</p>
-                            <div class="facilities clearfix">
-                                <ul>
-                                    <li>
-                                        <i class="customicon-double-bed"></i> King Size Bed
-                                    </li>
-                                    <li>
-                                        <i class="customicon-television"></i> 43 Inc TV
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- /box_item_info -->
-                    </div>
-                    <!-- /row_list_version_3 -->
-                </div>
-            </div>
-            <p class="text-end"><a href="#0" class="btn_1 outline">View all rooms</a></p>
-        </div>
-        <!-- /container-->
 
-        <div class="marquee">
-            <div class="track">
-                <div class="content">&nbsp;Relax Enjoy Luxury Holiday Travel Discover Experience Relax Enjoy Luxury Holiday Travel Discover Experience Relax Enjoy Luxury Holiday Travel Discover Experience Relax Enjoy Luxury Holiday Travel Discover Experience</div>
-            </div>
-        </div>
-        <!-- /marquee-->
+                        <!-- Adults -->
+                        <div class="booking-field">
+                            <label class="booking-label">Adults</label>
+                            <div class="qty-buttons-wrapper">
+                                <button type="button" class="qtyminus" name="adults">-</button>
+                                <input type="text" name="adults" id="adults" value="2" class="qty" readonly>
+                                <button type="button" class="qtyplus" name="adults">+</button>
+                            </div>
+                        </div>
 
-        <div class="bg_white">
-            <div class="container margin_120_95">
-                <div class="title text-center mb-5">
-                    <div data-cue="slideInUp"><small>LG Signature Suites</small></div>
-                    <div data-cue="slideInUp" data-delay="100">
-                        <h2>Main Facilities</h2>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-xl-3 col-md-6">
-                        <div class="box_facilities no-border" data-cue="slideInUp">
-                            <i class="customicon-private-parking"></i>
-                            <h3>Private Parking</h3>
-                            <p>Enjoy the convenience of secure, on-site parking—available exclusively for our guests.</p>
+                        <!-- Children -->
+                        <div class="booking-field">
+                            <label class="booking-label">Children</label>
+                            <div class="qty-buttons-wrapper">
+                                <button type="button" class="qtyminus" name="childs">-</button>
+                                <input type="text" name="childs" id="childs" value="0" class="qty" readonly>
+                                <button type="button" class="qtyplus" name="childs">+</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="box_facilities" data-cue="slideInUp">
-                            <i class="customicon-wifi"></i>
-                            <h3>High Speed Wifi</h3>
-                            <p>Stay connected with blazing-fast internet throughout your stay, whether for work or leisure.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="box_facilities" data-cue="slideInUp">
-                            <i class="customicon-cocktail"></i>
-                            <h3>Restaurant</h3>
-                            <p>Indulge in local and international flavors at our in-house bar and restaurant, crafted for every palate.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="box_facilities" data-cue="slideInUp">
-                            <i class="customicon-laundry"></i>
-                            <h3>Laundry & Dry Cleaning</h3>
-                            <p>Enjoy hassle-free travel with our convenient on-site laundry and dry-cleaning services.</p>
-                        </div>              
-                    </div>
-                </div>
-                <!-- /Row -->
-            </div>
-        </div>
-        <!-- /bg_white -->
 
-        <div class="parallax_section_1 jarallax" data-jarallax data-speed="0.2">
-            <img class="jarallax-img" src="img/hero_home_1.jpg" alt="">
-            <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center" data-opacity-mask="rgba(0, 0, 0, 0.5)">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="title white">
-                                <small class="mb-1">Testimonials</small>
-                                <h2>What Clients Says</h2>
-                            </div>
-                            <div class="carousel_testimonials owl-carousel owl-theme nav-dots-orizontal">
-                                <div>
-                                    <div class="box_overlay">
-                                        <div class="pic">
-                                            <figure><img src="img/testimonial_1.jpg" alt="" class="img-circle">
-                                            </figure>
-                                            <h3>Goretti Martins<small>12 Mar</small></h3>
-                                        </div>
-                                        <div class="comment">
-                                            "Very clean rooms with excellent room service. It's just 10 minutes walking distance to Logos. The owner and the staff are all very gentle, helpful and kind."
-                                        </div>
-                                    </div>
-                                    <!-- End box_overlay -->
-                                </div>
-                                <div>
-                                    <div class="box_overlay">
-                                        <div class="pic">
-                                            <figure><img src="img/testimonial_1.jpg" alt="" class="img-circle">
-                                            </figure>
-                                            <h3>Nairanjana Bhattacharyya<small>2 May</small></h3>
-                                        </div>
-                                        <div class="comment">
-                                            "Overall great stay. Very friendly and helpful staff. New property hence everything is very well maintained. Anil was a great host. Perfect for family, friends or corporate stays too."
-                                        </div>
-                                    </div>
-                                    <!-- End box_overlay -->
-                                </div>
-                                <div>
-                                    <div class="box_overlay">
-                                        <div class="pic">
-                                            <figure><img src="img/testimonial_1.jpg" alt="" class="img-circle">
-                                            </figure>
-                                            <h3>Nitha<small>12 June</small></h3>
-                                        </div>
-                                        <div class="comment">
-                                            "I booked the King's Deluxe Triple Room for my parents. The room was clean, well-maintained, and had all the necessary facilities."
-                                        </div>
-                                    </div>
-                                    <!-- End box_overlay -->
-                                </div>
-                            </div>
-                            <!-- End carousel_testimonials -->
+                        <!-- Search Button -->
+                        <div class="booking-button-container">
+                            <input type="submit" class="booking-button" value="Search"
+                                onclick="window.location.href='https://live.ipms247.com/booking/book-rooms-Lgsignature'" />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- /parallax_section_1-->
+        </section>
 
-        <div class="bg_white">
-            <div class="container margin_120_95">
-                <div class="title mb-3">
-                    <small data-cue="slideInUp">LG Signature Suites</small>
-                    <h2 data-cue="slideInUp" data-delay="200">News & Events</h2>
-                </div>
-                <div class="row justify-content-center home">
-                    <div class="item col-xl-4 col-lg-6">
-                        <a href="news-post.html" class="box_contents" data-cue="slideInUp" data-delay="300">
-                            <figure><img src="img/blog-1.jpg" alt="" class="img-fluid"><em>11 Dec</em></figure>
-                            <div class="wrapper">
-                                <small>Blog<span></span></small>
-                                <h3>Why LG Signature Suites Is Among the Best Budget Hotels</h3>
-                                <em>Read more</em>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item col-xl-4 col-lg-6">
-                        <a href="news-post.html" class="box_contents" data-cue="slideInUp" data-delay="400">
-                            <figure><img src="img/blog-3.jpg" alt="" class="img-fluid"><em>24 Dec</em></figure>
-                            <div class="wrapper">
-                                <small>Blog<span></span></small>
-                                <h3>Top 7 Reasons Why LG Signature Suites Is the Best Budget Hotel for Couples in Bangalore</h3>
-                                <em>Read more</em>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="item col-xl-4 col-lg-6">
-                        <a href="news-post.html" class="box_contents" data-cue="slideInUp" data-delay="500">
-                            <figure><img src="img/blog-2.jpg" alt="" class="img-fluid"><em>21 Dec</em></figure>
-                            <div class="wrapper">
-                                <small>Blog<span></span></small>
-                                <h3>Where to Stay in Bangalore: LG Signature Suites Near Commercial Street Offers Comfort on a Budget</h3>
-                                <em>Read more</em>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!--/row -->
-                <p class="text-end"><a href="#" class="btn_1 outline mt-2" data-cue="slideInUp" data-delay="600">View all News</a></p>
-            </div>
-            <!--/container -->
-        </div>
-        <!--/bg_white -->
 
-        <div class="container margin_120_95" id="booking_section">
-            <div class="row justify-content-between">
-                <div class="col-xl-4">
-                    <div data-cue="slideInUp">
-                        <div class="title">
-                            <small>LG Signature Suites</small>
-                            <h2>Check Availability</h2>
-                        </div>
-                        <p>Plan your perfect stay with ease. Enter your preferred dates and let us find the best room options tailored just for you.</p>
-                        <p class="phone_element no_borders"><a href="tel://+919113929433"><i class="bi bi-telephone"></i><span><em>Info and bookings</em>+91 9113929433</span></a></p>
-                    </div>
-                </div>
-                <div class="col-xl-7">
-                    <div data-cue="slideInUp" data-delay="200">
-                        <div class="booking_wrapper">
-                            <p id="daterangepicker-result" class="d-none"></p>
-                            <input id="date_booking" type="hidden">
-                            <div id="daterangepicker-embedded-container" class="embedded-daterangepicker clearfix mb-4"></div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="custom_select">
-                                        <select class="wide">
-                                            <option>Select Room</option>
-                                            <option>Double Room</option>
-                                            <option>Deluxe Room</option>
-                                            <option>Superior Room</option>
-                                            <option>Junior Suite</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="qty-buttons mb-3 version_2">
-                                                <input type="button" value="+" class="qtyplus" name="adults_booking">
-                                                <input type="text" name="adults_booking" id="adults_booking" value="" class="qty form-control" placeholder="Adults">
-                                                <input type="button" value="-" class="qtyminus" name="adults_booking">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="mb-3 qty-buttons mb-3 version_2">
-                                                <input type="button" value="+" class="qtyplus" name="childs_booking">
-                                                <input type="text" name="childs_booking" id="childs_booking" value="" class="qty form-control" placeholder="Childs">
-                                                <input type="button" value="-" class="qtyminus" name="childs_booking">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- / row -->
-                        <p class="text-end mt-4"><a href="https://live.ipms247.com/booking/book-rooms-Lgsignature" class="btn_1 outline">Book Now</a></p>
-                    </div>
-                </div>
-                <!-- /col -->
+        <!-- Rooms Section -->
+        <section class="parallax-section" id="rooms">
+            <div class="parallax-bg"
+                style="background-image: url('img/roomsandsuites.avif'); background-position: 30% center;"></div>
+            <div class="parallax-overlay" style="background: rgba(0,0,0,0.3);"></div>
+            <div class="parallax-content">
+                <h2 class="parallax-title">ROOMS AND SUITES</h2>
+                <a href="room-list-2.html" class="parallax-button">View Rooms</a>
             </div>
-            <!-- /row -->
-        </div>
-        <!-- /container -->
-        
+        </section>
+
+        <!-- About Section -->
+        <section class="parallax-section" id="about">
+            <div class="parallax-bg" style="background-image: url('img/outdoor.avif');"></div>
+            <div class="parallax-overlay" style="background: rgba(0, 0, 0, 0.3);"></div>
+            <div class="parallax-content">
+                <h2 class="parallax-title">ABOUT</h2>
+                <a href="about.html" class="parallax-button">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Restaurant Section -->
+        <section class="parallax-section" id="about">
+            <div class="parallax-bg" style="background-image: url('img/restaurant.avif');"></div>
+            <div class="parallax-overlay" style="background: rgba(0, 0, 0, 0.3);"></div>
+            <div class="parallax-content">
+                <h2 class="parallax-title">RESTAURANT</h2>
+                <a href="about.html" class="parallax-button">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="parallax-section" id="contact">
+            <div class="parallax-bg" style="background-image: url('img/outdoorfacade.jpg');"></div>
+            <div class="parallax-overlay" style="background: rgba(0,0,0,0.4);"></div>
+            <div class="parallax-content">
+                <h2 class="parallax-title">CONTACT</h2>
+                <a href="contacts.html" class="parallax-button">Get in Touch</a>
+            </div>
+        </section>
     </main>
-    
+
     <footer class="revealed">
         <div class="footer_bg">
             <div class="gradient_over"></div>
@@ -619,31 +1947,40 @@
                 <div class="col-lg-4 col-md-12">
                     <h5>Contacts</h5>
                     <ul>
-                        <li>99, Arakavati layout, 5th cross 19th block, Kalyan Nagar, Chelekare<br>Bangalore 560043<br><br></li>
+                        <li>99, Arakavati layout, 5th cross 19th block, Kalyan Nagar, Chelekare<br>Bangalore
+                            560043<br><br></li>
                         <li><strong><a href="#0">lgsignaturesuite@gmail.com</a></strong></li>
                         <li><strong><a href="#0">+91 9113929433</a></strong></li>
                     </ul>
                     <div class="social">
                         <ul>
                             <li><a href="https://g.page/r/CYLwnGL5wWz8EBM/review" target="_blank" title="Google Review">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                                </svg>
-                            </a></li>
-                            <li><a href="https://www.tripadvisor.in/Hotel_Review-g297628-d28108805-Reviews-LG_Signature_Suites-Bengaluru_Bangalore_District_Karnataka.html?m=19905" target="_blank" title="TripAdvisor">
-                                <svg width="16" height="16" viewBox="0 0 50 50" fill="currentColor">
-                                    <path d="M 25 11 C 19.167969 11 13.84375 12.511719 9.789063 15 L 2 15 C 2 15 3.753906 17.152344 4.578125 19.578125 C 2.96875 21.621094 2 24.195313 2 27 C 2 33.628906 7.371094 39 14 39 C 17.496094 39 20.636719 37.492188 22.828125 35.105469 L 25 38 L 27.171875 35.105469 C 29.363281 37.492188 32.503906 39 36 39 C 42.628906 39 48 33.628906 48 27 C 48 24.195313 47.03125 21.621094 45.421875 19.578125 C 46.246094 17.152344 48 15 48 15 L 40.203125 15 C 36.148438 12.511719 30.828125 11 25 11 Z M 25 13 C 28.882813 13 32.585938 13.707031 35.800781 15.011719 C 30.964844 15.089844 26.824219 18.027344 25 22.214844 C 23.171875 18.019531 19.023438 15.078125 14.171875 15.011719 L 14.242188 14.988281 C 17.453125 13.699219 21.144531 13 25 13 Z M 14 17 C 19.523438 17 24 21.476563 24 27 C 24 32.523438 19.523438 37 14 37 C 8.476563 37 4 32.523438 4 27 C 4 21.476563 8.476563 17 14 17 Z M 36 17 C 41.523438 17 46 21.476563 46 27 C 46 32.523438 41.523438 37 36 37 C 30.476563 37 26 32.523438 26 27 C 26 21.476563 30.476563 17 36 17 Z M 14 21 C 10.6875 21 8 23.6875 8 27 C 8 30.3125 10.6875 33 14 33 C 17.3125 33 20 30.3125 20 27 C 20 23.6875 17.3125 21 14 21 Z M 36 21 C 32.6875 21 30 23.6875 30 27 C 30 30.3125 32.6875 33 36 33 C 39.3125 33 42 30.3125 42 27 C 42 23.6875 39.3125 21 36 21 Z M 14 23 C 16.210938 23 18 24.789063 18 27 C 18 29.210938 16.210938 31 14 31 C 11.789063 31 10 29.210938 10 27 C 10 24.789063 11.789063 23 14 23 Z M 36 23 C 38.210938 23 40 24.789063 40 27 C 40 29.210938 38.210938 31 36 31 C 33.789063 31 32 29.210938 32 27 C 32 24.789063 33.789063 23 36 23 Z M 14 25 C 12.894531 25 12 25.894531 12 27 C 12 28.105469 12.894531 29 14 29 C 15.105469 29 16 28.105469 16 27 C 16 25.894531 15.105469 25 14 25 Z M 36 25 C 34.894531 25 34 25.894531 34 27 C 34 28.105469 34.894531 29 36 29 C 37.105469 29 38 28.105469 38 27 C 38 25.894531 37.105469 25 36 25 Z"></path>
-                                </svg>
-                            </a></li>
-                            <li><a href="https://www.makemytrip.com/hotels/review-of-lg_signature_suites-details-bangalore.html" target="_blank" title="MakeMyTrip Reviews">
-                                M
-                            </a></li>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                        <path
+                                            d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                        <path
+                                            d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                        <path
+                                            d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                    </svg>
+                                </a></li>
+                            <li><a href="https://www.tripadvisor.in/Hotel_Review-g297628-d28108805-Reviews-LG_Signature_Suites-Bengaluru_Bangalore_District_Karnataka.html?m=19905"
+                                    target="_blank" title="TripAdvisor">
+                                    <svg width="16" height="16" viewBox="0 0 50 50" fill="currentColor">
+                                        <path
+                                            d="M 25 11 C 19.167969 11 13.84375 12.511719 9.789063 15 L 2 15 C 2 15 3.753906 17.152344 4.578125 19.578125 C 2.96875 21.621094 2 24.195313 2 27 C 2 33.628906 7.371094 39 14 39 C 17.496094 39 20.636719 37.492188 22.828125 35.105469 L 25 38 L 27.171875 35.105469 C 29.363281 37.492188 32.503906 39 36 39 C 42.628906 39 48 33.628906 48 27 C 48 24.195313 47.03125 21.621094 45.421875 19.578125 C 46.246094 17.152344 48 15 48 15 L 40.203125 15 C 36.148438 12.511719 30.828125 11 25 11 Z M 25 13 C 28.882813 13 32.585938 13.707031 35.800781 15.011719 C 30.964844 15.089844 26.824219 18.027344 25 22.214844 C 23.171875 18.019531 19.023438 15.078125 14.171875 15.011719 L 14.242188 14.988281 C 17.453125 13.699219 21.144531 13 25 13 Z M 14 17 C 19.523438 17 24 21.476563 24 27 C 24 32.523438 19.523438 37 14 37 C 8.476563 37 4 32.523438 4 27 C 4 21.476563 8.476563 17 14 17 Z M 36 17 C 41.523438 17 46 21.476563 46 27 C 46 32.523438 41.523438 37 36 37 C 30.476563 37 26 32.523438 26 27 C 26 21.476563 30.476563 17 36 17 Z M 14 21 C 10.6875 21 8 23.6875 8 27 C 8 30.3125 10.6875 33 14 33 C 17.3125 33 20 30.3125 20 27 C 20 23.6875 17.3125 21 14 21 Z M 36 21 C 32.6875 21 30 23.6875 30 27 C 30 30.3125 32.6875 33 36 33 C 39.3125 33 42 30.3125 42 27 C 42 23.6875 39.3125 21 36 21 Z M 14 23 C 16.210938 23 18 24.789063 18 27 C 18 29.210938 16.210938 31 14 31 C 11.789063 31 10 29.210938 10 27 C 10 24.789063 11.789063 23 14 23 Z M 36 23 C 38.210938 23 40 24.789063 40 27 C 40 29.210938 38.210938 31 36 31 C 33.789063 31 32 29.210938 32 27 C 32 24.789063 33.789063 23 36 23 Z M 14 25 C 12.894531 25 12 25.894531 12 27 C 12 28.105469 12.894531 29 14 29 C 15.105469 29 16 28.105469 16 27 C 16 25.894531 15.105469 25 14 25 Z M 36 25 C 34.894531 25 34 25.894531 34 27 C 34 28.105469 34.894531 29 36 29 C 37.105469 29 38 28.105469 38 27 C 38 25.894531 37.105469 25 36 25 Z">
+                                        </path>
+                                    </svg>
+                                </a></li>
+                            <li><a href="https://www.makemytrip.com/hotels/review-of-lg_signature_suites-details-bangalore.html"
+                                    target="_blank" title="MakeMyTrip Reviews">
+                                    M
+                                </a></li>
                             <li><a href="https://wa.me/919113929433" target="_blank" title="WhatsApp">
-                                <i class="bi bi-whatsapp"></i>
-                            </a></li>
+                                    <i class="bi bi-whatsapp"></i>
+                                </a></li>
                         </ul>
                     </div>
                 </div>
@@ -662,9 +1999,11 @@
                     <div id="newsletter">
                         <h5>Newsletter</h5>
                         <div id="message-newsletter"></div>
-                        <form method="post" action="phpmailer/newsletter_template_email.php" name="newsletter_form" id="newsletter_form">
+                        <form method="post" action="phpmailer/newsletter_template_email.php" name="newsletter_form"
+                            id="newsletter_form">
                             <div class="form-group">
-                                <input type="email" name="email_newsletter" id="email_newsletter" class="form-control" placeholder="Your email">
+                                <input type="email" name="email_newsletter" id="email_newsletter" class="form-control"
+                                    placeholder="Your email">
                                 <button type="submit" id="submit-newsletter"><i class="bi bi-send"></i></button>
                             </div>
                         </form>
@@ -690,34 +2029,341 @@
     </div>
     <!-- /back to top -->
 
-<!-- COMMON SCRIPTS -->
-<script src="js/common_scripts.js"></script>
-<script src="js/common_functions.js"></script>
-<script src="js/datepicker_inline.js"></script>
-<script src="phpmailer/validate.js"></script>
-<script src="js/fslightbox.js"></script>
+    <!-- COMMON SCRIPTS -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/common_scripts.js"></script>
+    <script src="js/common_functions.js"></script>
+    <script src="js/datepicker_inline.js"></script>
+    <script src="phpmailer/validate.js"></script>
+    <script src="js/fslightbox.js"></script>
 
-<!-- Floating Review Icons -->
-<div class="floating-social-icons">
-    <a href="https://g.page/r/CYLwnGL5wWz8EBM/review" class="social-icon google-review" aria-label="Google Review" target="_blank" title="Google Review">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-        </svg>
-    </a>
-    <a href="https://www.tripadvisor.in/Hotel_Review-g297628-d28108805-Reviews-LG_Signature_Suites-Bengaluru_Bangalore_District_Karnataka.html?m=19905" class="social-icon tripadvisor" aria-label="TripAdvisor" target="_blank" title="TripAdvisor">
-        <svg width="20" height="20" viewBox="0 0 50 50" fill="currentColor">
-            <path d="M 25 11 C 19.167969 11 13.84375 12.511719 9.789063 15 L 2 15 C 2 15 3.753906 17.152344 4.578125 19.578125 C 2.96875 21.621094 2 24.195313 2 27 C 2 33.628906 7.371094 39 14 39 C 17.496094 39 20.636719 37.492188 22.828125 35.105469 L 25 38 L 27.171875 35.105469 C 29.363281 37.492188 32.503906 39 36 39 C 42.628906 39 48 33.628906 48 27 C 48 24.195313 47.03125 21.621094 45.421875 19.578125 C 46.246094 17.152344 48 15 48 15 L 40.203125 15 C 36.148438 12.511719 30.828125 11 25 11 Z M 25 13 C 28.882813 13 32.585938 13.707031 35.800781 15.011719 C 30.964844 15.089844 26.824219 18.027344 25 22.214844 C 23.171875 18.019531 19.023438 15.078125 14.171875 15.011719 L 14.242188 14.988281 C 17.453125 13.699219 21.144531 13 25 13 Z M 14 17 C 19.523438 17 24 21.476563 24 27 C 24 32.523438 19.523438 37 14 37 C 8.476563 37 4 32.523438 4 27 C 4 21.476563 8.476563 17 14 17 Z M 36 17 C 41.523438 17 46 21.476563 46 27 C 46 32.523438 41.523438 37 36 37 C 30.476563 37 26 32.523438 26 27 C 26 21.476563 30.476563 17 36 17 Z M 14 21 C 10.6875 21 8 23.6875 8 27 C 8 30.3125 10.6875 33 14 33 C 17.3125 33 20 30.3125 20 27 C 20 23.6875 17.3125 21 14 21 Z M 36 21 C 32.6875 21 30 23.6875 30 27 C 30 30.3125 32.6875 33 36 33 C 39.3125 33 42 30.3125 42 27 C 42 23.6875 39.3125 21 36 21 Z M 14 23 C 16.210938 23 18 24.789063 18 27 C 18 29.210938 16.210938 31 14 31 C 11.789063 31 10 29.210938 10 27 C 10 24.789063 11.789063 23 14 23 Z M 36 23 C 38.210938 23 40 24.789063 40 27 C 40 29.210938 38.210938 31 36 31 C 33.789063 31 32 29.210938 32 27 C 32 24.789063 33.789063 23 36 23 Z M 14 25 C 12.894531 25 12 25.894531 12 27 C 12 28.105469 12.894531 29 14 29 C 15.105469 29 16 28.105469 16 27 C 16 25.894531 15.105469 25 14 25 Z M 36 25 C 34.894531 25 34 25.894531 34 27 C 34 28.105469 34.894531 29 36 29 C 37.105469 29 38 28.105469 38 27 C 38 25.894531 37.105469 25 36 25 Z"></path>
-        </svg>
-    </a>
-    <!-- MakeMyTrip review icon temporarily disabled -->
-    <a href="https://wa.me/919113929433" class="social-icon whatsapp" aria-label="WhatsApp" target="_blank" title="WhatsApp">
-        <i class="bi bi-whatsapp"></i>
-    </a>
-</div>
-<!-- /Floating Review Icons -->
+    <!-- Custom Scroll Scape JavaScript -->
+    <script>
+        // Wait for all scripts to load first
+        $(document).ready(function () {
+            // Small delay to ensure common_scripts.js has loaded
+            setTimeout(function () {
+                // Mobile menu toggle
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                if (mobileMenuBtn && mobileMenu) {
+                    mobileMenuBtn.addEventListener('click', function () {
+                        const isOpen = mobileMenu.style.display === 'block';
+                        mobileMenu.style.display = isOpen ? 'none' : 'block';
+                    });
+                }
+
+                // Parallax scrolling effect with 20% delay
+                const parallaxElements = document.querySelectorAll('.parallax-bg');
+
+                // Detect if mobile device
+                const isMobile = window.innerWidth <= 768;
+
+                function updateParallax() {
+                    const scrolled = window.pageYOffset;
+
+                    parallaxElements.forEach((element, index) => {
+                        const sectionOffset = window.innerHeight * index;
+                        const elementOffset = scrolled - sectionOffset;
+                        const sectionHeight = window.innerHeight;
+
+                        // Calculate 20% of section height
+                        const delayThreshold = sectionHeight * 0.2;
+
+                        // Only start parallax after 20% of section is scrolled
+                        if (elementOffset > delayThreshold && elementOffset < sectionHeight) {
+                            const adjustedOffset = elementOffset - delayThreshold;
+                            // Increase parallax rate for mobile for stronger effect
+                            const parallaxRate = isMobile ? 1.2 : 0.5;
+                            element.style.transform = `translateY(${adjustedOffset * parallaxRate}px)`;
+                        } else if (elementOffset <= delayThreshold) {
+                            // Reset position when not yet at 20% threshold
+                            element.style.transform = 'translateY(0px)';
+                        }
+                    });
+                }
+
+                // Throttle scroll events for better performance
+                let ticking = false;
+                function requestTick() {
+                    if (!ticking) {
+                        requestAnimationFrame(updateParallax);
+                        ticking = true;
+                    }
+                }
+
+                function handleScroll() {
+                    ticking = false;
+                    requestTick();
+                }
+
+                window.addEventListener('scroll', handleScroll);
+
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+
+                // Override quantity buttons functionality to prevent duplication
+                $(".qtyplus").off("click").on("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const fieldName = $(this).attr("name");
+                    const input = $("input[name=" + fieldName + "]");
+                    let currentValue = parseInt(input.val()) || 0;
+                    input.val(currentValue + 1);
+                    input.trigger('change');
+                });
+
+                $(".qtyminus").off("click").on("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const fieldName = $(this).attr("name");
+                    const input = $("input[name=" + fieldName + "]");
+                    let currentValue = parseInt(input.val()) || 0;
+                    if (currentValue > 0) {
+                        input.val(currentValue - 1);
+                        input.trigger('change');
+                    }
+                });
+
+                // Initialize quantity inputs with proper values
+                $("input[name='adults']").val(2);
+                $("input[name='childs']").val(0);
+
+                // Override date range picker to prevent conflicts for desktop
+                $('input[name="dates"]').off().daterangepicker({
+                    autoUpdateInput: false,
+                    autoApply: true,
+                    alwaysShowCalendars: true,
+                    opens: 'center',
+                    minDate: new Date(),
+                    locale: {
+                        format: 'MM-DD-YYYY',
+                        cancelLabel: 'Clear'
+                    }
+                });
+
+                $('input[name="dates"]').on('apply.daterangepicker', function (ev, picker) {
+                    $(this).val(picker.startDate.format('MM-DD-YYYY') + ' to ' + picker.endDate.format('MM-DD-YYYY'));
+                });
+
+                $('input[name="dates"]').on('cancel.daterangepicker', function (ev, picker) {
+                    $(this).val('');
+                });
+
+
+            }, 100); // End of setTimeout
+
+            // Chatbot functionality
+            const chatbotWindow = document.getElementById('chatbot-window');
+            const chatbotClose = document.getElementById('chatbot-close');
+            const chatbotMessages = document.getElementById('chatbot-messages');
+            const chatbotOptions = document.getElementById('chatbot-options');
+            const chatbotInput = document.getElementById('chatbot-input');
+            const chatbotSend = document.getElementById('chatbot-send');
+
+            const whatsappNumber = '919113929433'; // WhatsApp number for redirection
+
+            // Conversation responses
+            const responses = {
+                'room-availability': {
+                    message: 'I can help you check room availability! Would you like to:',
+                    options: [
+                        { text: '📅 Book a room now', action: 'book' },
+                        { text: '💬 Chat with us on WhatsApp', action: 'whatsapp' }
+                    ]
+                },
+                'amenities': {
+                    message: 'We offer premium amenities including free WiFi, air conditioning, flat-screen TVs, room service, and more! Would you like to:',
+                    options: [
+                        { text: '📋 See full amenities list', action: 'whatsapp' },
+                        { text: '🏨 Book a room', action: 'book' }
+                    ]
+                },
+                'location': {
+                    message: 'We are located in Bengaluru, Karnataka. Would you like:',
+                    options: [
+                        { text: '🗺️ Get directions on WhatsApp', action: 'whatsapp' },
+                        { text: '📞 Call for assistance', action: 'whatsapp' }
+                    ]
+                },
+                'pricing': {
+                    message: 'Our room rates vary by season and availability. For current pricing:',
+                    options: [
+                        { text: '💰 Get pricing details on WhatsApp', action: 'whatsapp' },
+                        { text: '🛏️ Check availability & book', action: 'book' }
+                    ]
+                },
+                'contact': {
+                    message: 'You can reach us via:',
+                    options: [
+                        { text: '💬 WhatsApp: +91 91139 29433', action: 'whatsapp' },
+                        { text: '📧 Email us', action: 'whatsapp' }
+                    ]
+                }
+            };
+
+            // Toggle chatbot window
+            function toggleChatbot() {
+                chatbotWindow.classList.toggle('active');
+                // Toggle active state on chat icon in social menu
+                const chatIconToggle = document.getElementById('chat-icon-toggle');
+                if (chatIconToggle) {
+                    chatIconToggle.classList.toggle('active');
+                }
+                if (chatbotWindow.classList.contains('active')) {
+                    chatbotInput.focus();
+                }
+            }
+
+            chatbotClose.addEventListener('click', toggleChatbot);
+
+            // Chat icon in social menu toggles chatbot
+            const chatIconToggle = document.getElementById('chat-icon-toggle');
+            if (chatIconToggle) {
+                chatIconToggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    toggleChatbot();
+                });
+            }
+
+            // Add message to chat
+            function addMessage(text, isUser = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'chatbot-message';
+                messageDiv.innerHTML = `
+            <div class="${isUser ? 'user-message' : 'bot-message'}">
+                ${text}
+            </div>
+        `;
+                chatbotMessages.appendChild(messageDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+
+            // Show response options
+            function showOptions(options) {
+                chatbotOptions.innerHTML = '';
+                options.forEach(option => {
+                    const btn = document.createElement('button');
+                    btn.className = 'chatbot-option-btn';
+                    btn.textContent = option.text;
+                    btn.addEventListener('click', () => {
+                        if (option.action === 'whatsapp') {
+                            redirectToWhatsApp(option.text);
+                        } else if (option.action === 'book') {
+                            window.open('https://live.ipms247.com/booking/book-rooms-Lgsignature', '_blank');
+                            addMessage('Great! Opening our booking page for you...', false);
+                            setTimeout(() => {
+                                showInitialOptions();
+                            }, 1500);
+                        }
+                    });
+                    chatbotOptions.appendChild(btn);
+                });
+            }
+
+            // Show initial question options
+            function showInitialOptions() {
+                chatbotOptions.innerHTML = `
+            <button class="chatbot-option-btn" data-question="room-availability">
+                🛏️ Check Room Availability
+            </button>
+            <button class="chatbot-option-btn" data-question="amenities">
+                ✨ What amenities do you offer?
+            </button>
+            <button class="chatbot-option-btn" data-question="location">
+                📍 Location & Directions
+            </button>
+            <button class="chatbot-option-btn" data-question="pricing">
+                💰 Room Rates & Packages
+            </button>
+            <button class="chatbot-option-btn" data-question="contact">
+                📞 Contact Information
+            </button>
+        `;
+
+                // Re-attach event listeners
+                document.querySelectorAll('.chatbot-option-btn').forEach(btn => {
+                    btn.addEventListener('click', handleQuestionClick);
+                });
+            }
+
+            // Handle question button clicks
+            function handleQuestionClick(e) {
+                const question = e.currentTarget.dataset.question;
+                const questionText = e.currentTarget.textContent.trim();
+
+                // Add user's question to chat
+                addMessage(questionText, true);
+
+                // Get and display bot response
+                const response = responses[question];
+                if (response) {
+                    setTimeout(() => {
+                        addMessage(response.message, false);
+                        showOptions(response.options);
+                    }, 500);
+                }
+            }
+
+            // Redirect to WhatsApp
+            function redirectToWhatsApp(context = '') {
+                const message = context ? `Hi, I'm interested in: ${context}` : 'Hi, I have a question about LG Signature Suites';
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+
+                addMessage('Redirecting you to WhatsApp...', false);
+                setTimeout(() => {
+                    showInitialOptions();
+                }, 1500);
+            }
+
+            // Handle custom user input
+            function handleUserMessage() {
+                const message = chatbotInput.value.trim();
+                if (!message) return;
+
+                addMessage(message, true);
+                chatbotInput.value = '';
+
+                // Bot response for custom messages
+                setTimeout(() => {
+                    addMessage('Thank you for your message! Let me connect you with our team on WhatsApp for personalized assistance.', false);
+                    setTimeout(() => {
+                        redirectToWhatsApp(message);
+                    }, 1000);
+                }, 500);
+            }
+
+            // Event listeners for input
+            chatbotSend.addEventListener('click', handleUserMessage);
+            chatbotInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    handleUserMessage();
+                }
+            });
+
+            // Initial question button listeners
+            document.querySelectorAll('.chatbot-option-btn').forEach(btn => {
+                btn.addEventListener('click', handleQuestionClick);
+            });
+
+        }); // End of document ready
+    </script>
 
 </body>
+
 </html>

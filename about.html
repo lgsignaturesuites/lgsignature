@@ -1783,81 +1783,92 @@
 
                 <!-- Suites & Services Section -->
                 <div style="margin-bottom: 4rem;">
-                    <h3
-                        style="font-family: 'Playfair Display', serif; font-size: 2rem; text-align: center; margin-bottom: 0.5rem; color: #000 !important;">
-                        More Than Just Rooms
-                    </h3>
-                    <p style="text-align: center; color: #666 !important; margin-bottom: 2.5rem; font-size: 1rem;">
-                        Explore our additional services and spaces</p>
-                    <div class="row">
-                        <div class="col-lg-4 mb-4">
-                            <div
-                                style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); height: 100%;">
-                                <img src="img/homestay.avif" alt="Homestay"
-                                    style="width: 100%; height: 180px; object-fit: cover;">
-                                <div style="padding: 1.5rem;">
-                                    <h4
-                                        style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #000 !important; margin-bottom: 0.75rem;">
-                                        <i class="bi bi-house-heart" style="color: #76b2c4; margin-right: 0.5rem;"></i>
-                                        Homestay
-                                    </h4>
-                                    <p
-                                        style="color: #666 !important; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-                                        Experience the comfort of home with our premium homestay options. Perfect for
-                                        long stays and families seeking a cozy, home-like atmosphere.
-                                    </p>
-                                    <a href="suites.html"
-                                        style="color: #76b2c4 !important; font-weight: 600; text-decoration: none; font-size: 0.9rem;">
-                                        Learn More <i class="bi bi-arrow-right"></i>
-                                    </a>
-                                </div>
+
+                    <!-- Carousel Section -->
+                    <div style="margin-top: 3rem; margin-bottom: 5rem;">
+                        <!-- Section Header -->
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-lg-8 text-center">
+                                <h3
+                                    style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #000 !important; margin-bottom: 1rem;">
+                                    More Than Just Rooms
+                                </h3>
+                                <p style="color: #555 !important; font-size: 1.1rem; line-height: 1.8;">
+                                    LG Signature Suites is designed to be a versatile destination. Beyond our
+                                    comfortable rooms, we offer premium <span
+                                        style="color: #76b2c4; font-weight: 600;">Homestay</span> options for long-term
+                                    comfort, a fully equipped <span style="color: #76b2c4; font-weight: 600;">Co-working
+                                        Space</span> for your professional needs, and an exclusive <span
+                                        style="color: #76b2c4; font-weight: 600;">Party Hall</span> to celebrate life's
+                                    special moments. Everything you need, all in one place.
+                                </p>
                             </div>
                         </div>
-                        <div class="col-lg-4 mb-4">
-                            <div
-                                style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); height: 100%;">
-                                <img src="img/cowork.png" alt="Co-working Space"
-                                    style="width: 100%; height: 180px; object-fit: cover;">
-                                <div style="padding: 1.5rem;">
-                                    <h4
-                                        style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #000 !important; margin-bottom: 0.75rem;">
-                                        <i class="bi bi-laptop" style="color: #76b2c4; margin-right: 0.5rem;"></i>
-                                        Co-working Space
-                                    </h4>
-                                    <p
-                                        style="color: #666 !important; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-                                        Productive and professional workspace designed for your success. High-speed
-                                        internet, ergonomic seating, and a quiet environment.
-                                    </p>
-                                    <a href="suites.html"
-                                        style="color: #76b2c4 !important; font-weight: 600; text-decoration: none; font-size: 0.9rem;">
-                                        Learn More <i class="bi bi-arrow-right"></i>
-                                    </a>
+
+                        <!-- Carousel -->
+                        <div id="amenitiesCarousel" class="carousel slide" data-bs-ride="carousel"
+                            style="border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#amenitiesCarousel" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#amenitiesCarousel" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#amenitiesCarousel" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <!-- Slide 1: Homestay -->
+                                <div class="carousel-item active">
+                                    <img src="img/homestay.avif" class="d-block w-100" alt="Homestay"
+                                        style="height: 500px; object-fit: cover;">
+                                    <div class="carousel-caption d-none d-md-block"
+                                        style="background: rgba(0,0,0,0.6); border-radius: 12px; padding: 1.5rem; bottom: 3rem; left: 15%; right: 15%;">
+                                        <h5
+                                            style="font-family: 'Playfair Display', serif; font-size: 1.75rem; color: white !important;">
+                                            Homestay Comfort</h5>
+                                        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.95); margin-bottom: 0;">A
+                                            cozy, home-like atmosphere perfect for families and long stays.</p>
+                                    </div>
+                                </div>
+                                <!-- Slide 2: Co-working -->
+                                <div class="carousel-item">
+                                    <img src="img/cowork.png" class="d-block w-100" alt="Co-working Space"
+                                        style="height: 500px; object-fit: cover;">
+                                    <div class="carousel-caption d-none d-md-block"
+                                        style="background: rgba(0,0,0,0.6); border-radius: 12px; padding: 1.5rem; bottom: 3rem; left: 15%; right: 15%;">
+                                        <h5
+                                            style="font-family: 'Playfair Display', serif; font-size: 1.75rem; color: white !important;">
+                                            Professional Co-working</h5>
+                                        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.95); margin-bottom: 0;">
+                                            High-speed internet and ergonomic seating for maximum productivity.</p>
+                                    </div>
+                                </div>
+                                <!-- Slide 3: Party Hall -->
+                                <div class="carousel-item">
+                                    <img src="img/partyhall.jpg" class="d-block w-100" alt="Party Hall"
+                                        style="height: 500px; object-fit: cover;">
+                                    <div class="carousel-caption d-none d-md-block"
+                                        style="background: rgba(0,0,0,0.6); border-radius: 12px; padding: 1.5rem; bottom: 3rem; left: 15%; right: 15%;">
+                                        <h5
+                                            style="font-family: 'Playfair Display', serif; font-size: 1.75rem; color: white !important;">
+                                            Exclusive Party Hall</h5>
+                                        <p style="font-size: 1.1rem; color: rgba(255,255,255,0.95); margin-bottom: 0;">
+                                            The perfect venue for your birthdays, anniversaries, and events.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div
-                                style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); height: 100%;">
-                                <img src="img/partyhall.jpg" alt="Party Hall"
-                                    style="width: 100%; height: 180px; object-fit: cover;">
-                                <div style="padding: 1.5rem;">
-                                    <h4
-                                        style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #000 !important; margin-bottom: 0.75rem;">
-                                        <i class="bi bi-balloon" style="color: #76b2c4; margin-right: 0.5rem;"></i>
-                                        Private Party Hall
-                                    </h4>
-                                    <p
-                                        style="color: #666 !important; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-                                        Celebrate your special moments in our exclusive party hall. Perfect for
-                                        birthdays, anniversaries, and corporate events.
-                                    </p>
-                                    <a href="suites.html"
-                                        style="color: #76b2c4 !important; font-weight: 600; text-decoration: none; font-size: 0.9rem;">
-                                        Learn More <i class="bi bi-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#amenitiesCarousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"
+                                    style="background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 1.5rem;"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#amenitiesCarousel"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"
+                                    style="background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 1.5rem;"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
                     </div>
                 </div>

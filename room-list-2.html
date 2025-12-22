@@ -1213,6 +1213,309 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* Always Visible Social Icons */
+        .social-toggle-btn {
+            display: none !important;
+        }
+
+        .social-menu {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 15px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateX(0) !important;
+            position: relative !important;
+            right: auto !important;
+            bottom: auto !important;
+            pointer-events: all !important;
+        }
+
+        @media (max-width: 600px) {
+            .social-menu {
+                gap: 10px !important;
+            }
+        }
+
+        /* Chatbot Floating Button and Window */
+        .chatbot-container {
+            position: fixed;
+            bottom: 5.5rem;
+            left: 2rem;
+            z-index: 1000;
+        }
+
+        .chatbot-toggle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(118, 178, 196, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+                0 0 20px rgba(118, 178, 196, 0.4);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            border: none;
+            outline: none;
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+                    0 0 20px rgba(118, 178, 196, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+                    0 0 30px rgba(118, 178, 196, 0.6);
+            }
+        }
+
+        .chatbot-toggle:hover {
+            background: rgba(118, 178, 196, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5),
+                0 0 35px rgba(118, 178, 196, 0.7);
+            animation: none;
+        }
+
+        .chatbot-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        .chatbot-toggle.active i {
+            transform: rotate(180deg);
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            width: 350px;
+            max-height: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 16px;
+            box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-window.active {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, rgba(118, 178, 196, 0.9), rgba(118, 178, 196, 0.7));
+            padding: 1rem 1.25rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .chatbot-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1.25rem;
+            overflow-y: auto;
+            max-height: 320px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .chatbot-message {
+            margin-bottom: 1rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .bot-message {
+            background: white;
+            padding: 0.75rem 1rem;
+            border-radius: 12px 12px 12px 4px;
+            color: #333;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 85%;
+        }
+
+        .user-message {
+            background: linear-gradient(135deg, rgba(118, 178, 196, 0.9), rgba(118, 178, 196, 0.7));
+            padding: 0.75rem 1rem;
+            border-radius: 12px 12px 4px 12px;
+            color: white;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-left: auto;
+            max-width: 85%;
+        }
+
+        .chatbot-options {
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .chatbot-option-btn {
+            background: rgba(118, 178, 196, 0.1);
+            border: 1px solid rgba(118, 178, 196, 0.3);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            color: #333;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .chatbot-option-btn:hover {
+            background: rgba(118, 178, 196, 0.2);
+            border-color: rgba(118, 178, 196, 0.5);
+            transform: translateX(4px);
+        }
+
+        .chatbot-input-area {
+            padding: 1rem 1.25rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .chatbot-input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid rgba(118, 178, 196, 0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .chatbot-input:focus {
+            border-color: rgba(118, 178, 196, 0.6);
+            box-shadow: 0 0 0 3px rgba(118, 178, 196, 0.1);
+        }
+
+        .chatbot-send {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(118, 178, 196, 0.9), rgba(118, 178, 196, 0.7));
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .chatbot-send:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(118, 178, 196, 0.4);
+        }
+
+        .chatbot-send:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .chatbot-container {
+                bottom: 4.5rem;
+                left: 1rem;
+            }
+
+            .chatbot-window {
+                width: 320px;
+                max-height: 450px;
+            }
+
+            .chatbot-toggle {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chatbot-container {
+                bottom: 4rem;
+                left: 0.75rem;
+                right: 0.75rem;
+            }
+
+            .chatbot-window {
+                width: calc(100vw - 1.5rem);
+                max-height: 400px;
+            }
+
+            .chatbot-toggle {
+                width: 48px;
+                height: 48px;
+            }
+        }
     </style>
 </head>
 
@@ -1280,20 +1583,8 @@
         </div>
     </header>
 
-    <!-- Floating Social Media Icons - Collapsible -->
+    <!-- Floating Social Media Icons - Always Visible -->
     <div class="floating-social-collapsible">
-        <button class="social-toggle-btn" id="social-toggle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                <path
-                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                <path
-                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                <path
-                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-            </svg>
-        </button>
         <div class="social-menu" id="social-menu">
             <a href="https://g.page/r/CYLwnGL5wWz8EBM/review" target="_blank" title="Google Review">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -1320,8 +1611,13 @@
                         d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
                 </svg>
             </a>
+            <a href="#" id="chat-icon-toggle" title="Chat" style="cursor: pointer;">
+                <i class="bi bi-chat-dots-fill"></i>
+            </a>
         </div>
     </div>
+
+
 
     <main>
         <!-- Hero Section with Rooms Background -->
@@ -1594,45 +1890,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="room-card"
-                            style="background: white; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease;">
-                            <div class="room-image" style="height: 250px; overflow: hidden;">
-                                <img src="img/partyhall.jpg" alt="Private Parties"
-                                    style="width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                            <div class="room-content" style="padding: 2rem;">
-                                <h3
-                                    style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; color: #000 !important;">
-                                    Private Parties</h3>
-                                <p style="color: #000 !important; line-height: 1.6; margin-bottom: 1.5rem;">Celebrate
-                                    your special moments in our exclusive private party hall. Perfect for birthdays,
-                                    anniversaries, and corporate events.</p>
-                                <div class="amenities"
-                                    style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
-                                    <i class="bi bi-music-note-beamed" style="color: #76b2c4; font-size: 1.2rem;"
-                                        title="Sound System"></i>
-                                    <i class="bi bi-people" style="color: #76b2c4; font-size: 1.2rem;"
-                                        title="Seating Capacity"></i>
-                                    <i class="bi bi-thermometer-snow" style="color: #76b2c4; font-size: 1.2rem;"
-                                        title="AC"></i>
-                                    <i class="bi bi-lightbulb" style="color: #76b2c4; font-size: 1.2rem;"
-                                        title="Ambient Lighting"></i>
-                                    <i class="bi bi-gift" style="color: #76b2c4; font-size: 1.2rem;"
-                                        title="Decorations"></i>
-                                </div>
-                                <div class="room-buttons" style="display: flex; gap: 1rem;">
-                                    <a href="https://live.ipms247.com/booking/book-rooms-Lgsignature"
-                                        class="btn btn-primary"
-                                        style="background: #76b2c4; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; color: white !important; text-decoration: none; font-weight: 600; flex: 1; text-align: center;">BOOK
-                                        NOW</a>
-                                    <a href="suites.html" class="btn btn-outline"
-                                        style="background: white; border: 2px solid #76b2c4; padding: 0.75rem 1.5rem; border-radius: 6px; color: #76b2c4 !important; text-decoration: none; font-weight: 600; flex: 1; text-align: center;">KNOW
-                                        MORE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -1821,25 +2079,252 @@
 
             }, 100); // End of setTimeout
 
-            // Collapsible Social Icons
-            const socialToggle = document.getElementById('social-toggle');
-            const socialMenu = document.getElementById('social-menu');
 
-            if (socialToggle && socialMenu) {
-                socialToggle.addEventListener('click', function () {
-                    socialMenu.classList.toggle('active');
-                });
 
-                // Close menu when clicking outside
-                document.addEventListener('click', function (event) {
-                    if (!socialToggle.contains(event.target) && !socialMenu.contains(event.target)) {
-                        socialMenu.classList.remove('active');
-                    }
+
+            // Chatbot functionality
+            const chatbotWindow = document.getElementById('chatbot-window');
+            const chatbotClose = document.getElementById('chatbot-close');
+            const chatbotMessages = document.getElementById('chatbot-messages');
+            const chatbotOptions = document.getElementById('chatbot-options');
+            const chatbotInput = document.getElementById('chatbot-input');
+            const chatbotSend = document.getElementById('chatbot-send');
+
+            const whatsappNumber = '919113929433'; // WhatsApp number for redirection
+
+            // Conversation responses
+            const responses = {
+                'room-availability': {
+                    message: 'I can help you check room availability! Would you like to:',
+                    options: [
+                        { text: '📅 Book a room now', action: 'book' },
+                        { text: '💬 Chat with us on WhatsApp', action: 'whatsapp' }
+                    ]
+                },
+                'amenities': {
+                    message: 'We offer premium amenities including free WiFi, air conditioning, flat-screen TVs, room service, and more! Would you like to:',
+                    options: [
+                        { text: '📋 See full amenities list', action: 'whatsapp' },
+                        { text: '🏨 Book a room', action: 'book' }
+                    ]
+                },
+                'location': {
+                    message: 'We are located in Bengaluru, Karnataka. Would you like:',
+                    options: [
+                        { text: '🗺️ Get directions on WhatsApp', action: 'whatsapp' },
+                        { text: '📞 Call for assistance', action: 'whatsapp' }
+                    ]
+                },
+                'pricing': {
+                    message: 'Our room rates vary by season and availability. For current pricing:',
+                    options: [
+                        { text: '💰 Get pricing details on WhatsApp', action: 'whatsapp' },
+                        { text: '🛏️ Check availability & book', action: 'book' }
+                    ]
+                },
+                'contact': {
+                    message: 'You can reach us via:',
+                    options: [
+                        { text: '💬 WhatsApp: +91 91139 29433', action: 'whatsapp' },
+                        { text: '📧 Email us', action: 'whatsapp' }
+                    ]
+                }
+            };
+
+            // Toggle chatbot window
+            function toggleChatbot() {
+                chatbotWindow.classList.toggle('active');
+                // Toggle active state on chat icon in social menu
+                const chatIconToggle = document.getElementById('chat-icon-toggle');
+                if (chatIconToggle) {
+                    chatIconToggle.classList.toggle('active');
+                }
+                if (chatbotWindow.classList.contains('active')) {
+                    chatbotInput.focus();
+                }
+            }
+
+            chatbotClose.addEventListener('click', toggleChatbot);
+
+            // Chat icon in social menu toggles chatbot
+            const chatIconToggle = document.getElementById('chat-icon-toggle');
+            if (chatIconToggle) {
+                chatIconToggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    toggleChatbot();
                 });
             }
 
+            // Add message to chat
+            function addMessage(text, isUser = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'chatbot-message';
+                messageDiv.innerHTML = `
+            <div class="${isUser ? 'user-message' : 'bot-message'}">
+                ${text}
+            </div>
+        `;
+                chatbotMessages.appendChild(messageDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+
+            // Show response options
+            function showOptions(options) {
+                chatbotOptions.innerHTML = '';
+                options.forEach(option => {
+                    const btn = document.createElement('button');
+                    btn.className = 'chatbot-option-btn';
+                    btn.textContent = option.text;
+                    btn.addEventListener('click', () => {
+                        if (option.action === 'whatsapp') {
+                            redirectToWhatsApp(option.text);
+                        } else if (option.action === 'book') {
+                            window.open('https://live.ipms247.com/booking/book-rooms-Lgsignature', '_blank');
+                            addMessage('Great! Opening our booking page for you...', false);
+                            setTimeout(() => {
+                                showInitialOptions();
+                            }, 1500);
+                        }
+                    });
+                    chatbotOptions.appendChild(btn);
+                });
+            }
+
+            // Show initial question options
+            function showInitialOptions() {
+                chatbotOptions.innerHTML = `
+            <button class="chatbot-option-btn" data-question="room-availability">
+                🛏️ Check Room Availability
+            </button>
+            <button class="chatbot-option-btn" data-question="amenities">
+                ✨ What amenities do you offer?
+            </button>
+            <button class="chatbot-option-btn" data-question="location">
+                📍 Location & Directions
+            </button>
+            <button class="chatbot-option-btn" data-question="pricing">
+                💰 Room Rates & Packages
+            </button>
+            <button class="chatbot-option-btn" data-question="contact">
+                📞 Contact Information
+            </button>
+        `;
+
+                // Re-attach event listeners
+                document.querySelectorAll('.chatbot-option-btn').forEach(btn => {
+                    btn.addEventListener('click', handleQuestionClick);
+                });
+            }
+
+            // Handle question button clicks
+            function handleQuestionClick(e) {
+                const question = e.currentTarget.dataset.question;
+                const questionText = e.currentTarget.textContent.trim();
+
+                // Add user's question to chat
+                addMessage(questionText, true);
+
+                // Get and display bot response
+                const response = responses[question];
+                if (response) {
+                    setTimeout(() => {
+                        addMessage(response.message, false);
+                        showOptions(response.options);
+                    }, 500);
+                }
+            }
+
+            // Redirect to WhatsApp
+            function redirectToWhatsApp(context = '') {
+                const message = context ? `Hi, I'm interested in: ${context}` : 'Hi, I have a question about LG Signature Suites';
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+
+                addMessage('Redirecting you to WhatsApp...', false);
+                setTimeout(() => {
+                    showInitialOptions();
+                }, 1500);
+            }
+
+            // Handle custom user input
+            function handleUserMessage() {
+                const message = chatbotInput.value.trim();
+                if (!message) return;
+
+                addMessage(message, true);
+                chatbotInput.value = '';
+
+                // Bot response for custom messages
+                setTimeout(() => {
+                    addMessage('Thank you for your message! Let me connect you with our team on WhatsApp for personalized assistance.', false);
+                    setTimeout(() => {
+                        redirectToWhatsApp(message);
+                    }, 1000);
+                }, 500);
+            }
+
+            // Event listeners for input
+            chatbotSend.addEventListener('click', handleUserMessage);
+            chatbotInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    handleUserMessage();
+                }
+            });
+
+            // Initial question button listeners
+            document.querySelectorAll('.chatbot-option-btn').forEach(btn => {
+                btn.addEventListener('click', handleQuestionClick);
+            });
+
         }); // End of document ready
     </script>
+
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h3>LG Signature Concierge</h3>
+                <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="chatbot-message">
+                    <div class="bot-message">
+                        Hello! 👋 Welcome to LG Signature Suites. How can I assist you today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="chatbot-options" id="chatbot-options">
+                <button class="chatbot-option-btn" data-question="room-availability">
+                    🛏️ Check Room Availability
+                </button>
+                <button class="chatbot-option-btn" data-question="amenities">
+                    ✨ What amenities do you offer?
+                </button>
+                <button class="chatbot-option-btn" data-question="location">
+                    📍 Location & Directions
+                </button>
+                <button class="chatbot-option-btn" data-question="pricing">
+                    💰 Room Rates & Packages
+                </button>
+                <button class="chatbot-option-btn" data-question="contact">
+                    📞 Contact Information
+                </button>
+            </div>
+
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Type your message..."
+                    aria-label="Chat input">
+                <button class="chatbot-send" id="chatbot-send" aria-label="Send message">
+                    <i class="bi bi-send-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
 </body>
 

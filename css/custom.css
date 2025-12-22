@@ -201,9 +201,176 @@ h6 {
   }
 }
 
+/* Collapsible Floating Social Icons */
+.floating-social-collapsible {
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  z-index: 50;
+}
 
+.social-toggle-btn {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 50%;
+  border: 1px solid rgba(118, 178, 196, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  color: rgba(118, 178, 196, 0.9);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
 
+.social-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: rgba(118, 178, 196, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px 0 rgba(118, 178, 196, 0.4);
+}
 
+.social-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.social-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.social-menu a {
+  color: rgba(189, 159, 56, 1) !important;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 50%;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(118, 178, 196, 0.25);
+}
+
+.social-menu a:hover {
+  color: rgba(118, 178, 196, 1) !important;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px 0 rgba(118, 178, 196, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .floating-social-collapsible {
+    top: unset;
+    bottom: 35px;
+    right: 10px;
+    left: auto;
+    transform: none;
+  }
+
+  .social-toggle-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .social-menu {
+    gap: 10px;
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+    flex-direction: column-reverse;
+    bottom: 0;
+    top: auto;
+  }
+
+  .social-menu.active {
+    transform: translateX(0);
+  }
+
+  .social-menu a {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Legacy floating-social-icons (keeping for compatibility) */
+.floating-social-icons {
+  position: fixed;
+  top: 30%;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.floating-social-icons .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  color: #222;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Removed individual color overrides - using white for all */
+.floating-social-icons .social-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .floating-social-icons {
+    top: unset;
+    bottom: 80px;
+    right: 10px;
+    gap: 10px;
+  }
+
+  .floating-social-icons .social-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+}
 
 /* Promo Banner Button */
 .promo-banner .btn_1 {
@@ -288,9 +455,29 @@ h6 {
   z-index: -1;
 }
 
+.floating-social-icons .social-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
 
+.floating-social-icons .social-icon:hover::before {
+  opacity: 1;
+}
 
-
+/* Enhanced color transitions for social icons - using white for all */
+.floating-social a:hover {
+  color: white !important;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
 
 /* Smooth animation for promo banner text */
 .promo-banner span {
@@ -307,7 +494,13 @@ h6 {
     background: rgba(210, 167, 112, 0.9);
   }
 
+  .floating-social-icons .social-icon {
+    background: rgba(255, 255, 255, 0.9);
+  }
 
+  .floating-social-icons .social-icon:hover {
+    background: rgba(255, 255, 255, 1);
+  }
 }
 
 /* Footer Social Icons Styling */

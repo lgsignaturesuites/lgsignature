@@ -1549,10 +1549,10 @@
     <header class="sticky-header">
         <div class="header-content">
             <div class="header-inner">
-                <div class="logo-section">
+                <a href="index.html" class="logo-section" style="text-decoration: none;">
                     <img src="img/logo.png" alt="LG Signature Suites Logo">
                     <h1 class="logo-text">LG SIGNATURE SUITES</h1>
-                </div>
+                </a>
 
                 <!-- Desktop Navigation -->
                 <nav class="desktop-nav">
@@ -1703,8 +1703,15 @@
                         <div class="room-card"
                             style="background: white; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease;">
                             <div class="room-image" style="height: 250px; overflow: hidden;">
-                                <img src="img/cowork.png" alt="Co-working Space"
-                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                <div style="position: relative; cursor: pointer;" data-bs-toggle="modal"
+                                    data-bs-target="#coworkingModal">
+                                    <img src="img/cowork.png" alt="Co-working Space"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div
+                                        style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.5); color: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem;">
+                                        <i class="bi bi-images"></i> View Photos
+                                    </div>
+                                </div>
                             </div>
                             <div class="room-content" style="padding: 2rem;">
                                 <h3
@@ -2220,6 +2227,42 @@
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#homestayCarouselModal"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Co-working Modal -->
+    <div class="modal fade" id="coworkingModal" tabindex="-1" aria-labelledby="coworkingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content" style="background-color: rgba(0,0,0,0.8); border: none;">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div id="coworkingCarouselModal" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/cowork.png" class="d-block w-100" alt="Co-working Space"
+                                    style="height: 80vh; object-fit: contain;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/conference.jpg" class="d-block w-100" alt="Conference Room"
+                                    style="height: 80vh; object-fit: contain;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#coworkingCarouselModal"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#coworkingCarouselModal"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
